@@ -68,6 +68,9 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .changelog p{font-size:13px;color:#64748b;}
 footer{background:#1e293b;color:#94a3b8;text-align:center;padding:20px;font-size:12px;}
 footer a{color:#60a5fa;text-decoration:none;}
+@media(max-width:700px){
+  #page-galerie .section div{grid-template-columns:1fr !important;}
+}
 </style>
 </head>
 <body>
@@ -86,6 +89,7 @@ footer a{color:#60a5fa;text-decoration:none;}
   <a onclick="showPage('accueil');toggleMenu()">🏠 Accueil</a>
   <a onclick="showPage('histoire');toggleMenu()">🎯 Notre histoire</a>
   <a onclick="showPage('miseajour');toggleMenu()">🚀 Mises à jour</a>
+  <a onclick="showPage('galerie');toggleMenu()">📱 Captures d'écran</a>
   <a onclick="showPage('aide');toggleMenu()">❓ Aide</a>
 </nav>
 
@@ -180,7 +184,21 @@ footer a{color:#60a5fa;text-decoration:none;}
   </div>
 </div>
 
-<!-- PAGE AIDE -->
+<!-- PAGE GALERIE -->
+<div class="page" id="page-galerie">
+  <div class="section">
+    <h2>📱 Captures d'écran</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <img src="Screenshot_2026-03-18-13-33-40-88_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%;border-radius:14px;border:1px solid #e2e8f0" alt="KarBu"/>
+      <img src="Screenshot_2026-03-18-13-36-10-25_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%;border-radius:14px;border:1px solid #e2e8f0" alt="KarBu"/>
+      <img src="Screenshot_2026-03-18-13-36-23-80_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%;border-radius:14px;border:1px solid #e2e8f0" alt="KarBu"/>
+      <img src="Screenshot_2026-03-18-13-36-33-04_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%;border-radius:14px;border:1px solid #e2e8f0" alt="KarBu"/>
+      <img src="Screenshot_2026-03-18-13-37-05-57_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%;border-radius:14px;border:1px solid #e2e8f0" alt="KarBu"/>
+      <img src="Screenshot_2026-03-18-13-37-18-75_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%;border-radius:14px;border:1px solid #e2e8f0" alt="KarBu"/>
+    </div>
+  </div>
+</div>
+  <!-- PAGE AIDE -->
 <div class="page" id="page-aide">
   <div class="section">
     <h2>❓ Aide & Guide d'utilisation</h2>
