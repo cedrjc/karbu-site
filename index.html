@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KarBu — Suivi carburant & recharge</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;}
+header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;}
+.logo{font-size:22px;font-weight:900;font-style:italic;letter-spacing:-1px;cursor:pointer;}
+.logo span{color:#2563eb;font-style:italic;}
+.header-right{display:flex;align-items:center;gap:12px;}
+.btn-dl{background:#2563eb;color:#fff;padding:8px 18px;border-radius:50px;text-decoration:none;font-weight:700;font-size:13px;}
+.hamburger{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:5px;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#1e293b;border-radius:2px;transition:.3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-menu{display:none;position:fixed;top:57px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;z-index:199;box-shadow:0 8px 24px rgba(0,0,0,.1);}
+.nav-menu.open{display:block;}
+.nav-menu a{display:block;padding:16px 24px;font-weight:600;font-size:15px;color:#1e293b;text-decoration:none;border-bottom:1px solid #f1f5f9;cursor:pointer;}
+.nav-menu a:hover{background:#f8fafc;color:#2563eb;}
+.page{display:none;}
+.page.active{display:block;}
+.hero{background:linear-gradient(135deg,#1e293b 0%,#2563eb 100%);color:#fff;padding:50px 24px;text-align:center;}
+.hero h1{font-size:42px;font-weight:900;letter-spacing:-1px;margin-bottom:12px;}
+.hero h1 span{color:#60a5fa;font-style:italic;}
+.hero p{font-size:16px;opacity:.85;max-width:500px;margin:0 auto 20px;}
+.hero-row{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;}
+.badge{display:inline-block;background:#fff;color:#1e293b;font-weight:800;font-size:13px;padding:12px 24px;border-radius:50px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.2);}
+.prix-inline{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:16px;padding:12px 24px;text-align:center;}
+.prix-inline .amount{font-size:32px;font-weight:900;}
+.prix-inline .sub{font-size:10px;opacity:.8;font-weight:700;letter-spacing:1px;}
+.hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.hbadge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;}
+.section{padding:40px 24px;max-width:900px;margin:0 auto;}
+.section h2{font-size:22px;font-weight:800;margin-bottom:20px;}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:700px){
+  .features{grid-template-columns:repeat(2,1fr);}
+  .hero h1{font-size:28px;}
+  .two-col{grid-template-columns:1fr !important;}
+  .roadmap{flex-direction:column !important;}
+}
+.feat{background:#fff;border-radius:14px;padding:16px;border:1px solid #e2e8f0;}
+.feat .ico{font-size:24px;margin-bottom:6px;}
+.feat h3{font-weight:700;font-size:13px;margin-bottom:4px;}
+.feat p{font-size:12px;color:#64748b;line-height:1.4;}
+.card{background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0;}
+.privacy{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:28px;}
+.privacy h3{color:#166534;font-weight:700;margin-bottom:10px;font-size:16px;}
+.privacy p{color:#166534;font-size:14px;line-height:1.7;}
+.roadmap{display:flex;gap:12px;margin-bottom:32px;}
+.rv{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;flex:1;}
+.rv .bv{display:inline-block;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:8px;}
+.rv h3{font-size:13px;font-weight:700;margin-bottom:4px;}
+.rv p{font-size:12px;color:#64748b;}
+.dl-box{background:#1e293b;border-radius:16px;padding:32px;text-align:center;color:#fff;}
+.dl-box p{color:#94a3b8;margin-bottom:20px;}
+.dl-btn{display:inline-block;background:#fff;color:#1e293b;padding:14px 32px;border-radius:14px;text-decoration:none;font-weight:700;font-size:15px;}
+.aide-section{background:#fff;border-radius:16px;padding:24px;border:1px solid #e2e8f0;margin-bottom:16px;}
+.aide-section h3{font-weight:700;font-size:16px;margin-bottom:12px;color:#2563eb;}
+.aide-section p,.aide-section li{font-size:14px;color:#475569;line-height:1.7;}
+.aide-section ul{padding-left:20px;}
+.changelog{background:#fff;border-radius:14px;padding:20px;border:1px solid #e2e8f0;margin-bottom:12px;}
+.changelog h3{font-size:14px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.changelog p{font-size:13px;color:#64748b;}
+footer{background:#1e293b;color:#94a3b8;text-align:center;padding:20px;font-size:12px;}
+footer a{color:#60a5fa;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" onclick="showPage('accueil')">Kar<span>Bu</span></div>
+  <div class="header-right">
+    <a href="#download" class="btn-dl" onclick="showPage('accueil')">📲 Télécharger</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-menu" id="navMenu">
+  <a onclick="showPage('accueil');toggleMenu()">🏠 Accueil</a>
+  <a onclick="showPage('histoire');toggleMenu()">🎯 Notre histoire</a>
+  <a onclick="showPage('miseajour');toggleMenu()">🚀 Mises à jour</a>
+  <a onclick="showPage('aide');toggleMenu()">❓ Aide</a>
+</nav>
+
+<!-- PAGE ACCUEIL -->
+<div class="page active" id="page-accueil">
+  <div class="hero">
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:12px">
+      <img src="logo.png" height="70" alt="KarBu logo"/>
+      <div style="text-align:left">
+        <h1><span style="font-style:italic;color:#fff">Kar</span><span>Bu</span></h1>
+        <p style="margin:0;opacity:.85;font-size:16px">Suivez la consommation de vos véhicules.<br>Simple & précis.</p>
+      </div>
+    </div>
+    <div class="prix-inline">
+        <div class="amount">8,99 €</div>
+        <div class="sub">PAIEMENT UNIQUE · PAS D'ABONNEMENT</div>
+      </div>
+    <div class="hero-badges">
+      <span class="hbadge">✅ Pas d'abonnement</span>
+      <span class="hbadge">🚫 Pas de pub</span>
+      <span class="hbadge">🔒 100% hors ligne</span>
+      <span class="hbadge">🌐 6 langues</span>
+    </div>
+  </div>
+  <div style="margin-top:16px;text-align:center"></div>
+
+  <div class="section">
+    <h2>✅ Fonctionnalités</h2>
+    <div class="features">
+      <div class="feat"><div class="ico">📊</div><h3>Suivi précis</h3><p>L/100km ou kWh/100km — thermique & électrique</p></div>
+      <div class="feat"><div class="ico">📈</div><h3>Graphiques</h3><p>Meilleure et pire conso<br>Meilleur et pire tarif</p></div>
+      <div class="feat"><div class="ico">🚗</div><h3>6 véhicules</h3><p>Thermique et/ou électrique combinés</p></div>
+      <div class="feat"><div class="ico">🌍</div><h3>7 pays</h3><p>Suivez vos pleins partout en Europe</p></div>
+      <div class="feat"><div class="ico">🧭</div><h3>GPS trajet</h3><p>Calcul du coût en temps réel</p></div>
+      <div class="feat"><div class="ico">📤</div><h3>Export CSV</h3><p>Vos données exportables à tout moment</p></div>
+      <div class="feat"><div class="ico">🌐</div><h3>6 langues</h3><p>FR · EN · ES · IT · DE · PT</p></div>
+      <div class="feat"><div class="ico">🚫</div><h3>Sans pub</h3><p>Aucune publicité. Jamais.</p></div>
+    </div>
+  </div>
+
+  <div class="section" id="download">
+    <div class="dl-box">
+      <div style="font-size:28px;font-weight:900;font-style:italic;margin-bottom:8px">Kar<span style="color:#60a5fa;font-style:italic">Bu</span></div>
+      <p>Disponible sur Android — iOS bientôt disponible</p>
+      <a href="#" class="dl-btn">▶ Google Play Store</a>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HISTOIRE -->
+<div class="page" id="page-histoire">
+  <div class="section">
+    <h2>🎯 L'histoire de KarBu</h2>
+    <div class="card" style="line-height:1.8;color:#475569;font-size:15px">
+      <p style="font-size:18px;color:#1e293b;font-weight:700;margin-bottom:20px">Né d'un besoin réel, pas d'une idée marketing.</p>
+      <p style="margin-bottom:16px">Pendant plus de 3 ans, j'ai suivi ma consommation sur Google Sheets, voyage après voyage, dans 3 pays différents. Ce tableau, c'était mon outil du quotidien — pratique, mais pas idéal sur mobile.</p>
+      <p style="margin-bottom:16px">Un jour, j'ai décidé de transformer tout ce travail en une vraie application mobile. Simple, rapide, efficace. Une application que j'aurais aimé avoir dès le départ.</p>
+      <p style="margin-bottom:16px">Il m'aura fallu de nombreuses heures de développement, de tests et d'améliorations pour en arriver là. KarBu, c'est 3 ans d'expérience terrain condensés dans votre poche.</p>
+      <p style="font-size:16px;font-weight:700;color:#2563eb">Et le fait de l'avoir publiée est déjà ma récompense. 🙏</p>
+    </div>
+
+    <div style="margin-top:24px">
+      <div class="privacy">
+        <h3>🔐 Respect total de votre vie privée</h3>
+        <p>KarBu ne collecte aucune donnée personnelle. Pas d'email, pas de compte obligatoire. Une seule permission possible : le GPS, uniquement si vous choisissez d'utiliser le suivi de trajet, et seulement après votre accord explicite.<br><br><strong>Vos données restent sur votre téléphone, point final.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE MISES À JOUR -->
+<div class="page" id="page-miseajour">
+  <div class="section">
+    <h2>🚀 Roadmap</h2>
+    <div class="roadmap">
+      <div class="rv"><span class="bv" style="background:#2563eb">v1.0</span><h3>Actuelle</h3><p>Suivi complet, 6 langues, graphiques</p></div>
+      <div class="rv"><span class="bv" style="background:#f59e0b">v1.1</span><h3>Prochainement</h3><p>Rappel vidange automatique</p></div>
+      <div class="rv"><span class="bv" style="background:#f59e0b">v1.5</span><h3>En préparation</h3><p>Suivi GPS trajet</p></div>
+      <div class="rv"><span class="bv" style="background:#10b981">v2.0</span><h3>À venir</h3><p>Multi-utilisateurs famille</p></div>
+      <div class="rv"><span class="bv" style="background:#8b5cf6">v3.0</span><h3>Futur</h3><p>Prix carburant temps réel</p></div>
+    </div>
+
+    <h2>📋 Changelog</h2>
+    <div class="changelog">
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.0</span> Lancement — 2025</h3>
+      <p>Première version publique. Suivi carburant complet, 6 langues, 4 véhicules, 7 pays, graphiques interactifs, export CSV, mode sombre.</p>
+    </div>
+    <div class="changelog">
+      <h3><span style="background:#f59e0b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.1</span> Prochainement</h3>
+      <p>Rappel vidange — alerte automatique selon kilométrage ou durée depuis la dernière vidange.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE AIDE -->
+<div class="page" id="page-aide">
+  <div class="section">
+    <h2>❓ Aide & Guide d'utilisation</h2>
+
+    <div class="aide-section">
+      <h3>🚗 Démarrage rapide</h3>
+      <ul>
+        <li>Ouvrez KarBu et ajoutez votre premier véhicule via le bouton <strong>+ Nouveau Véhicule</strong></li>
+        <li>Configurez le type (thermique ou électrique), le carburant, la capacité du réservoir</li>
+        <li>Après chaque plein, allez sur la page <strong>Ajouter</strong> et saisissez les informations</li>
+        <li>Vos statistiques apparaissent automatiquement sur la page <strong>Accueil</strong></li>
+      </ul>
+    </div>
+
+    <div class="aide-section">
+      <h3>📊 Les graphiques</h3>
+      <ul>
+        <li>Touchez un point sur le graphique pour voir les détails de ce plein</li>
+        <li>Pincez pour zoomer sur une période précise</li>
+        <li>Le point vert 🟢 indique la meilleure valeur, le rouge 🔴 la moins bonne</li>
+        <li>Appuyez sur <strong>Tableau</strong> pour voir le détail complet</li>
+      </ul>
+    </div>
+
+    <div class="aide-section">
+      <h3>🌍 Gestion des pays</h3>
+      <ul>
+        <li>Votre pays principal est défini à la première utilisation</li>
+        <li>Ajoutez jusqu'à 6 pays supplémentaires depuis la page <strong>Ajouter</strong></li>
+        <li>Chaque pays a une couleur distincte dans les graphiques</li>
+      </ul>
+    </div>
+
+    <div class="aide-section">
+      <h3>💾 Données & Sauvegarde</h3>
+      <ul>
+        <li>Exportez vos données en CSV depuis la <strong>Configuration</strong></li>
+        <li>Importez une sauvegarde existante à tout moment</li>
+        <li>Vos données sont stockées localement sur votre téléphone</li>
+      </ul>
+    </div>
+
+    <div class="aide-section">
+      <h3>📧 Contact & Support</h3>
+      <p>Une question ? Une idée d'amélioration ? Contactez-nous à <a href="mailto:appdrive.dev@proton.me" style="color:#2563eb;font-weight:700">appdrive.dev@proton.me</a></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 AppDrive — Tous droits réservés &nbsp;|&nbsp; <a href="mailto:appdrive.dev@proton.me">appdrive.dev@proton.me</a></p>
+</footer>
+
+<script>
+function toggleMenu(){
+  var m=document.getElementById('navMenu');
+  var h=document.getElementById('hamburger');
+  m.classList.toggle('open');
+  h.classList.toggle('open');
+}
+function showPage(name){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('page-'+name).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
