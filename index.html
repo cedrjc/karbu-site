@@ -79,7 +79,10 @@ footer a{color:#60a5fa;text-decoration:none;}
 <body>
 
 <header>
-  <div class="logo" onclick="showPage('accueil')">Kar<span>Bu</span></div>
+<div class="logo" onclick="showPage('accueil')">
+  <img src="logo.png" style="height:28px;width:28px;object-fit:contain;vertical-align:middle;margin-right:6px"/>
+  Kar<span>Bu</span>
+</div>
   <div class="header-right">
    <select id="lang-select" onchange="setLangSite(this.value)" style="padding:6px 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;font-size:13px;cursor:pointer">
   <option value="fr">🇫🇷 Français</option>
@@ -111,16 +114,7 @@ footer a{color:#60a5fa;text-decoration:none;}
 <div class="page active" id="page-accueil">
   <div class="hero">
     <div style="display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;padding:0 16px">
-
-  <!-- Gauche : Logo + Prix -->
-  <div style="text-align:center">
-    <img src="logo.png" style="height:100px;width:100px;object-fit:contain;margin-bottom:12px;position:relative;top:10px" alt="KarBu logo"/>
-	<div class="prix-inline" style="margin-top:10px">
-  <div class="amount">8,99 €</div>
-  <div class="sub" data-t="prix_sub_1">PAIEMENT UNIQUE</div>
-  <div class="sub" data-t="prix_sub_2">PAS D'ABONNEMENT</div>
-</div>
-  </div>
+  
 
   <!-- Droite : Slogan + Badges -->
   <div style="text-align:left">
@@ -132,6 +126,12 @@ footer a{color:#60a5fa;text-decoration:none;}
       <span class="hbadge" data-t="badge2">🚫 Aucune publicité</span>
       <span class="hbadge" data-t="badge3">🔒 Données privées & sécurisées</span>
       <span class="hbadge" data-t="badge4">🗣️ 10 langues, 💵 7 devises</span>
+	  <div class="prix-inline" style="margin-top:0px;padding:5px 10px;text-align:center">
+  <div class="amount" style="font-size:36px;font-weight:900">8,99 €</div>
+  <div style="width:40px;height:2px;background:rgba(255,255,255,.4);margin:8px auto"></div>
+  <div class="sub" data-t="prix_sub_1">PAIEMENT UNIQUE</div>
+  <div class="sub" data-t="prix_sub_2">SANS ABONNEMENT</div>
+</div>
     </div>
   </div>
 
@@ -220,7 +220,7 @@ footer a{color:#60a5fa;text-decoration:none;}
   </div>
 
 </div> 
-
+</div> 
   <div class="section" id="download">
     <div class="dl-box">
       <div style="font-size:28px;font-weight:900;font-style:italic;margin-bottom:8px">Kar<span style="color:#60a5fa;font-style:italic">Bu</span></div>
@@ -265,23 +265,23 @@ footer a{color:#60a5fa;text-decoration:none;}
     </div>
     <div class="changelog">
       <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.7</span> 9 mars 2026</h3>
-      <p data-t="cl_v17_p">Rappel vidange — Alerte automatique selon kilométrage ou durée depuis la dernière vidange.</p>
+      <p data-t="cl_v17_p">Rappel vidange — Alerte automatique selon kilométrage ou durée depuis la dernière vidange.<br>Rappel contrôle technique — Alerte automatique suivant l'age du véhicule<br>Suivi GPS trajet — Calcul automatique du coût d'un trajet basé sur votre historique €/km.</p>
     </div>
     <div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.0</span> 13 mars 2026</h3>
-      <p data-t="cl_v20_p">Traduction en 10 langues (Anglais, Allemand, Espagnol, Français, Italien, Japonais, Coréen, Néerlandais, Portugais, Turc)</p>
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.0</span> 01 avril 2026</h3>
+      <p data-t="cl_v20_p">Traduction en 10 langues (Anglais, Allemand, Espagnol, Français, Italien, Japonais, Coréen, Néerlandais, Portugais, Turc)<br>Lancement de l'application publique!</p>
     </div>
     <div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.2</span> 19 mars 2026</h3>
-      <p data-t="cl_v22_p">Suivi GPS trajet — Calcul automatique du coût d'un trajet basé sur votre historique €/km.</p>
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.5</span> courant avril 2026</h3>
+      <p data-t="cl_v25_p">Prix de votre station préférée en direct et des 5 les plus proches de votre emplacement.</p>
     </div>
     <div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.5</span> 01 avril 2026</h3>
-      <p data-t="cl_v25_p">Lancement de l'application publique</p>
+      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">courant Mai 2026</span></h3>
+      <p data-t="cl_v30_p">Scan ticket — Scannez votre ticket gratuitement.</p>
     </div>
-    <div class="changelog">
-      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">prévu courant Mai 2026</span></h3>
-      <p data-t="cl_v30_p">Scan ticket — Scannez votre ticket gratuitement</p>
+	<div class="changelog">
+      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v?.?</span> <span data-t="cl_v30_date">2026</span></h3>
+      <p data-t="cl_v30_p">Vos sugestions — A l'écoute de vos remarques et améliorations à effectuer.</p>
     </div>
   </div>
 </div>
@@ -404,6 +404,7 @@ function setLangSite(lang){
   var sel=document.getElementById('lang-select');
   if(sel)sel.value=lang;
 }
+
 </script>
 
 </body>
