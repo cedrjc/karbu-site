@@ -33,22 +33,27 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .page.active{display:block;}
 
 /* ===== HERO ===== */
-.hero{background:linear-gradient(135deg,#1e293b 0%,#2563eb 100%);color:#fff;padding:50px 24px;text-align:center;}
-.hero-inner{max-width:520px;margin:0 auto;text-align:center;}
+.hero{background:linear-gradient(135deg,#1e293b 0%,#2563eb 100%);color:#fff;padding:50px 24px;}
+.hero-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:48px;}
+.hero-logo-img{width:160px;height:160px;object-fit:contain;flex-shrink:0;}
+.hero-content{flex:1;min-width:0;}
 .hero-title{font-size:42px;font-weight:900;letter-spacing:-1px;margin-bottom:6px;}
 .hero-title span{color:#60a5fa;font-style:italic;}
 .hero-tagline{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:10px;}
 .hero-sub{font-size:16px;opacity:.85;margin-bottom:20px;}
-.hero-prix{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:16px;padding:16px 24px;text-align:center;max-width:360px;margin:0 auto;}
+.hero-prix{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:16px;padding:16px 24px;text-align:center;max-width:360px;margin:0;}
 .hero-prix-top{font-size:20px;font-weight:800;margin-bottom:6px;}
 .hero-prix-sep{display:none;}
 .hero-prix-bot{font-size:15px;font-weight:700;margin-bottom:10px;}
 .hero-prix-privacy{font-size:12px;opacity:.7;font-weight:600;}
+.hero-tagline{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:10px;margin-left:0;padding-left:0;}
+.hero-sub{font-size:16px;opacity:.85;margin-bottom:20px;margin-left:0;padding-left:0;}
+.hero-logo-img{width:160px;height:160px;object-fit:contain;flex-shrink:0;border-radius:24px;background:#fff;padding:8px;}
 
 /* ===== HERO legacy (non utilisé mais conservé) ===== */
 .hero h1{font-size:42px;font-weight:900;letter-spacing:-1px;margin-bottom:12px;}
 .hero h1 span{color:#60a5fa;font-style:italic;}
-.hero p{font-size:16px;opacity:.85;max-width:500px;margin:0 auto 20px;}
+.hero p{font-size:16px;opacity:.85;max-width:500px;margin:0 0 20px 0;}
 .hero-row{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;}
 .badge{display:inline-block;background:#fff;color:#1e293b;font-weight:800;font-size:13px;padding:12px 24px;border-radius:50px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.2);}
 .prix-inline{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:16px;padding:12px 24px;text-align:center;}
@@ -102,9 +107,6 @@ footer a{color:#60a5fa;text-decoration:none;}
   .hero-sub{font-size:15px;margin-bottom:16px;}
   .hero-prix{max-width:100%;padding:14px 18px;}
   .hero-prix-top{font-size:17px;}
-	@media(max-width:700px){
-  .section{padding:16px 16px;}
-}
 }
 </style>
 
@@ -146,16 +148,18 @@ footer a{color:#60a5fa;text-decoration:none;}
 <div class="page active" id="page-accueil">
   <div class="hero">
     <div class="hero-inner">
-      <h1 class="hero-title"><em>Kar</em><em><span>Bu</span></em></h1>
-      <p class="hero-tagline">Votre carnet de bord automobile intelligent</p>
-      <p data-t="hero_sub" class="hero-sub">Maîtrisez vos dépenses carburant.<br>Suivez, analysez, économisez.</p>
-
-      <div class="hero-prix">
-        <div class="hero-prix-top">💰 <strong>Achat unique — 8,99€</strong></div>
-        <div class="hero-prix-sep"></div>
-        <div class="hero-prix-bot" data-t="hero_prix_sub">Sans abonnement, sans surprise,<br>sans pub !</div>
-        <div class="hero-prix-sep"></div>
-        <div class="hero-prix-privacy">🔒 Données privées &amp; sécurisées</div>
+      <img class="hero-logo-img" src="IMG_20260328_144545.png" alt="KarBu"/>
+      <div class="hero-content">
+        
+        <p class="hero-tagline">Votre carnet de bord automobile intelligent</p>
+        <p data-t="hero_sub" class="hero-sub">Maîtrisez vos dépenses carburant.<br>Suivez, analysez, économisez.</p>
+        <div class="hero-prix">
+          <div class="hero-prix-top">💰 <strong>Achat unique — 8,99€</strong></div>
+          <div class="hero-prix-sep"></div>
+          <div class="hero-prix-bot" data-t="hero_prix_sub">Sans abonnement, sans surprise,<br>sans pub !</div>
+          <div class="hero-prix-sep"></div>
+          <div class="hero-prix-privacy">🔒 Données privées &amp; sécurisées</div>
+        </div>
       </div>
     </div>
   </div>
