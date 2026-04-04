@@ -31,7 +31,21 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .nav-menu a:hover{background:#f8fafc;color:#2563eb;}
 .page{display:none;}
 .page.active{display:block;}
+
+/* ===== HERO ===== */
 .hero{background:linear-gradient(135deg,#1e293b 0%,#2563eb 100%);color:#fff;padding:50px 24px;text-align:center;}
+.hero-inner{max-width:520px;margin:0 auto;text-align:center;}
+.hero-title{font-size:42px;font-weight:900;letter-spacing:-1px;margin-bottom:6px;}
+.hero-title span{color:#60a5fa;font-style:italic;}
+.hero-tagline{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:10px;}
+.hero-sub{font-size:16px;opacity:.85;margin-bottom:20px;}
+.hero-prix{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:16px;padding:16px 24px;text-align:center;max-width:360px;margin:0 auto;}
+.hero-prix-top{font-size:20px;font-weight:800;margin-bottom:6px;}
+.hero-prix-sep{display:none;}
+.hero-prix-bot{font-size:15px;font-weight:700;margin-bottom:10px;}
+.hero-prix-privacy{font-size:12px;opacity:.7;font-weight:600;}
+
+/* ===== HERO legacy (non utilisé mais conservé) ===== */
 .hero h1{font-size:42px;font-weight:900;letter-spacing:-1px;margin-bottom:12px;}
 .hero h1 span{color:#60a5fa;font-style:italic;}
 .hero p{font-size:16px;opacity:.85;max-width:500px;margin:0 auto 20px;}
@@ -42,15 +56,11 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .prix-inline .sub{font-size:10px;opacity:.8;font-weight:700;letter-spacing:1px;}
 .hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px;}
 .hbadge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;}
-.section{padding:40px 24px;max-width:900px;margin:0 auto;}
+
+/* ===== SECTIONS ===== */
+.section{padding:28px 24px;max-width:900px;margin:0 auto;}
 .section h2{font-size:22px;font-weight:800;margin-bottom:20px;}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-@media(max-width:700px){
-  .features{grid-template-columns:repeat(2,1fr);}
-  .hero h1{font-size:28px;}
-  .two-col{grid-template-columns:1fr !important;}
-  .roadmap{flex-direction:column !important;}
-}
 .feat{background:#fff;border-radius:14px;padding:16px;border:1px solid #e2e8f0;}
 .feat .ico{font-size:24px;margin-bottom:6px;}
 .feat h3{font-weight:700;font-size:13px;margin-bottom:4px;}
@@ -76,29 +86,13 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .changelog p{font-size:13px;color:#64748b;}
 footer{background:#1e293b;color:#94a3b8;text-align:center;padding:20px;font-size:12px;}
 footer a{color:#60a5fa;text-decoration:none;}
-@media(max-width:700px){
-  #page-galerie .section div{grid-template-columns:1fr !important;}
 .lang-switcher{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:12px 24px;background:#f8fafc;border-bottom:1px solid #e2e8f0;}
 .lang-btn{background:none;border:1px solid #e2e8f0;border-radius:50px;padding:4px 12px;font-size:12px;cursor:pointer;color:#475569;}
 .lang-btn.active{background:#2563eb;color:#fff;border-color:#2563eb;}
-/* Hero restructuré — HORS media query */
-.hero-inner{max-width:520px;margin:0 auto;text-align:center;}
-.hero-title{font-size:42px;font-weight:900;letter-spacing:-1px;margin-bottom:6px;}
-.hero-title span{color:#60a5fa;font-style:italic;}
-.hero-tagline{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-bottom:10px;}
-.hero-sub{font-size:16px;opacity:.85;margin-bottom:20px;}
-.hero-prix{background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:16px;padding:16px 24px;text-align:center;max-width:360px;margin:0 auto;}
-.hero-prix-top{font-size:20px;font-weight:800;margin-bottom:6px;}
-.hero-prix-sep{display:none;}
-.hero-prix-bot{font-size:15px;font-weight:700;margin-bottom:10px;}
-.hero-prix-privacy{font-size:12px;opacity:.7;font-weight:600;}
 
-/* Réduction espace avant Fonctionnalités */
-.section{padding:16px 24px;max-width:900px;margin:0 auto;}
-
+/* ===== MEDIA QUERY MOBILE ===== */
 @media(max-width:700px){
   .features{grid-template-columns:repeat(2,1fr);}
-  .hero h1{font-size:28px;}
   .two-col{grid-template-columns:1fr !important;}
   .roadmap{flex-direction:column !important;}
   #page-galerie .section div{grid-template-columns:1fr !important;}
@@ -109,8 +103,8 @@ footer a{color:#60a5fa;text-decoration:none;}
   .hero-prix{max-width:100%;padding:14px 18px;}
   .hero-prix-top{font-size:17px;}
 }
-
 </style>
+
 </head>
 <body>
 
