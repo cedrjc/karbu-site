@@ -96,17 +96,18 @@ footer a{color:#60a5fa;text-decoration:none;}
 .lang-btn.active{background:#2563eb;color:#fff;border-color:#2563eb;}
 
 /* ===== MEDIA QUERY MOBILE ===== */
-@media(max-width:700px){
+@media(max-width:768px){
   .features{grid-template-columns:repeat(2,1fr);}
   .two-col{grid-template-columns:1fr !important;}
   .roadmap{flex-direction:column !important;}
+  #page-galerie .section div{grid-template-columns:1fr !important;}
   .section{padding:16px 16px;}
+  .hero{padding:28px 20px;}
+  .hero-inner{flex-direction:column;gap:0;max-width:100%;}
   .hero-logo-img{display:none;}
-  .hero-inner{flex-direction:column;gap:0;}
-  .hero-content{text-align:center;}
+  .hero-content{text-align:center;width:100%;}
   .hero-prix{max-width:100%;padding:14px 18px;margin:0 auto;}
   .hero-prix-top{font-size:17px;}
-  .hero{padding:28px 20px;}
   .hero-tagline{font-size:11px;}
   .hero-sub{font-size:15px;margin-bottom:16px;}
 }
