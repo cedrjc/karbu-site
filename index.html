@@ -257,8 +257,8 @@ footer a{color:#60a5fa;text-decoration:none;}
       <p data-t="desc_f2p">Dès l'ouverture, KarBu affiche le prix de votre station préférée ou de la moins chère à proximité — mis à jour toutes les 10 minutes depuis les données officielles du gouvernement. En un coup d'œil, vous savez combien vous économisez (ou perdez) en changeant de station, calculé sur la base de votre véhicule et de votre consommation réelle. Disponible en France — d'autres pays suivront.</p>
     </div>
     <div style="margin-bottom:24px">
-      <h3 data-t="desc_f3h">🗺️ Trajet GPS</h3>
-      <p data-t="desc_f3p">Enregistrez vos trajets et calculez automatiquement le coût en carburant. Barème kilométrique 2024 intégré — idéal pour le covoiturage et les remboursements professionnels.</p>
+      <h3 data-t="desc_f3h">🗺️ Calculateur de trajet</h3>
+      <p data-t="desc_f3p">Estimez le coût de vos trajets en carburant selon votre consommation réelle. Barème kilométrique 2025 intégré — idéal pour le covoiturage et les remboursements professionnels. Partagez votre résumé de trajet.</p>
     </div>
     <div style="margin-bottom:24px">
       <h3 data-t="desc_f4h">🔔 Entretiens</h3>
@@ -277,7 +277,7 @@ footer a{color:#60a5fa;text-decoration:none;}
       <p data-t="desc_f7p">KarBu est née de mes propres besoins de conducteur. Vos retours comptent vraiment — les meilleures suggestions seront intégrées dans les futures versions.</p>
     </div>
     <div style="margin-bottom:24px">
-      <h3 data-t="desc_f8h">📷 Scan ticket — prévu mai 2026</h3>
+      <h3 data-t="desc_f8h">📷 Scan ticket — prévu juin 2026</h3>
       <p data-t="desc_f8p">Scannez votre ticket de caisse pour enregistrer vos pleins automatiquement. D'autres fonctionnalités importantes sont déjà planifiées pour les versions futures !</p>
     </div>
     <div style="margin-bottom:24px">
@@ -350,12 +350,16 @@ footer a{color:#60a5fa;text-decoration:none;}
       <p data-t="cl_v20_p">Traduction en 10 langues (Anglais, Allemand, Espagnol, Français, Italien, Japonais, Coréen, Néerlandais, Portugais, Turc</p>
     </div>
     <div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.5</span> courant avril 2026</h3>
-      <p data-t="cl_v25_p">Votre station préférée et les moins chères autour de votre position<br>France uniquement, d'autres pays suivront<br><strong>Lancement de l'application publique!</p>
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.5</span> 28 avril 2026</h3>
+      <p data-t="cl_v25_p">Votre station préférée et les moins chères autour de votre position<br>France uniquement, d'autres pays suivront</p>
+    </div>
+	<div class="changelog">
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.7</span> 13 mai 2026</h3>
+      <p data-t="cl_v25_p">Estimez le coût de vos trajets en carburant selon votre consommation réelle.<br>Partagez votre résumé de trajet.<br><strong>Test en cours sur Google Play!</p>
     </div>
     <div class="changelog">
-      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">courant Mai 2026</span></h3>
-      <p data-t="cl_v30_p">Scan ticket — Scannez votre ticket gratuitement.</p>
+      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">1er juin 2026</span></h3>
+      <p data-t="cl_v30_p">Scan ticket — Scannez votre ticket gratuitement.<br><strong>Lancement de l'application publique!</p>
     </div>
 	<div class="changelog">
       <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v?.?</span> <span data-t="cl_vxx_date">2026</span></h3>
@@ -363,7 +367,6 @@ footer a{color:#60a5fa;text-decoration:none;}
     </div>
   </div>
 </div>
-
 <!-- PAGE GALERIE -->
 <div class="page" id="page-galerie">
   <div class="section">
@@ -449,12 +452,28 @@ footer a{color:#60a5fa;text-decoration:none;}
     </div>
 	
 	<div class="aide-section">
-  <h3 data-t="aide_s6h">📍 Bouton GPS</h3>
+  <h3 data-t="aide_s6h" style="display:flex;align-items:center;gap:10px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 30" width="60" height="22" fill="none">
+      <rect x="1" y="1" width="80" height="28" rx="14" ry="14" fill="transparent" stroke="var(--blue)" stroke-width="2"/>
+      <path d="M 16 22 C 20 10, 34 8, 40 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2.5 2" fill="none"/>
+      <circle cx="16" cy="18" r="4.5" fill="var(--blue)"/>
+      <path d="M 13.5 20.5 Q 16 26 16 26 Q 16 26 18.5 20.5" fill="var(--blue)"/>
+      <circle cx="16" cy="18" r="1.8" fill="white"/>
+      <circle cx="40" cy="7" r="4.5" fill="currentColor"/>
+      <path d="M 37.5 9.5 Q 40 15 40 15 Q 40 15 42.5 9.5" fill="currentColor"/>
+      <circle cx="40" cy="7" r="1.8" fill="var(--bg)" opacity="0.9"/>
+      <circle cx="63" cy="15" r="8" fill="var(--blue)" opacity="0.15"/>
+      <circle cx="63" cy="15" r="8" fill="none" stroke="var(--blue)" stroke-width="1.8"/>
+      <circle cx="63" cy="15" r="5.5" fill="none" stroke="var(--blue)" stroke-width="0.7" stroke-opacity="0.5"/>
+      <text x="63" y="15" font-family="Georgia, serif" font-size="9" font-weight="700" fill="var(--blue)" text-anchor="middle" dominant-baseline="middle">$</text>
+    </svg>
+    <span data-t="aide_s6h">Calculateur de trajet</span>
+  </h3>
   <ul>
-    <li data-t="aide_s6l1">Appuyez sur le bouton <strong>GPS</strong> en haut à droite pour démarrer l'enregistrement d'un trajet</li>
-    <li data-t="aide_s6l2">Le coût du carburant est calculé en temps réel à partir de votre dernier plein et de votre consommation moyenne</li>
-    <li data-t="aide_s6l3">À l'arrêt du trajet, partagez le résumé — km, coût carburant et barème kilométrique — pour diviser les frais entre passagers ou pour vos remboursements professionnels</li>
-    <li data-t="aide_s6l4">Le barème kilométrique 2024 est intégré pour la France — idéal pour le covoiturage et les notes de frais</li>
+    <li data-t="aide_s6l1">Saisissez les adresses de départ et d'arrivée pour calculer automatiquement la distance, ou ajustez les kilomètres manuellement</li>
+    <li data-t="aide_s6l2">Le coût carburant est calculé selon le prix au litre de votre dernier plein, et selon votre consommation moyenne ou celle du dernier plein</li>
+    <li data-t="aide_s6l3">Partagez le résumé — km, coût carburant et barème kilométrique — pour diviser les frais entre passagers</li>
+    <li data-t="aide_s6l4">Le barème kilométrique 2025 est intégré pour la France — idéal pour les notes de frais</li>
   </ul>
 </div>
 <div class="aide-section">
