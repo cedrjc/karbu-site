@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="KarBu — Carnet de bord Auto"/>
-<meta property="og:description" content="Suivez votre consommation, analysez vos coûts<br>Optimisez chaque trajet."/>
+<meta property="og:description" content="Maîtrisez vos dépenses carburant. Suivez, analysez, économisez. Disponible sur Android."/>
 <meta property="og:image" content="https://karbu.net/icon-512.png"/>
 <meta property="og:url" content="https://karbu.net"/>
 <meta property="og:type" content="website"/>
@@ -84,7 +84,7 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .dl-btn{display:inline-block;background:#fff;color:#1e293b;padding:14px 32px;border-radius:14px;text-decoration:none;font-weight:700;font-size:15px;}
 .aide-section{background:#fff;border-radius:16px;padding:24px;border:1px solid #e2e8f0;margin-bottom:16px;}
 .aide-section h3{font-weight:700;font-size:16px;margin-bottom:12px;color:#2563eb;}
-.aide-section p,.aide-section li{font-size:14px;color:#475569;line-height:1.7;}
+.aide-section p,.aide-section li{font-size:14px;color:#475569;line-height:1.7;font-weight:400;}
 .aide-section ul{padding-left:20px;}
 .changelog{background:#fff;border-radius:14px;padding:20px;border:1px solid #e2e8f0;margin-bottom:12px;}
 .changelog h3{font-size:14px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
@@ -96,7 +96,9 @@ footer a{color:#60a5fa;text-decoration:none;}
 .lang-btn.active{background:#2563eb;color:#fff;border-color:#2563eb;}
 
 /* ===== MEDIA QUERY MOBILE ===== */
+.mobile-only{display:none;}
 @media(max-width:768px){
+  .mobile-only{display:inline;}
   .features{grid-template-columns:repeat(2,1fr);}
   .two-col{grid-template-columns:1fr !important;}
   .roadmap{flex-direction:column !important;}
@@ -155,14 +157,9 @@ footer a{color:#60a5fa;text-decoration:none;}
       <div class="hero-content">
         
           <p class="hero-tagline" data-t="hero_tagline">Votre carnet de bord automobile intelligent</p>
-<p data-t="hero_sub" class="hero-sub">Suivez votre consommation, analysez vos coûts<br>Optimisez chaque trajet.</p>
-<div class="hero-prix">
-  <div class="hero-prix-top" data-t="hero_prix_top">💰 <strong>Achat unique — 8,99€</strong></div>
-  <div class="hero-prix-sep"></div>
-  <div class="hero-prix-bot" data-t="hero_prix_sub">Sans abonnement, sans surprise,<br>sans pub !</div>
-  <div class="hero-prix-sep"></div>
-  <div class="hero-prix-privacy" data-t="hero_prix_privacy">🔒 Données privées &amp; sécurisées</div>
-        </div>
+<p data-t="hero_sub" class="hero-sub">Maîtrisez vos dépenses carburant.<br>Suivez, analysez, économisez.</p>
+<p style="font-size:0.95em;font-weight:700;margin-bottom:6px;opacity:0.9;">Sans abonnement · Sans frais cachés · <br class="mobile-only"/>Sans publicité</p>
+<p style="font-size:0.8em;opacity:0.65;margin-top:4px;">🔒 Données privées &amp; sécurisées · <br class="mobile-only"/>🤖 Android · iOS plus tard</p>
       </div>
     </div>
   </div>
@@ -171,73 +168,71 @@ footer a{color:#60a5fa;text-decoration:none;}
     <div class="features">
   <!-- Ligne 1 : L'essentiel visible dès l'ouverture -->
   <div class="feat">
-    <div class="ico">⛽</div>
-    <h3 data-t="f9h">Prix station</h3>
-    <p data-t="f9p">Votre station préférée ou la moins chère, actualisée toutes les 10 min. Comparez et voyez ce que vous économisez.</p>
-  </div>
-
-  <div class="feat">
     <div class="ico">📊</div>
     <h3 data-t="f1h">Suivi précis</h3>
-    <p data-t="f1p">L/100km ou kWh/100km — thermique &amp; électrique</p>
+    <p data-t="f1p">Votre consommation réelle, plein après plein</p>
   </div>
-
+  
   <div class="feat">
     <div class="ico">📈</div>
     <h3 data-t="f2h">Graphiques</h3>
-    <p data-t="f2p">Meilleure et pire conso<br>Meilleur et pire tarif</p>
+    <p data-t="f2p">Suivez l'évolution de votre conso dans le temps et repérez les dérives</p>
   </div>
-
-  <div class="feat">
-    <div class="ico">📷</div>
-    <h3 data-t="f10h">Scan ticket</h3>
-    <p data-t="f10p">Scannez votre ticket pour remplir les informations automatiquement<br>— Bientôt disponible</p>
-  </div>
-
-  <!-- Ligne 2 : Fonctionnalités qui fidélisent -->
-  <div class="feat">
-    <div class="ico">🔧</div>
-    <h3 data-t="f11h">Entretiens</h3>
-    <p data-t="f11p">Enregistrez vos entretiens et recevez des alertes automatiques à l'ouverture de l'application</p>
-  </div>
-
+  
   <div class="feat">
     <div class="ico">🗺️</div>
     <h3 data-t="f5h"> Calculateur de trajet</h3>
     <p data-t="f5p">Estimez le coût de vos trajets en carburant selon votre consommation réelle.</p>
   </div>
-
+  
+  <div class="feat">
+    <div class="ico">🔧</div>
+    <h3 data-t="f11h">Entretiens</h3>
+    <p data-t="f11p">Ne ratez plus jamais une révision ou un contrôle technique — alerte automatiques</p>
+  </div>
+  
+  <div class="feat">
+    <div class="ico">⛽</div>
+    <h3 data-t="f9h">Votre carburant, optimisé</h3>
+    <p data-t="f9p">Prix officiels, station idéale, économies calculées. <strong>Sans rien saisir !</strong></p>
+  </div>
+  
+  <div class="feat">
+    <div class="ico">🌍</div>
+    <h3 data-t="f4h">Multi-pays</h3>
+    <p data-t="f4p">Suivez vos pleins partout où vous voyagez — jusqu'à 7 pays simultanément</p>
+  </div>
+  
   <div class="feat">
     <div class="ico">🌙</div>
     <h3 data-t="f12h">Mode sombre</h3>
     <p data-t="f12p">Interface adaptée jour et nuit — confort visuel garanti</p>
   </div>
-
+  
   <div class="feat">
     <div class="ico">🗣️</div>
     <h3 data-t="f7h">10 langues</h3>
     <p>FR · EN · ES · IT · DE · PT · NL · TR · JP · KO</p>
   </div>
-
-  <!-- Ligne 3 : Détails rassurants -->
+  
+  <div class="feat">
+    <div class="ico">💬</div>
+    <h3 data-t="f10h">Vos idées, notre appli</h3>
+    <p data-t="f10p">Chaque retour peut devenir une fonctionnalité</p>
+  </div>
+  
   <div class="feat">
     <div class="ico">🚗</div>
     <h3 data-t="f3h">6 véhicules</h3>
     <p data-t="f3p">Thermique et/ou électrique combinés</p>
   </div>
-
-  <div class="feat">
-    <div class="ico">🌍</div>
-    <h3 data-t="f4h">7 pays</h3>
-    <p data-t="f4p">Suivez vos pleins partout où vous voyagez</p>
-  </div>
-
+  
   <div class="feat">
     <div class="ico">📤</div>
-    <h3 data-t="f6h">Export CSV</h3>
-    <p data-t="f6p">Vos données exportables à tout moment</p>
+    <h3 data-t="f6h">Export CSV & JSON</h3>
+    <p data-t="f6p">100% local, aucune donnée envoyée sur internet — Export automatique et manuel à tout moment</p>
   </div>
-
+  
   <div class="feat">
     <div class="ico">💵</div>
     <h3 data-t="f8h">7 devises</h3>
@@ -249,44 +244,37 @@ footer a{color:#60a5fa;text-decoration:none;}
   <h2 style="text-align:center;margin-bottom:30px" data-t="desc_titre">KarBu — Votre carnet de bord automobile intelligent</h2>
   <div style="max-width:700px;margin:0 auto">
     <div style="margin-bottom:24px">
-      <h3 data-t="desc_f1h">⛽ Suivi de consommation</h3>
-      <p data-t="desc_f1p">Enregistrez vos pleins et suivez votre consommation L/100km ou kWh/100km. Historique complet avec graphiques et statistiques détaillées. Comparez vos pleins et identifiez vos tendances de consommation.</p>
+      <h3 data-t="desc_f1h">📈 Suivi de consommation</h3>
+      <p data-t="desc_f1p">Enregistrez vos pleins et suivez votre consommation réelle plein après plein. Historique complet avec graphiques et statistiques détaillées — Identifiez vos tendances et détectez une dérive avant qu'elle ne coûte cher. Comparez par pays et par véhicule</p>
     </div>
     <div style="margin-bottom:24px">
-      <h3 data-t="desc_f2h">📍 Prix station en temps réel</h3>
-      <p data-t="desc_f2p">Dès l'ouverture, KarBu affiche le prix de votre station préférée ou de la moins chère à proximité — mis à jour toutes les 10 minutes depuis les données officielles du gouvernement. En un coup d'œil, vous savez combien vous économisez (ou perdez) en changeant de station, calculé sur la base de votre véhicule et de votre consommation réelle. Disponible en France — d'autres pays suivront.</p>
+      <h3 data-t="desc_f2h">⛽ Votre carburant, optimisé</h3>
+      <p data-t="desc_f2p">Dès l'ouverture, KarBu affiche le prix de votre station idéale — la plus rentable selon votre position. Mise à jour toutes les 10 minutes depuis les données officielles du gouvernement. En un coup d'œil, vous savez combien vous économisez en changeant de station, calculé sur la base de votre consommation réelle. Disponible en France — d'autres pays suivront.</p>
     </div>
     <div style="margin-bottom:24px">
       <h3 data-t="desc_f3h">🗺️ Calculateur de trajet</h3>
-      <p data-t="desc_f3p">Estimez le coût de vos trajets en carburant selon votre consommation réelle. Barème kilométrique 2025 intégré — idéal pour le covoiturage et les remboursements professionnels. Partagez votre résumé de trajet.</p>
+      <p data-t="desc_f3p">Estimez le coût de vos trajets en carburant, calculé selon votre consommation moyenne réelle et le prix au litre de votre dernier plein. Saisissez votre point de départ et d'arrivée, et partagez votre résumé de trajet.</p>
     </div>
     <div style="margin-bottom:24px">
-      <h3 data-t="desc_f4h">🔔 Entretiens</h3>
-      <p data-t="desc_f4p">Enregistrez vos entretiens (vidange, révision, contrôle technique…) et recevez des rappels automatiques selon votre véhicule et vos kilométrages.</p>
+      <h3 data-t="desc_f4h">🔧 Entretiens</h3>
+      <p data-t="desc_f4p">Enregistrez vos entretiens — révision, contrôle technique — et recevez des rappels automatiques à l'ouverture de l'application, selon votre véhicule et son kilométrage.</p>
     </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f5h">⚡ Compatible thermique et électrique</h3>
-      <p data-t="desc_f5p">Suivi kWh, autonomie estimée, coût par km.</p>
-    </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f6h">📊 Statistiques avancées</h3>
-      <p data-t="desc_f6p">Graphiques de consommation et de prix, coût moyen par kilomètre, comparaison par pays et par carburant.</p>
-    </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f7h">🤝 Une app qui vous écoute</h3>
-      <p data-t="desc_f7p">KarBu est née de mes propres besoins de conducteur. Vos retours comptent vraiment — les meilleures suggestions seront intégrées dans les futures versions.</p>
-    </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f8h">📷 Scan ticket — prévu juin 2026</h3>
-      <p data-t="desc_f8p">Scannez votre ticket de caisse pour enregistrer vos pleins automatiquement. D'autres fonctionnalités importantes sont déjà planifiées pour les versions futures !</p>
-    </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f9h">🌍 10 langues</h3>
+	
+	<div style="margin-bottom:24px">
+      <h3 data-t="desc_f9h">🌍 Traduction en 10 langues</h3>
       <p data-t="desc_f9p">Français, English, Deutsch, Español, Italiano, Nederlands, Português, 日本語, 한국어, Türkçe</p>
     </div>
+    <div style="margin-bottom:24px">
+      <h3 data-t="desc_f7h">💬 Un développeur qui vous écoute</h3>
+      <p data-t="desc_f7p">KarBu est née de mes propres besoins de conducteur. Vos retours comptent vraiment — les meilleures suggestions seront intégrées dans les futures versions.</p>
+    </div>
+	<div style="margin-bottom:24px">
+      <h3>🔄 Toujours en évolution</h3>
+      <p>KarBu continue d'évoluer — de nouvelles fonctionnalités sont déjà planifiées pour les versions futures.</p>
+    </div>
     <div style="text-align:center;padding:20px;background:var(--card);border-radius:16px;margin-top:32px">
-      <h3 style="color:var(--blue)" data-t="desc_prixh">💰 Achat unique — 8,99€</h3>
-      <p data-t="desc_prixp">Sans abonnement, sans surprise, sans pub !</p>
+      <h3 style="color:var(--blue)" data-t="desc_prixh">💰 8,99€</h3>
+      <p data-t="desc_prixp">Sans abonnement — Sans frais cachés — Sans publicité !</p>
     </div>
   </div>
 </div>
@@ -298,10 +286,7 @@ footer a{color:#60a5fa;text-decoration:none;}
     <img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" 
          alt="Disponible sur Google Play" style="height:60px"/>
   </a>
-  <a href="#" style="opacity:.5;cursor:not-allowed">
-    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" 
-         alt="Bientôt sur App Store" style="height:46px"/>
-  </a>
+ 
 </div>
     </div>
   </div>
@@ -343,7 +328,7 @@ footer a{color:#60a5fa;text-decoration:none;}
     </div>
     <div class="changelog">
       <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.7</span> 9 mars 2026</h3>
-      <p data-t="cl_v17_p">Rappel vidange — Alerte automatique selon kilométrage ou durée depuis la dernière vidange.<br>Rappel contrôle technique — Alerte automatique suivant l'age du véhicule/p>
+      <p data-t="cl_v17_p">Rappel vidange — Alerte automatique selon kilométrage ou durée depuis la dernière vidange.<br>Rappel contrôle technique — Alerte automatique suivant l'age du véhicule<br>Coût réel de vos trajets — covoiturage &amp; remboursements pro</p>
     </div>
     <div class="changelog">
       <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.0</span> 01 avril 2026</h3>
@@ -358,8 +343,8 @@ footer a{color:#60a5fa;text-decoration:none;}
       <p data-t="cl_v25_p">Estimez le coût de vos trajets en carburant selon votre consommation réelle.<br>Partagez votre résumé de trajet.<br><strong>Test en cours sur Google Play!</p>
     </div>
     <div class="changelog">
-      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">1er juin 2026</span></h3>
-      <p data-t="cl_v30_p">Scan ticket — Scannez votre ticket gratuitement.<br><strong>Lancement de l'application publique!</p>
+      <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px"></span> <span data-t="cl_v30_date">juin 2026</span></h3>
+      <p data-t="cl_v30_p">Lancement de l'application publique!</p>
     </div>
 	<div class="changelog">
       <h3><span style="background:#64748b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v?.?</span> <span data-t="cl_vxx_date">2026</span></h3>
@@ -373,14 +358,14 @@ footer a{color:#60a5fa;text-decoration:none;}
     <h2 data-t="gal_title">📱 Captures d'écran</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
       <img src="img01.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img05.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img07.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img08.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img09.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img02.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img03.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img04.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src="img05.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img06.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src="img07.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src="img08.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src="img09.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img10.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img11.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
       <img src="img12.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
@@ -440,14 +425,16 @@ footer a{color:#60a5fa;text-decoration:none;}
     </div>
     
     <div class="aide-section">
-      <h3 data-t="aide_s8h">⛽ Prix station</h3>
+      <h3 data-t="aide_s8h">⛽ Votre carburant, optimisé</h3>
       <ul>
-        <li data-t="aide_s8l1">Sur la page <strong>Accueil</strong>, la carte <strong>Prix station</strong> affiche en un coup d'œil votre station préférée ou, à défaut, la moins chère autour de vous. Si votre station préférée est en rupture de carburant, KarBu bascule automatiquement vers la moins chère à proximité</li>
-        <li data-t="aide_s8l2">Appuyez sur cette carte pour ouvrir la vue complète : les <strong>10 stations les plus proches</strong> et les <strong>10 stations les moins chères</strong> de votre secteur, avec le gain ou la perte en € par plein, calculé selon votre véhicule et sa consommation</li>
-        <li data-t="aide_s8l3">Grâce à la <strong>carte interactive</strong>, explorez les stations dans n'importe quelle ville — il suffit de déplacer la carte ou de taper le nom d'une ville pour consulter les prix ailleurs</li>
-        <li data-t="aide_s8l4">Définissez votre <strong>station préférée</strong> en appuyant sur l'étoile ⭐ — elle servira de référence pour le calcul des économies</li>
         <li data-t="aide_s8l5">Les prix sont <strong>mis à jour toutes les 10 minutes</strong> en arrière-plan depuis les données officielles du gouvernement</li>
-        <li data-t="aide_s8l6">Disponible en France pour le moment — d'autres pays suivront</li>
+		<li data-t="aide_s8l1">Sur la page <strong>Accueil</strong>, la carte <strong>Prix station</strong> affiche en un coup d'œil votre station préférée ou, à défaut, la moins chère autour de vous. Si votre station préférée est en rupture de carburant, KarBu bascule automatiquement vers la moins chère à proximité</li>
+        <li data-t="aide_s8l2">Appuyez sur cette carte pour ouvrir la vue complète : les <strong>10 stations les plus proches</strong> et les <strong>10 stations les moins chères</strong> de votre secteur, avec l'économie calculée sur votre consommation réelle.</li>
+        <li data-t="aide_s8l5">KarBu calcule la <strong>rentabilité réelle du détour — </strong>vous savez immédiatement à partir de combien de litres le déplacement vaut le coup, et combien vous économisez sur un plein complet.</li>
+		<li data-t="aide_s8l5">Le prix au litre se remplit <strong>automatiquement</strong> à l'arrivée à la station (modifiable) — vous n'avez qu'à saisir le nombre de litres et le kilométrage </li>
+		<li data-t="aide_s8l3">Grâce à la <strong>carte interactive</strong>, explorez les stations dans n'importe quelle ville — il suffit de déplacer la carte ou de taper le nom d'une ville pour consulter les prix ailleurs</li>
+        <li data-t="aide_s8l4">Définissez votre <strong>station préférée</strong> en appuyant sur l'étoile ⭐ — elle servira de référence pour le calcul des économies</li>
+        <li data-t="aide_s8l6">Disponible en France — Espagne pour cet été</li>
       </ul>
     </div>
 	
@@ -508,8 +495,9 @@ footer a{color:#60a5fa;text-decoration:none;}
     <div class="aide-section">
       <h3 data-t="aide_s4h">💾 Données & Sauvegarde</h3>
       <ul>
-        <li data-t="aide_s4l1">Exportez vos données en CSV depuis la <strong>Configuration</strong></li>
-        <li data-t="aide_s4l2">Importez une sauvegarde existante à tout moment</li>
+        <li data-t="aide_s4l1">Exportez vos données en CSV ou JSON depuis le panneau <strong>Configuration</strong></li>
+        <li data-t="aide_s4l1">Sauvegarde JSON automatique dès l'enregistrement de données</li>
+		<li data-t="aide_s4l2">Importez une sauvegarde existante à tout moment</li>
         <li data-t="aide_s4l3">Vos données sont stockées localement sur votre téléphone</li>
       </ul>
     </div>
@@ -554,13 +542,13 @@ fr:{
   badge4:"🗣️ 10 langues,  💵 7 devises",
   feat_title:"✅ Fonctionnalités",
   f1h:"Suivi précis",
-  f1p:"L/100km ou kWh/100km — thermique & électrique",
+  f1p:"Votre consommation réelle, plein après plein",
   f2h:"Graphiques",
-  f2p:"Meilleure et pire conso<br>Meilleur et pire tarif",
+  f2p:"Suivez l'évolution de votre conso dans le temps et repérez les dérives",
   f3h:"6 véhicules",
   f3p:"Thermique et/ou électrique combinés",
-  f4h:"7 pays",
-  f4p:"Suivez vos pleins partout où vous voyagez",
+  f4h:"Multi-pays",
+  f4p:"Suivez vos pleins partout où vous voyagez — jusqu'à 7 pays simultanément",
   f5h:"GPS trajet",
   f5p:"Coût réel de vos trajets — covoiturage & remboursements pro",
   f6h:"Export CSV",
