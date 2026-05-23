@@ -1,5 +1,5 @@
 {
-  "version": "2.7.10",
+  "version": "2.7.9",
   "notes_fr": "Fix calcul détour négatif, ajout phrase explicative dans le bloc résumé, fix recherche ville en mode Liste.",
   "notes_en": "Fix negative detour calculation, added explanatory note in summary block, fix city search in List mode.",
   "url": "market://search?q=KarBu"
