@@ -1,5 +1,8 @@
 {
-  "message_fr": "🙏 Merci à tous pour votre participation !",
-  "message_en": "🙏 Thank you to all for your support!",
+  "icon": "🫶🏻",
+  "title_fr": "Merci à vous !",
+  "title_en": "Thank you!",
+  "message_fr": "Un grand merci à tous pour votre participation et vos retours précieux !",
+  "message_en": "A big thank you to all our testers for your participation!",
   "message_until": "2026-06-15"
 }
