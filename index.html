@@ -98,6 +98,7 @@ footer a{color:#60a5fa;text-decoration:none;}
 /* ===== MEDIA QUERY MOBILE ===== */
 .mobile-only{display:none;}
 @media(max-width:768px){
+  .two-col-desc{grid-template-columns:1fr !important;}
   .mobile-only{display:inline;}
   .features{grid-template-columns:repeat(2,1fr);}
   .two-col{grid-template-columns:1fr !important;}
@@ -222,39 +223,40 @@ footer a{color:#60a5fa;text-decoration:none;}
 </div>
  <div class="section">
   <h2 style="text-align:center;margin-bottom:30px" data-t="desc_titre">KarBu — Votre carnet de bord automobile intelligent</h2>
-  <div style="max-width:700px;margin:0 auto">
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f1h">📈 Suivi de consommation</h3>
-      <p data-t="desc_f1p">Enregistrez vos pleins et suivez votre consommation réelle plein après plein. Historique complet avec graphiques et statistiques détaillées — Identifiez vos tendances et détectez une dérive avant qu'elle ne coûte cher. Comparez par pays et par véhicule</p>
+  <div class="two-col-desc" style="display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;">
+    <div>
+      <h3 data-t="desc_f1h" style="margin-bottom:8px">📈 Suivi de consommation</h3>
+      <p data-t="desc_f1p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">Enregistrez vos pleins et suivez votre consommation réelle plein après plein. Historique complet avec graphiques et statistiques détaillées — Identifiez vos tendances et détectez une dérive avant qu'elle ne coûte cher. Comparez par pays et par véhicule</p>
     </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f2h">⛽ Votre carburant, optimisé</h3>
-      <p data-t="desc_f2p">Dès l'ouverture, KarBu affiche le prix de votre station idéale — la plus rentable selon votre position. Mise à jour toutes les 10 minutes depuis les données officielles du gouvernement. En un coup d'œil, vous savez combien vous économisez en changeant de station, calculé sur la base de votre consommation réelle. Déjà disponible en France — Espagne été 2026.</p>
+    <div>
+      <h3 data-t="desc_f2h" style="margin-bottom:8px">⛽ Votre carburant, optimisé</h3>
+      <p data-t="desc_f2p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">Dès l'ouverture, KarBu affiche le prix de votre station idéale — la plus rentable selon votre position. Mise à jour toutes les 10 minutes depuis les données officielles du gouvernement. En un coup d'œil, vous savez combien vous économisez en changeant de station, calculé sur la base de votre consommation réelle. Déjà disponible en France — Espagne été 2026.</p>
     </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f3h">🗺️ Calculateur de trajet</h3>
-      <p data-t="desc_f3p">Estimez le coût de vos trajets en carburant, calculé selon votre consommation moyenne réelle et le prix au litre de votre dernier plein. Saisissez votre point de départ et d'arrivée, et partagez votre résumé de trajet.</p>
+    <div>
+      <h3 data-t="desc_f3h" style="margin-bottom:8px">🗺️ Calculateur de trajet</h3>
+      <p data-t="desc_f3p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">Estimez le coût de vos trajets en carburant, calculé selon votre consommation moyenne réelle et le prix au litre de votre dernier plein. Saisissez votre point de départ et d'arrivée, et partagez votre résumé de trajet.</p>
     </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f4h">🔧 Entretiens</h3>
-      <p data-t="desc_f4p">Enregistrez vos entretiens — révision, contrôle technique — et recevez des rappels automatiques à l'ouverture de l'application, selon votre véhicule et son kilométrage.</p>
+    <div>
+      <h3 data-t="desc_f4h" style="margin-bottom:8px">🔧 Entretiens</h3>
+      <p data-t="desc_f4p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">Enregistrez vos entretiens — révision, contrôle technique — et recevez des rappels automatiques à l'ouverture de l'application, selon votre véhicule et son kilométrage.</p>
     </div>
-	
-	<div style="margin-bottom:24px">
-      <h3 data-t="desc_f9h">🌍 Traduction en 10 langues</h3>
-      <p data-t="desc_f9p">Français, English, Deutsch, Español, Italiano, Nederlands, Português, 日本語, 한국어, Türkçe</p>
+    <div>
+      <h3 data-t="desc_f9h" style="margin-bottom:8px">🌍 Traduction en 10 langues</h3>
+      <p data-t="desc_f9p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">Français, English, Deutsch, Español, Italiano, Nederlands, Português, 日本語, 한국어, Türkçe</p>
     </div>
-    <div style="margin-bottom:24px">
-      <h3 data-t="desc_f7h">💬 Un développeur qui vous écoute</h3>
-      <p data-t="desc_f7p">KarBu est née de mes propres besoins de conducteur. Vos retours comptent vraiment — les meilleures suggestions seront intégrées dans les futures versions.</p>
+    <div>
+      <h3 data-t="desc_f7h" style="margin-bottom:8px">💬 Un développeur qui vous écoute</h3>
+      <p data-t="desc_f7p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">KarBu est née de mes propres besoins de conducteur. Vos retours comptent vraiment — les meilleures suggestions seront intégrées dans les futures versions.</p>
     </div>
-	<div style="margin-bottom:24px">
-      <h3 data-t="desc_evol_h">🔄 Toujours en évolution</h3>
-      <p data-t="desc_evol_p">KarBu continue d'évoluer — de nouvelles fonctionnalités sont déjà planifiées pour les versions futures.</p>
+    <div>
+      <h3 data-t="desc_evol_h" style="margin-bottom:8px">🔄 Toujours en évolution</h3>
+      <p data-t="desc_evol_p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">KarBu continue d'évoluer — de nouvelles fonctionnalités sont déjà planifiées pour les versions futures.</p>
     </div>
-    <div style="text-align:center;padding:20px;background:var(--card);border-radius:16px;margin-top:32px">
-      <h3 style="color:var(--blue)" data-t="desc_prixh">💰 8,99€</h3>
-      <p data-t="desc_prixp">Sans abonnement — Sans frais cachés — Sans publicité !</p>
+    <div style="display:flex;align-items:center;justify-content:center;background:#f8fafc;border-radius:16px;padding:20px;border:1px solid #e2e8f0">
+      <div style="text-align:center">
+        <h3 style="color:#2563eb;margin-bottom:6px" data-t="desc_prixh">💰 8,99€</h3>
+        <p data-t="desc_prixp" style="font-size:13px;color:#64748b">Sans abonnement — Sans frais cachés<br>Sans publicité !</p>
+      </div>
     </div>
   </div>
 </div>
