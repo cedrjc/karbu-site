@@ -1,6 +1,5 @@
 {
-  "version": "2.7.9",
-  "message": "🎉 Merci pour votre participation au test, vous êtes au top !",
-  "message_until": "2026-05-30",
-  ...
+  "message_fr": "🙏 Merci à tous pour votre participation !",
+  "message_en": "🙏 Thank you to all for your support!",
+  "message_until": "2026-06-15"
 }
