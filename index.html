@@ -115,6 +115,38 @@ footer a{color:#60a5fa;text-decoration:none;}
   .hero-sub{font-size:15px;margin-bottom:16px;}
   .hero-sans-abo{font-size:0.8em !important;}
 }
+
+/* ===== SHINE KARBU HEADER ===== */
+@keyframes karbu-shine-site {
+  0%   { left: -50%; }
+  100% { left: 150%; }
+}
+#karbu-logo-wrap-site { color: inherit;
+  position: relative;
+  display: inline-block;
+  padding-right: 2px;
+}
+#karbu-logo-wrap-site::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.8) 50%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  pointer-events: none;
+  opacity: 0;
+}
+#karbu-logo-wrap-site.do-shine::after {
+  animation: karbu-shine-site 1.8s ease 0.5s 1 forwards;
+  opacity: 1;
+}
 </style>
 
 </head>
@@ -123,7 +155,7 @@ footer a{color:#60a5fa;text-decoration:none;}
 <header>
 <div class="logo" onclick="showPage('accueil')">
   <img src="icon-512.png" style="height:28px;width:28px;object-fit:contain;vertical-align:middle;margin-right:6px"/>
-  Kar<span>Bu</span>
+  <span id="karbu-logo-wrap-site">Kar<span>Bu</span></span>
 </div>
   <div class="header-right">
    <select id="lang-select" onchange="setLangSite(this.value)" style="padding:6px 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;font-size:13px;cursor:pointer">
@@ -1803,9 +1835,34 @@ setTimeout(function(){
   <div style="background:#fff;border-radius:20px;padding:28px;max-width:320px;width:100%;text-align:center;animation:fadeIn .3s ease">
     <div style="font-size:48px;margin-bottom:12px">🚀</div>
     <div style="font-size:20px;font-weight:900;color:#1e293b;margin-bottom:8px">KarBu</div>
-    <div style="font-size:14px;color:#64748b;margin-bottom:20px;line-height:1.6" data-t="popup_text">est en test avec des utilisateurs actifs sur<strong> Google Play</strong><br><strong>Lancement public très bientôt !</strong> </div>
-    <a href="#" onclick="document.getElementById('popup-launch').style.display='none'" style="display:block;background:#2563eb;color:#fff;padding:12px 24px;border-radius:14px;font-weight:700;font-size:14px;text-decoration:none" data-t="popup_btn">Super, je patiente !</a>
+    <div style="font-size:14px;color:#64748b;margin-bottom:20px;line-height:1.6" data-t="popup_text">est sur<strong> Google Play</strong><br><strong>Actuellement en test avec des utilisateurs actifs!</strong> 🎉</div>
+    <a href="#" onclick="document.getElementById('popup-launch').style.display='none'" style="display:block;background:#2563eb;color:#fff;padding:12px 24px;border-radius:14px;font-weight:700;font-size:14px;text-decoration:none" data-t="popup_btn">Cool, j'ai hâte !</a>
   </div>
 </div>
+
+<script>
+(function(){
+  function triggerShine(){
+    var el = document.getElementById('karbu-logo-wrap-site');
+    if(el){ el.classList.add('do-shine'); }
+  }
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+  // Accueil : racine ou /index.html
+  if(path === '/' || path === '/index.html' || path === '' || !hash){
+    triggerShine();
+  }
+  // Aide : accès direct depuis l'appli via /aide
+  if(path.indexOf('/aide') !== -1){
+    triggerShine();
+    // Afficher directement la page aide
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(function(p){ p.classList.remove('active'); });
+    var aideP = document.getElementById('page-aide');
+    if(aideP) aideP.classList.add('active');
+  }
+})();
+</script>
+
 </body>
 </html>
