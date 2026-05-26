@@ -1852,8 +1852,8 @@ setTimeout(function(){
   if(path === '/' || path === '/index.html' || path === '' || !hash){
     triggerShine();
   }
-  // Aide : accès direct depuis l'appli via /aide
-  if(path.indexOf('/aide') !== -1){
+  // Aide : accès direct depuis l'appli via /aide ou #aide
+  if(path.indexOf('/aide') !== -1 || hash === '#aide'){
     triggerShine();
     // Afficher directement la page aide
     var pages = document.querySelectorAll('.page');
