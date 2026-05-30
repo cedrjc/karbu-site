@@ -1,6 +1,12 @@
 {
   "version": "3.0",
-  "notes_fr": "Correctifs",
+  "notes_fr": "🆕 Nouveau
+Bouton "⛽ Coût carburant" sur la page d'accueil, sous le graphique de consommation (ancien icone calculateur de trajet dans le header - véhicules thermiques uniquement)
+Support des bornes de recharge électrique (sur page accueil)
+🔧 Améliorations
+Icône de l'onglet "Ajouter" adaptée selon le type de véhicule : ⛽ thermique / ⚡ électrique
+🌍 Traductions
+Nouvelle clé coutCarburant ajoutée dans les 10 langues",
   "notes_en": "",
   "url": "market://search?q=KarBu"
 }
