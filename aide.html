@@ -30,57 +30,77 @@ footer a{color:#60a5fa;text-decoration:none;}
     Kar<span>Bu</span>
   </a>
   <select id="lang-select" onchange="setLang(this.value)" style="padding:6px 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;font-size:13px;cursor:pointer">
-  <option value="fr">🇫🇷 Français</option>
-  <option value="de">🇩🇪 Deutsch</option>
-  <option value="en">🇬🇧 English</option>
-  <option value="es">🇪🇸 Español</option>
-  <option value="it">🇮🇹 Italiano</option>
-  <option value="nl">🇳🇱 Nederlands</option>
-  <option value="pt">🇵🇹 Português</option>
-  <option value="tr">🇹🇷 Türkçe</option>
-  <option value="ja">🇯🇵 日本語</option>
-  <option value="ko">🇰🇷 한국어</option>
-</select>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="nl">🇳🇱 Nederlands</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="ja">🇯🇵 日本語</option>
+    <option value="ko">🇰🇷 한국어</option>
+  </select>
 </header>
 
 <div class="section">
   <h2 id="aide_title">❓ Aide & Guide d'utilisation</h2>
 
+  <!-- S1 Démarrage rapide -->
   <div class="aide-section">
     <h3 id="aide_s1h">🚙 Démarrage rapide</h3>
     <ul id="aide_s1_list"></ul>
   </div>
 
+  <!-- S8 Carburant optimisé -->
   <div class="aide-section">
     <h3 id="aide_s8h">⛽ Votre carburant, optimisé</h3>
     <ul id="aide_s8_list"></ul>
   </div>
 
+  <!-- S10 Comparateur de stations -->
+  <div class="aide-section">
+    <h3 id="aide_s10h">⚖️ Comparer deux stations</h3>
+    <ul id="aide_s10_list"></ul>
+  </div>
+
+  <!-- S6 Calculateur de trajet -->
   <div class="aide-section">
     <h3 id="aide_s6h">🗺️ Calculateur de trajet</h3>
     <ul id="aide_s6_list"></ul>
   </div>
 
+  <!-- S7 Entretiens -->
   <div class="aide-section">
     <h3 id="aide_s7h">🔧 Entretiens</h3>
     <ul id="aide_s7_list"></ul>
   </div>
 
+  <!-- S9 Bornes de recharge -->
+  <div class="aide-section">
+    <h3 id="aide_s9h">⚡ Bornes de recharge</h3>
+    <ul id="aide_s9_list"></ul>
+  </div>
+
+  <!-- S2 Graphiques -->
   <div class="aide-section">
     <h3 id="aide_s2h">📊 Les graphiques</h3>
     <ul id="aide_s2_list"></ul>
   </div>
 
+  <!-- S3 Gestion des pays -->
   <div class="aide-section">
     <h3 id="aide_s3h">🌍 Gestion des pays</h3>
     <ul id="aide_s3_list"></ul>
   </div>
 
+  <!-- S4 Données & Sauvegarde -->
   <div class="aide-section">
     <h3 id="aide_s4h">💾 Données & Sauvegarde</h3>
     <ul id="aide_s4_list"></ul>
   </div>
 
+  <!-- S5 Contact -->
   <div class="aide-section">
     <h3 id="aide_s5h">📧 Contact & Support</h3>
     <p id="aide_s5p"></p>
@@ -98,17 +118,21 @@ fr:{
   aide_s1h:"🚙 Démarrage rapide",
   aide_s1:["Ouvrez KarBu et ajoutez votre premier véhicule via le bouton <strong>+ Nouveau Véhicule</strong>","Configurez le type (thermique ou électrique), le carburant, la capacité du réservoir pour un meilleur suivi conso","Après chaque plein, allez sur la page <strong>Ajouter</strong> et saisissez les informations; km véhicule, nombre de litres, le tarif €/L ou prenez la photo de votre ticket","Vos statistiques apparaissent automatiquement sur la page <strong>Accueil</strong>","Des statistiques supplémentaires apparaîtront après 2 pleins"],
   aide_s8h:"⛽ Votre carburant, optimisé",
-  aide_s8:["Sur la page <strong>Accueil</strong>, la carte <strong>Prix station</strong> affiche en un coup d'œil votre station préférée ou, à défaut, la moins chère autour de vous. Si votre station préférée est en rupture de carburant, KarBu bascule automatiquement vers la moins chère à proximité","Appuyez sur cette carte pour ouvrir la vue complète : les <strong>10 stations les plus proches</strong> et les <strong>10 stations les moins chères</strong> de votre secteur, avec le gain ou la perte en € par plein, calculé selon votre véhicule et sa consommation. KarBu calcule aussi la <strong>rentabilité réelle du détour</strong> — vous savez immédiatement à partir de combien de litres le déplacement vaut le coup.","Grâce à la <strong>carte interactive</strong>, explorez les stations dans n'importe quelle ville — il suffit de déplacer la carte ou de taper le nom d'une ville pour consulter les prix ailleurs","Définissez votre <strong>station préférée</strong> en appuyant sur l'étoile ⭐ — elle servira de référence pour le calcul des économies","Les prix sont <strong>mis à jour toutes les 10 minutes</strong> en arrière-plan depuis les données officielles du gouvernement","Disponible en France — Espagne pour cet été","Le prix au litre se remplit <strong>automatiquement</strong> à l'arrivée à la station (modifiable) — vous n'avez qu'à saisir le nombre de litres et le kilométrage."],
+  aide_s8:["Les prix sont <strong>mis à jour toutes les 10 minutes</strong> en arrière-plan depuis les données officielles du gouvernement","Sur la page <strong>Accueil</strong>, la carte <strong>Prix station</strong> affiche en un coup d'œil votre station préférée ou, à défaut, la moins chère autour de vous. Si votre station préférée est en rupture de carburant, KarBu bascule automatiquement vers la moins chère à proximité","Appuyez sur cette carte pour ouvrir la vue complète : les <strong>10 stations les plus proches</strong> et les <strong>10 stations les moins chères</strong> de votre secteur, avec l'économie calculée sur votre consommation réelle.","KarBu calcule la <strong>rentabilité réelle du détour</strong> — vous savez immédiatement à partir de combien de litres le déplacement vaut le coup, et combien vous économisez sur un plein complet.","Le prix au litre se remplit <strong>automatiquement</strong> à l'arrivée à la station (modifiable) — vous n'avez qu'à saisir le nombre de litres et le kilométrage.","Grâce à la <strong>carte interactive</strong>, explorez les stations dans n'importe quelle ville — il suffit de déplacer la carte ou de taper le nom d'une ville pour consulter les prix ailleurs","Définissez votre <strong>station préférée</strong> en appuyant sur l'étoile ⭐ — elle servira de référence pour le calcul des économies","Disponible en France — Espagne pour cet été"],
+  aide_s10h:"⚖️ Comparer deux stations",
+  aide_s10:["Depuis la liste des prix, faites un <strong>appui long</strong> sur le bouton <strong>Préférée</strong> de la première station à comparer — elle s'entoure en bleu. Faites de même sur une seconde station : le comparateur s'ouvre automatiquement.","Vous pouvez comparer depuis votre <strong>position actuelle</strong> (aller-retour) ou en indiquant une <strong>destination</strong> : KarBu calcule alors le trajet via chaque station pour vous donner le résultat le plus précis possible."],
   aide_s6h:"🗺️ Calculateur de trajet",
   aide_s6:["Saisissez les adresses de départ et d'arrivée pour calculer automatiquement la distance, ou ajustez les kilomètres manuellement","Le coût carburant est calculé selon le prix au litre de votre dernier plein, et selon votre consommation moyenne ou celle du dernier plein","Partagez le résumé — km, coût carburant et barème kilométrique — pour diviser les frais entre passagers","Le barème kilométrique 2025 est intégré pour la France — idéal pour les notes de frais"],
   aide_s7h:"🔧 Entretiens",
   aide_s7:["Depuis la page <strong>Historique</strong>, enregistrez vos entretiens (vidange, révision, contrôle technique, pneus, freins, courroie…) avec date et kilométrage","KarBu calcule automatiquement la date ou le kilométrage du prochain entretien selon les intervalles habituels","Un <strong>rappel automatique</strong> s'affiche à l'ouverture de l'application lorsqu'un entretien approche","Gardez un historique complet de l'entretien de votre véhicule — utile pour la revente"],
+  aide_s9h:"⚡ Bornes de recharge",
+  aide_s9:["KarBu localise les bornes de recharge à proximité grâce aux données OpenStreetMap, disponibles partout dans le monde","Chaque borne indique les types de connecteurs disponibles et leur puissance nominale","<strong>CCS / CHAdeMO</strong> : charge rapide DC — généralement à partir de 50 kW, jusqu'à 350 kW et au-delà","<strong>Type 2 (T2)</strong> : charge normale AC — de 7 à 22 kW","<strong>Prise domestique (EF)</strong> : charge lente — environ 2 à 3 kW"],
   aide_s2h:"📊 Les graphiques",
   aide_s2:["Touchez un point sur le graphique pour voir les détails de ce plein","Pincez pour zoomer sur une période précise","Le point vert 🟢 indique la meilleure valeur, le rouge 🔴 la moins bonne","Appuyez sur <strong>Tableau</strong> pour voir le détail complet"],
   aide_s3h:"🌍 Gestion des pays",
   aide_s3:["Votre pays principal est défini à la première utilisation","Ajoutez jusqu'à 6 pays supplémentaires depuis la page <strong>Ajouter</strong>","Chaque pays a une couleur distincte dans les graphiques"],
   aide_s4h:"💾 Données & Sauvegarde",
-  aide_s4:["Exportez vos données en CSV ou JSON depuis la <strong>Configuration</strong> — sauvegarde JSON automatique à chaque enregistrement","Importez une sauvegarde existante à tout moment","Vos données sont stockées localement sur votre téléphone"],
+  aide_s4:["Exportez vos données en CSV ou JSON depuis la <strong>Configuration</strong>","Sauvegarde JSON automatique à chaque enregistrement de données","Importez une sauvegarde existante à tout moment","Vos données sont stockées localement sur votre téléphone"],
   aide_s5h:"📧 Contact & Support",
   aide_s5p:"Une question ? Contactez-nous à <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -117,17 +141,21 @@ en:{
   aide_s1h:"🚙 Quick start",
   aide_s1:["Open KarBu and add your first vehicle using the <strong>+ New Vehicle</strong> button","Set the type (combustion or electric), fuel, tank capacity for better consumption tracking","After each refuel, go to <strong>Add</strong> and enter: vehicle km, litres, price €/L or take a photo of your receipt","Your stats appear automatically on the <strong>Home</strong> page","Additional statistics will appear after 2 refuels"],
   aide_s8h:"⛽ Your fuel, optimised",
-  aide_s8:["On the <strong>Home</strong> page, the <strong>Station prices</strong> card shows at a glance your favorite station or, if none, the cheapest one around you. If your favorite station is out of fuel, KarBu automatically switches to the cheapest nearby","Tap this card to open the full view: the <strong>10 nearest stations</strong> and the <strong>10 cheapest stations</strong> in your area, with the gain or loss in € per refuel, calculated based on your vehicle and its consumption. KarBu also calculates the <strong>real profitability of the detour</strong> — you instantly know from how many litres the trip is worth it.","Thanks to the <strong>interactive map</strong>, browse stations in any city — just move the map or type a city name to check prices elsewhere","Set your <strong>favorite station</strong> by tapping the star ⭐ — it will be used as reference for savings calculation","Prices are <strong>updated every 10 minutes</strong> in the background from official government data","Available in France — Spain this summer","The price per litre fills in <strong>automatically</strong> when you arrive at the station (editable) — you only need to enter the number of litres and the mileage."],
+  aide_s8:["Prices are <strong>updated every 10 minutes</strong> in the background from official government data","On the <strong>Home</strong> page, the <strong>Station prices</strong> card shows at a glance your favorite station or, if none, the cheapest one around you. If your favorite station is out of fuel, KarBu automatically switches to the cheapest nearby","Tap this card to open the full view: the <strong>10 nearest stations</strong> and the <strong>10 cheapest stations</strong> in your area, with the savings calculated based on your real consumption.","KarBu calculates the <strong>real profitability of the detour</strong> — you instantly know from how many litres the trip is worth it, and how much you save on a full tank.","The price per litre fills in <strong>automatically</strong> when you arrive at the station (editable) — you only need to enter the number of litres and the mileage.","Thanks to the <strong>interactive map</strong>, browse stations in any city — just move the map or type a city name to check prices elsewhere","Set your <strong>favorite station</strong> by tapping the star ⭐ — it will be used as reference for savings calculation","Available in France — Spain this summer"],
+  aide_s10h:"⚖️ Compare two stations",
+  aide_s10:["From the price list, <strong>long-press</strong> the <strong>Favourite</strong> button of the first station to compare — it turns blue. Do the same on a second station: the comparator opens automatically.","You can compare from your <strong>current position</strong> (round trip) or by entering a <strong>destination</strong>: KarBu then calculates the route via each station to give you the most accurate result possible."],
   aide_s6h:"🗺️ Trip calculator",
   aide_s6:["Enter departure and arrival addresses to automatically calculate the distance, or adjust the kilometres manually","Fuel cost is calculated based on the price per litre of your last fill-up and your average or last fill-up consumption","Share the summary — km, fuel cost and mileage rate — to split costs between passengers","The 2025 mileage rate for France is built in — ideal for expense reports"],
   aide_s7h:"🔧 Maintenance",
   aide_s7:["From the <strong>History</strong> page, log your maintenance (oil change, service, MOT, tires, brakes, timing belt…) with date and mileage","KarBu automatically calculates the date or mileage for the next service based on standard intervals","An <strong>automatic reminder</strong> appears when you open the app as a maintenance date approaches","Keep a complete maintenance history of your vehicle — useful for resale"],
+  aide_s9h:"⚡ Charging stations",
+  aide_s9:["KarBu locates nearby charging stations using OpenStreetMap data, available worldwide","Each station shows the available connector types and their rated power","<strong>CCS / CHAdeMO</strong>: fast DC charging — typically from 50 kW up to 350 kW and beyond","<strong>Type 2 (T2)</strong>: standard AC charging — 7 to 22 kW","<strong>Domestic socket (EF)</strong>: slow charging — around 2 to 3 kW"],
   aide_s2h:"📊 Charts",
   aide_s2:["Tap a point on the chart to see details for that refuel","Pinch to zoom on a specific period","The green dot 🟢 indicates the best value, red 🔴 the worst","Press <strong>Table</strong> to see the full details"],
   aide_s3h:"🌍 Country management",
   aide_s3:["Your main country is set on first use","Add up to 6 more countries from the <strong>Add</strong> page","Each country has a distinct colour in the charts"],
   aide_s4h:"💾 Data & Backup",
-  aide_s4:["Export your data as CSV or JSON from <strong>Settings</strong> — automatic JSON backup on every save","Import an existing backup at any time","Your data is stored locally on your phone"],
+  aide_s4:["Export your data as CSV or JSON from <strong>Settings</strong>","Automatic JSON backup on every save","Import an existing backup at any time","Your data is stored locally on your phone"],
   aide_s5h:"📧 Contact & Support",
   aide_s5p:"A question? Contact us at <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -136,17 +164,21 @@ de:{
   aide_s1h:"🚙 Schnellstart",
   aide_s1:["Öffnen Sie KarBu und fügen Sie Ihr erstes Fahrzeug über <strong>+ Neues Fahrzeug</strong> hinzu","Typ, Kraftstoff und Tankkapazität für bessere Verbrauchsverfolgung konfigurieren","Nach jedem Tanken zu <strong>Hinzufügen</strong> — km, Liter, Preis €/L oder Foto des Bons","Statistiken erscheinen automatisch auf der <strong>Startseite</strong>","Zusätzliche Statistiken erscheinen nach 2 Tankfüllungen"],
   aide_s8h:"⛽ Ihr Kraftstoff, optimiert",
-  aide_s8:["Auf der Seite <strong>Start</strong> zeigt die Karte <strong>Tankstellenpreise</strong> auf einen Blick Ihre Lieblingstankstelle oder die günstigste in Ihrer Nähe. Wenn Ihre Lieblingstankstelle kein Kraftstoff hat, wechselt KarBu automatisch zur günstigsten in der Nähe","Tippen Sie auf diese Karte, um die vollständige Ansicht zu öffnen: die <strong>10 nächstgelegenen Tankstellen</strong> und die <strong>10 günstigsten Tankstellen</strong> in Ihrer Region, mit Gewinn oder Verlust in € pro Tankfüllung. KarBu berechnet auch die <strong>echte Rentabilität des Umwegs</strong>.","Dank der <strong>interaktiven Karte</strong> können Sie Tankstellen in jeder beliebigen Stadt erkunden","Legen Sie Ihre <strong>Lieblingstankstelle</strong> fest, indem Sie auf den Stern ⭐ tippen","Preise werden <strong>alle 10 Minuten</strong> aus offiziellen Regierungsdaten aktualisiert","Verfügbar in Frankreich — Spanien diesen Sommer","Der Literpreis wird beim Erreichen der Tankstelle <strong>automatisch</strong> ausgefüllt (änderbar)."],
+  aide_s8:["Preise werden <strong>alle 10 Minuten</strong> im Hintergrund aus offiziellen Regierungsdaten aktualisiert","Auf der Seite <strong>Start</strong> zeigt die Karte <strong>Tankstellenpreise</strong> auf einen Blick Ihre Lieblingstankstelle oder, falls keine festgelegt ist, die günstigste in Ihrer Nähe. Wenn Ihre Lieblingstankstelle kein Kraftstoff hat, wechselt KarBu automatisch zur günstigsten in der Nähe","Tippen Sie auf diese Karte, um die vollständige Ansicht zu öffnen: die <strong>10 nächstgelegenen Tankstellen</strong> und die <strong>10 günstigsten Tankstellen</strong> in Ihrer Region, mit der berechneten Ersparnis basierend auf Ihrem realen Verbrauch.","KarBu berechnet die <strong>echte Rentabilität des Umwegs</strong> — Sie wissen sofort, ab wie vielen Litern sich die Fahrt lohnt und wie viel Sie bei einer vollen Tankfüllung sparen.","Der Literpreis wird beim Erreichen der Tankstelle <strong>automatisch</strong> ausgefüllt (änderbar) — Sie müssen nur die Literzahl und den Kilometerstand eingeben.","Dank der <strong>interaktiven Karte</strong> können Sie Tankstellen in jeder beliebigen Stadt erkunden — einfach die Karte verschieben oder einen Städtenamen eingeben, um Preise anderswo zu prüfen","Legen Sie Ihre <strong>Lieblingstankstelle</strong> fest, indem Sie auf den Stern ⭐ tippen — sie dient als Referenz für die Einsparungsberechnung","Verfügbar in Frankreich — Spanien diesen Sommer"],
+  aide_s10h:"⚖️ Zwei Tankstellen vergleichen",
+  aide_s10:["Halten Sie in der Preisliste die Schaltfläche <strong>Favorit</strong> der ersten zu vergleichenden Tankstelle <strong>gedrückt</strong> — sie wird blau umrandet. Wiederholen Sie dies bei einer zweiten Tankstelle: Der Vergleicher öffnet sich automatisch.","Sie können von Ihrem <strong>aktuellen Standort</strong> (Hin- und Rückfahrt) oder durch Eingabe eines <strong>Ziels</strong> vergleichen: KarBu berechnet dann die Route über jede Tankstelle, um Ihnen das genaueste Ergebnis zu liefern."],
   aide_s6h:"🗺️ Fahrtrechner",
-  aide_s6:["Geben Sie Start- und Zieladresse ein, um die Entfernung automatisch zu berechnen, oder passen Sie die Kilometer manuell an","Die Kraftstoffkosten werden auf Basis des Literpreises Ihres letzten Tankens und Ihres Durchschnittsverbrauchs berechnet","Teilen Sie die Zusammenfassung — km, Kraftstoffkosten und Kilometerpauschale — um die Kosten auf Mitfahrer aufzuteilen","Die Kilometerpauschale 2025 für Frankreich ist integriert — ideal für Spesenabrechnung"],
+  aide_s6:["Geben Sie Start- und Zieladresse ein, um die Entfernung automatisch zu berechnen, oder passen Sie die Kilometer manuell an","Die Kraftstoffkosten werden auf Basis des Literpreises Ihres letzten Tankens und Ihres Durchschnitts- oder letzten Verbrauchs berechnet","Teilen Sie die Zusammenfassung — km, Kraftstoffkosten und Kilometerpauschale — um die Kosten auf Mitfahrer aufzuteilen","Die Kilometerpauschale 2025 für Frankreich ist integriert — ideal für Spesenabrechnung"],
   aide_s7h:"🔧 Wartung",
-  aide_s7:["Erfassen Sie auf der Seite <strong>Verlauf</strong> Ihre Wartungen (Ölwechsel, Inspektion, TÜV, Reifen, Bremsen, Zahnriemen…) mit Datum und Kilometerstand","KarBu berechnet automatisch das Datum oder den Kilometerstand für die nächste Wartung","Eine <strong>automatische Erinnerung</strong> erscheint beim Start der App, wenn eine Wartung ansteht","Behalten Sie eine vollständige Wartungshistorie Ihres Fahrzeugs — nützlich für den Wiederverkauf"],
+  aide_s7:["Erfassen Sie auf der Seite <strong>Verlauf</strong> Ihre Wartungen (Ölwechsel, Inspektion, TÜV, Reifen, Bremsen, Zahnriemen…) mit Datum und Kilometerstand","KarBu berechnet automatisch das Datum oder den Kilometerstand für die nächste Wartung nach üblichen Intervallen","Eine <strong>automatische Erinnerung</strong> erscheint beim Start der App, wenn eine Wartung ansteht","Behalten Sie eine vollständige Wartungshistorie Ihres Fahrzeugs — nützlich für den Wiederverkauf"],
+  aide_s9h:"⚡ Ladestationen",
+  aide_s9:["KarBu findet Ladestationen in der Nähe mithilfe von OpenStreetMap-Daten, weltweit verfügbar","Jede Station zeigt die verfügbaren Steckertypen und ihre Nennleistung","<strong>CCS / CHAdeMO</strong>: Schnellladen DC — in der Regel ab 50 kW bis 350 kW und mehr","<strong>Typ 2 (T2)</strong>: normales AC-Laden — 7 bis 22 kW","<strong>Haushaltssteckdose (EF)</strong>: langsames Laden — ca. 2 bis 3 kW"],
   aide_s2h:"📊 Diagramme",
   aide_s2:["Tippen Sie auf einen Punkt für Details","Zusammenkneifen zum Zoomen","Grüner Punkt 🟢 = bester Wert, rot 🔴 = schlechtester","<strong>Tabelle</strong> für vollständige Details"],
   aide_s3h:"🌍 Länderverwaltung",
   aide_s3:["Hauptland wird beim ersten Start festgelegt","Bis zu 6 Länder über <strong>Hinzufügen</strong> ergänzen","Jedes Land hat eine eigene Farbe"],
   aide_s4h:"💾 Daten & Backup",
-  aide_s4:["Daten als CSV oder JSON über <strong>Einstellungen</strong> exportieren — automatisches JSON-Backup bei jeder Speicherung","Backup jederzeit importieren","Daten lokal gespeichert"],
+  aide_s4:["Daten als CSV oder JSON über <strong>Einstellungen</strong> exportieren","Automatisches JSON-Backup bei jeder Speicherung","Backup jederzeit importieren","Daten lokal gespeichert"],
   aide_s5h:"📧 Kontakt & Support",
   aide_s5p:"Fragen? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -155,17 +187,21 @@ es:{
   aide_s1h:"🚙 Inicio rápido",
   aide_s1:["Abra KarBu y agregue su primer vehículo con <strong>+ Nuevo Vehículo</strong>","Configure tipo, combustible y capacidad del depósito para un mejor seguimiento","Tras cada repostaje vaya a <strong>Agregar</strong> — km vehículo, litros, precio €/L o foto del ticket","Las estadísticas aparecen automáticamente en <strong>Inicio</strong>","Estadísticas adicionales aparecerán después de 2 repostajes"],
   aide_s8h:"⛽ Tu combustible, optimizado",
-  aide_s8:["En la página <strong>Inicio</strong>, la tarjeta <strong>Precio estación</strong> muestra tu gasolinera favorita o la más barata cerca de ti. Si tu favorita está sin combustible, KarBu cambia automáticamente a la más barata cercana","Toca esta tarjeta para abrir la vista completa: las <strong>10 gasolineras más cercanas</strong> y las <strong>10 gasolineras más baratas</strong> de tu zona, con la ganancia o pérdida en € por repostaje. KarBu también calcula la <strong>rentabilidad real del desvío</strong>.","Gracias al <strong>mapa interactivo</strong>, explora gasolineras en cualquier ciudad","Define tu <strong>gasolinera favorita</strong> tocando la estrella ⭐","Los precios se <strong>actualizan cada 10 minutos</strong> desde los datos oficiales del gobierno","Disponible en Francia — España este verano","El precio por litro se rellena <strong>automáticamente</strong> al llegar a la estación (editable)."],
+  aide_s8:["Los precios se <strong>actualizan cada 10 minutos</strong> en segundo plano desde los datos oficiales del gobierno","En la página <strong>Inicio</strong>, la tarjeta <strong>Precio estación</strong> muestra de un vistazo tu gasolinera favorita o, en su defecto, la más barata cerca de ti. Si tu favorita está sin combustible, KarBu cambia automáticamente a la más barata cercana","Toca esta tarjeta para abrir la vista completa: las <strong>10 gasolineras más cercanas</strong> y las <strong>10 gasolineras más baratas</strong> de tu zona, con los ahorros calculados según tu consumo real.","KarBu calcula la <strong>rentabilidad real del desvío</strong> — sabes al instante a partir de cuántos litros vale la pena el desplazamiento y cuánto ahorras en un depósito completo.","El precio por litro se rellena <strong>automáticamente</strong> al llegar a la estación (editable) — solo tienes que introducir el número de litros y el kilometraje.","Gracias al <strong>mapa interactivo</strong>, explora gasolineras en cualquier ciudad — basta con mover el mapa o escribir el nombre de una ciudad para consultar precios en otro lugar","Define tu <strong>gasolinera favorita</strong> tocando la estrella ⭐ — servirá de referencia para calcular los ahorros","Disponible en Francia — España este verano"],
+  aide_s10h:"⚖️ Comparar dos estaciones",
+  aide_s10:["Desde la lista de precios, mantén pulsado el botón <strong>Favorita</strong> de la primera estación a comparar — se rodea en azul. Haz lo mismo en una segunda estación: el comparador se abre automáticamente.","Puedes comparar desde tu <strong>posición actual</strong> (ida y vuelta) o indicando un <strong>destino</strong>: KarBu calcula entonces la ruta pasando por cada estación para darte el resultado más preciso posible."],
   aide_s6h:"🗺️ Calculadora de trayecto",
-  aide_s6:["Introduce las direcciones de salida y llegada para calcular automáticamente la distancia, o ajusta los kilómetros manualmente","El coste de combustible se calcula según el precio por litro de tu último repostaje y tu consumo medio","Comparte el resumen — km, coste de combustible y baremo kilométrico — para dividir los gastos entre los pasajeros","El baremo kilométrico 2025 para Francia está integrado — ideal para notas de gastos"],
+  aide_s6:["Introduce las direcciones de salida y llegada para calcular automáticamente la distancia, o ajusta los kilómetros manualmente","El coste de combustible se calcula según el precio por litro de tu último repostaje y tu consumo medio o del último repostaje","Comparte el resumen — km, coste de combustible y baremo kilométrico — para dividir los gastos entre los pasajeros","El baremo kilométrico 2025 para Francia está integrado — ideal para notas de gastos"],
   aide_s7h:"🔧 Mantenimiento",
-  aide_s7:["Desde la página <strong>Historial</strong>, registra tus mantenimientos (cambio de aceite, revisión, ITV, neumáticos, frenos, correa…) con fecha y kilometraje","KarBu calcula automáticamente la fecha o el kilometraje del próximo mantenimiento","Un <strong>recordatorio automático</strong> aparece al abrir la aplicación cuando se acerca un mantenimiento","Mantén un historial completo del mantenimiento de tu vehículo — útil para la reventa"],
+  aide_s7:["Desde la página <strong>Historial</strong>, registra tus mantenimientos (cambio de aceite, revisión, ITV, neumáticos, frenos, correa…) con fecha y kilometraje","KarBu calcula automáticamente la fecha o el kilometraje del próximo mantenimiento según los intervalos habituales","Un <strong>recordatorio automático</strong> aparece al abrir la aplicación cuando se acerca un mantenimiento","Mantén un historial completo del mantenimiento de tu vehículo — útil para la reventa"],
+  aide_s9h:"⚡ Puntos de recarga",
+  aide_s9:["KarBu localiza los puntos de recarga cercanos gracias a los datos de OpenStreetMap, disponibles en todo el mundo","Cada punto indica los tipos de conectores disponibles y su potencia nominal","<strong>CCS / CHAdeMO</strong>: carga rápida DC — generalmente desde 50 kW hasta 350 kW y más","<strong>Tipo 2 (T2)</strong>: carga normal AC — de 7 a 22 kW","<strong>Enchufe doméstico (EF)</strong>: carga lenta — aproximadamente 2 a 3 kW"],
   aide_s2h:"📊 Gráficos",
   aide_s2:["Toque un punto para ver detalles","Pellizque para hacer zoom","Punto verde 🟢 = mejor valor, rojo 🔴 = peor","<strong>Tabla</strong> para detalles completos"],
   aide_s3h:"🌍 Gestión de países",
   aide_s3:["País principal definido en el primer uso","Añada hasta 6 países desde <strong>Agregar</strong>","Cada país tiene un color distinto"],
   aide_s4h:"💾 Datos y copias",
-  aide_s4:["Exporte datos CSV o JSON desde <strong>Configuración</strong> — copia de seguridad JSON automática en cada guardado","Importe una copia de seguridad en cualquier momento","Datos almacenados localmente"],
+  aide_s4:["Exporte datos CSV o JSON desde <strong>Configuración</strong>","Copia de seguridad JSON automática en cada guardado","Importe una copia de seguridad en cualquier momento","Datos almacenados localmente"],
   aide_s5h:"📧 Contacto",
   aide_s5p:"¿Preguntas? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -174,17 +210,21 @@ it:{
   aide_s1h:"🚙 Avvio rapido",
   aide_s1:["Apri KarBu e aggiungi il primo veicolo con <strong>+ Nuovo Veicolo</strong>","Configura tipo, carburante e capacità serbatoio per un migliore monitoraggio","Dopo ogni rifornimento vai su <strong>Aggiungi</strong> — km veicolo, litri, prezzo €/L o foto dello scontrino","Le statistiche appaiono automaticamente su <strong>Home</strong>","Statistiche aggiuntive appariranno dopo 2 rifornimenti"],
   aide_s8h:"⛽ Il tuo carburante, ottimizzato",
-  aide_s8:["Nella pagina <strong>Home</strong>, la scheda <strong>Prezzo stazione</strong> mostra la tua stazione preferita o la più economica intorno a te. Se la tua stazione preferita è senza carburante, KarBu passa automaticamente alla più economica nelle vicinanze","Tocca questa scheda per aprire la vista completa: le <strong>10 stazioni più vicine</strong> e le <strong>10 stazioni più economiche</strong>, con il guadagno o la perdita in € per rifornimento. KarBu calcola anche la <strong>reale redditività della deviazione</strong>.","Grazie alla <strong>mappa interattiva</strong>, esplora le stazioni in qualsiasi città","Imposta la tua <strong>stazione preferita</strong> toccando la stella ⭐","I prezzi vengono <strong>aggiornati ogni 10 minuti</strong> dai dati ufficiali del governo","Disponibile in Francia — Spagna questa estate","Il prezzo al litro si compila <strong>automaticamente</strong> all'arrivo alla stazione (modificabile)."],
+  aide_s8:["I prezzi vengono <strong>aggiornati ogni 10 minuti</strong> in background dai dati ufficiali del governo","Nella pagina <strong>Home</strong>, la scheda <strong>Prezzo stazione</strong> mostra a colpo d'occhio la tua stazione preferita o, in mancanza, la più economica intorno a te. Se la tua stazione preferita è senza carburante, KarBu passa automaticamente alla più economica nelle vicinanze","Tocca questa scheda per aprire la vista completa: le <strong>10 stazioni più vicine</strong> e le <strong>10 stazioni più economiche</strong> della tua zona, con il risparmio calcolato in base al tuo consumo reale.","KarBu calcola la <strong>reale redditività della deviazione</strong> — sai subito da quanti litri vale la pena spostarsi e quanto risparmi su un pieno completo.","Il prezzo al litro si compila <strong>automaticamente</strong> all'arrivo alla stazione (modificabile) — devi solo inserire il numero di litri e il chilometraggio.","Grazie alla <strong>mappa interattiva</strong>, esplora le stazioni in qualsiasi città — basta spostare la mappa o digitare il nome di una città per consultare i prezzi altrove","Imposta la tua <strong>stazione preferita</strong> toccando la stella ⭐ — servirà come riferimento per il calcolo dei risparmi","Disponibile in Francia — Spagna questa estate"],
+  aide_s10h:"⚖️ Confrontare due stazioni",
+  aide_s10:["Dall'elenco dei prezzi, tieni premuto il pulsante <strong>Preferita</strong> della prima stazione da confrontare — si contorna in blu. Fai lo stesso su una seconda stazione: il comparatore si apre automaticamente.","Puoi confrontare dalla tua <strong>posizione attuale</strong> (andata e ritorno) o indicando una <strong>destinazione</strong>: KarBu calcola allora il percorso passando per ogni stazione per darti il risultato più preciso possibile."],
   aide_s6h:"🗺️ Calcolatore di percorso",
-  aide_s6:["Inserisci gli indirizzi di partenza e arrivo per calcolare automaticamente la distanza, o regola i chilometri manualmente","Il costo del carburante viene calcolato in base al prezzo al litro dell'ultimo rifornimento e al consumo medio","Condividi il riepilogo — km, costo carburante e rimborso chilometrico — per dividere le spese tra i passeggeri","Il rimborso chilometrico 2025 per la Francia è integrato — ideale per le note spese"],
+  aide_s6:["Inserisci gli indirizzi di partenza e arrivo per calcolare automaticamente la distanza, o regola i chilometri manualmente","Il costo del carburante viene calcolato in base al prezzo al litro dell'ultimo rifornimento e al consumo medio o dell'ultimo rifornimento","Condividi il riepilogo — km, costo carburante e rimborso chilometrico — per dividere le spese tra i passeggeri","Il rimborso chilometrico 2025 per la Francia è integrato — ideale per le note spese"],
   aide_s7h:"🔧 Manutenzione",
-  aide_s7:["Dalla pagina <strong>Storico</strong>, registra le tue manutenzioni (cambio olio, tagliando, revisione, pneumatici, freni, cinghia…) con data e chilometraggio","KarBu calcola automaticamente la data o il chilometraggio del prossimo intervento","Un <strong>promemoria automatico</strong> appare all'apertura dell'app quando si avvicina una manutenzione","Mantieni uno storico completo della manutenzione del tuo veicolo — utile per la rivendita"],
+  aide_s7:["Dalla pagina <strong>Storico</strong>, registra le tue manutenzioni (cambio olio, tagliando, revisione, pneumatici, freni, cinghia…) con data e chilometraggio","KarBu calcola automaticamente la data o il chilometraggio del prossimo intervento in base agli intervalli standard","Un <strong>promemoria automatico</strong> appare all'apertura dell'app quando si avvicina una manutenzione","Mantieni uno storico completo della manutenzione del tuo veicolo — utile per la rivendita"],
+  aide_s9h:"⚡ Colonnine di ricarica",
+  aide_s9:["KarBu individua le colonnine di ricarica nelle vicinanze grazie ai dati OpenStreetMap, disponibili in tutto il mondo","Ogni colonnina indica i tipi di connettori disponibili e la loro potenza nominale","<strong>CCS / CHAdeMO</strong>: ricarica rapida DC — generalmente da 50 kW fino a 350 kW e oltre","<strong>Tipo 2 (T2)</strong>: ricarica normale AC — da 7 a 22 kW","<strong>Presa domestica (EF)</strong>: ricarica lenta — circa 2-3 kW"],
   aide_s2h:"📊 Grafici",
   aide_s2:["Tocca un punto per i dettagli","Pizzica per ingrandire","Punto verde 🟢 = valore migliore, rosso 🔴 = peggiore","<strong>Tabella</strong> per dettagli completi"],
   aide_s3h:"🌍 Gestione paesi",
   aide_s3:["Paese principale impostato al primo utilizzo","Aggiungi fino a 6 paesi da <strong>Aggiungi</strong>","Ogni paese ha un colore distinto"],
   aide_s4h:"💾 Dati e backup",
-  aide_s4:["Esporta dati CSV o JSON dalle <strong>Impostazioni</strong> — backup JSON automatico ad ogni salvataggio","Importa backup in qualsiasi momento","Dati memorizzati localmente"],
+  aide_s4:["Esporta dati CSV o JSON dalle <strong>Impostazioni</strong>","Backup JSON automatico ad ogni salvataggio","Importa backup in qualsiasi momento","Dati memorizzati localmente"],
   aide_s5h:"📧 Contatto",
   aide_s5p:"Domande? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -193,17 +233,21 @@ nl:{
   aide_s1h:"🚙 Snel starten",
   aide_s1:["Open KarBu en voeg uw eerste voertuig toe via <strong>+ Nieuw Voertuig</strong>","Stel type, brandstof en tankinhoud in voor betere verbruiksregistratie","Na elke tankbeurt naar <strong>Toevoegen</strong> — km voertuig, liters, prijs €/L of foto van uw bon","Statistieken verschijnen automatisch op <strong>Home</strong>","Aanvullende statistieken verschijnen na 2 tankbeurten"],
   aide_s8h:"⛽ Uw brandstof, geoptimaliseerd",
-  aide_s8:["Op de pagina <strong>Home</strong> toont de kaart <strong>Tankprijzen</strong> uw favoriete tankstation of het goedkoopste in uw buurt. Als uw favoriete tankstation geen brandstof heeft, schakelt KarBu automatisch over naar het goedkoopste in de buurt","Tik op deze kaart om de volledige weergave te openen: de <strong>10 dichtstbijzijnde tankstations</strong> en de <strong>10 goedkoopste tankstations</strong>, met de winst of het verlies in € per tankbeurt. KarBu berekent ook de <strong>echte rentabiliteit van de omweg</strong>.","Dankzij de <strong>interactieve kaart</strong> kunt u tankstations in elke stad verkennen","Stel uw <strong>favoriete tankstation</strong> in door op de ster ⭐ te tikken","Prijzen worden <strong>elke 10 minuten</strong> bijgewerkt vanuit officiële overheidsgegevens","Beschikbaar in Frankrijk — Spanje deze zomer","De literprijs wordt <strong>automatisch</strong> ingevuld bij aankomst bij het tankstation (bewerkbaar)."],
+  aide_s8:["Prijzen worden <strong>elke 10 minuten</strong> op de achtergrond bijgewerkt vanuit officiële overheidsgegevens","Op de pagina <strong>Home</strong> toont de kaart <strong>Tankprijzen</strong> in één oogopslag uw favoriete tankstation of, als er geen is ingesteld, het goedkoopste in uw buurt. Als uw favoriete tankstation geen brandstof heeft, schakelt KarBu automatisch over naar het goedkoopste in de buurt","Tik op deze kaart om de volledige weergave te openen: de <strong>10 dichtstbijzijnde tankstations</strong> en de <strong>10 goedkoopste tankstations</strong> in uw omgeving, met de besparing berekend op basis van uw werkelijk verbruik.","KarBu berekent de <strong>echte rentabiliteit van de omweg</strong> — u weet meteen vanaf hoeveel liter de omweg de moeite waard is en hoeveel u bespaart bij een volle tank.","De literprijs wordt <strong>automatisch</strong> ingevuld bij aankomst bij het tankstation (bewerkbaar) — u hoeft alleen het aantal liters en de kilometerstand in te voeren.","Dankzij de <strong>interactieve kaart</strong> kunt u tankstations in elke stad verkennen — verplaats simpelweg de kaart of typ een stadsnaam om prijzen elders te bekijken","Stel uw <strong>favoriete tankstation</strong> in door op de ster ⭐ te tikken — het dient als referentie voor de berekening van besparingen","Beschikbaar in Frankrijk — Spanje deze zomer"],
+  aide_s10h:"⚖️ Twee tankstations vergelijken",
+  aide_s10:["Houd in de prijslijst de knop <strong>Favoriet</strong> van het eerste te vergelijken tankstation <strong>ingedrukt</strong> — het wordt blauw omlijnd. Doe hetzelfde bij een tweede tankstation: de vergelijker opent automatisch.","U kunt vergelijken vanaf uw <strong>huidige positie</strong> (heen en terug) of door een <strong>bestemming</strong> in te voeren: KarBu berekent dan de route via elk tankstation om u het meest nauwkeurige resultaat te geven."],
   aide_s6h:"🗺️ Ritcalculator",
-  aide_s6:["Voer vertrek- en aankomstadressen in om de afstand automatisch te berekenen, of pas de kilometers handmatig aan","De brandstofkosten worden berekend op basis van de literprijs van uw laatste tankbeurt en uw gemiddeld verbruik","Deel de samenvatting — km, brandstofkosten en kilometervergoeding — om kosten te verdelen tussen passagiers","De kilometervergoeding 2025 voor Frankrijk is ingebouwd — ideaal voor onkostennota's"],
+  aide_s6:["Voer vertrek- en aankomstadressen in om de afstand automatisch te berekenen, of pas de kilometers handmatig aan","De brandstofkosten worden berekend op basis van de literprijs van uw laatste tankbeurt en uw gemiddeld of laatste verbruik","Deel de samenvatting — km, brandstofkosten en kilometervergoeding — om kosten te verdelen tussen passagiers","De kilometervergoeding 2025 voor Frankrijk is ingebouwd — ideaal voor onkostennota's"],
   aide_s7h:"🔧 Onderhoud",
-  aide_s7:["Registreer op de pagina <strong>Geschiedenis</strong> uw onderhoud (olieverversing, beurt, APK, banden, remmen, distributieriem…) met datum en kilometerstand","KarBu berekent automatisch de datum of kilometerstand voor het volgende onderhoud","Een <strong>automatische herinnering</strong> verschijnt bij het openen van de app wanneer onderhoud nadert","Houd een volledige onderhoudshistorie bij van uw voertuig — handig bij verkoop"],
+  aide_s7:["Registreer op de pagina <strong>Geschiedenis</strong> uw onderhoud (olieverversing, beurt, APK, banden, remmen, distributieriem…) met datum en kilometerstand","KarBu berekent automatisch de datum of kilometerstand voor het volgende onderhoud volgens standaardintervallen","Een <strong>automatische herinnering</strong> verschijnt bij het openen van de app wanneer onderhoud nadert","Houd een volledige onderhoudshistorie bij van uw voertuig — handig bij verkoop"],
+  aide_s9h:"⚡ Laadpalen",
+  aide_s9:["KarBu localiseert nabijgelegen laadpalen via OpenStreetMap-gegevens, wereldwijd beschikbaar","Elke paal toont de beschikbare connectortypen en hun nominaal vermogen","<strong>CCS / CHAdeMO</strong>: snelladen DC — doorgaans vanaf 50 kW tot 350 kW en meer","<strong>Type 2 (T2)</strong>: normaal AC-laden — 7 tot 22 kW","<strong>Huishoudelijk stopcontact (EF)</strong>: langzaam laden — ongeveer 2 tot 3 kW"],
   aide_s2h:"📊 Grafieken",
   aide_s2:["Tik op een punt voor details","Knijp om in te zoomen","Groen punt 🟢 = beste waarde, rood 🔴 = slechtste","<strong>Tabel</strong> voor volledige details"],
   aide_s3h:"🌍 Landenbeheer",
   aide_s3:["Hoofdland ingesteld bij eerste gebruik","Voeg tot 6 landen toe via <strong>Toevoegen</strong>","Elk land heeft een eigen kleur"],
   aide_s4h:"💾 Gegevens & Back-up",
-  aide_s4:["Exporteer gegevens als CSV of JSON via <strong>Instellingen</strong> — automatische JSON-back-up bij elke opslag","Importeer backup op elk moment","Gegevens lokaal opgeslagen"],
+  aide_s4:["Exporteer gegevens als CSV of JSON via <strong>Instellingen</strong>","Automatische JSON-back-up bij elke opslag","Importeer backup op elk moment","Gegevens lokaal opgeslagen"],
   aide_s5h:"📧 Contact",
   aide_s5p:"Vragen? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -212,17 +256,21 @@ pt:{
   aide_s1h:"🚙 Início rápido",
   aide_s1:["Abra o KarBu e adicione o primeiro veículo com <strong>+ Novo Veículo</strong>","Configure tipo, combustível e capacidade do tanque para melhor acompanhamento","Após cada abastecimento vá para <strong>Adicionar</strong> — km veículo, litros, preço €/L ou foto do ticket","As estatísticas aparecem automaticamente em <strong>Início</strong>","Estatísticas adicionais aparecerão após 2 abastecimentos"],
   aide_s8h:"⛽ O seu combustível, otimizado",
-  aide_s8:["Na página <strong>Início</strong>, o cartão <strong>Preço posto</strong> mostra o seu posto preferido ou o mais barato à sua volta. Se o seu posto preferido estiver sem combustível, o KarBu alterna automaticamente para o mais barato nas proximidades","Toque neste cartão para abrir a vista completa: os <strong>10 postos mais próximos</strong> e os <strong>10 postos mais baratos</strong>, com o ganho ou a perda em € por abastecimento. O KarBu também calcula a <strong>rentabilidade real do desvio</strong>.","Graças ao <strong>mapa interativo</strong>, explore postos em qualquer cidade","Defina o seu <strong>posto preferido</strong> tocando na estrela ⭐","Os preços são <strong>atualizados a cada 10 minutos</strong> a partir dos dados oficiais do governo","Disponível em França — Espanha este verão","O preço por litro preenche-se <strong>automaticamente</strong> ao chegar à estação (editável)."],
+  aide_s8:["Os preços são <strong>atualizados a cada 10 minutos</strong> em segundo plano a partir dos dados oficiais do governo","Na página <strong>Início</strong>, o cartão <strong>Preço posto</strong> mostra num relance o seu posto preferido ou, se nenhum estiver definido, o mais barato à sua volta. Se o seu posto preferido estiver sem combustível, o KarBu alterna automaticamente para o mais barato nas proximidades","Toque neste cartão para abrir a vista completa: os <strong>10 postos mais próximos</strong> e os <strong>10 postos mais baratos</strong> da sua zona, com a poupança calculada conforme o seu consumo real.","O KarBu calcula a <strong>rentabilidade real do desvio</strong> — sabe imediatamente a partir de quantos litros vale a pena o deslocamento e quanto poupa num depósito completo.","O preço por litro preenche-se <strong>automaticamente</strong> ao chegar à estação (editável) — só precisa de introduzir o número de litros e a quilometragem.","Graças ao <strong>mapa interativo</strong>, explore postos em qualquer cidade — basta mover o mapa ou escrever o nome de uma cidade para consultar os preços noutros locais","Defina o seu <strong>posto preferido</strong> tocando na estrela ⭐ — servirá de referência para o cálculo das poupanças","Disponível em França — Espanha este verão"],
+  aide_s10h:"⚖️ Comparar dois postos",
+  aide_s10:["Na lista de preços, mantenha premido o botão <strong>Favorito</strong> do primeiro posto a comparar — fica contornado a azul. Faça o mesmo num segundo posto: o comparador abre automaticamente.","Pode comparar a partir da sua <strong>posição atual</strong> (ida e volta) ou indicando um <strong>destino</strong>: o KarBu calcula então o trajeto passando por cada posto para lhe dar o resultado mais preciso possível."],
   aide_s6h:"🗺️ Calculadora de percurso",
-  aide_s6:["Introduza os endereços de partida e chegada para calcular automaticamente a distância, ou ajuste os quilómetros manualmente","O custo de combustível é calculado com base no preço por litro do último abastecimento e no consumo médio","Partilhe o resumo — km, custo de combustível e tabela quilométrica — para dividir os custos entre os passageiros","A tabela quilométrica 2025 para a França está integrada — ideal para notas de despesas"],
+  aide_s6:["Introduza os endereços de partida e chegada para calcular automaticamente a distância, ou ajuste os quilómetros manualmente","O custo de combustível é calculado com base no preço por litro do último abastecimento e no consumo médio ou do último abastecimento","Partilhe o resumo — km, custo de combustível e tabela quilométrica — para dividir os custos entre os passageiros","A tabela quilométrica 2025 para a França está integrada — ideal para notas de despesas"],
   aide_s7h:"🔧 Manutenção",
-  aide_s7:["Na página <strong>Histórico</strong>, registe as suas manutenções (mudança de óleo, revisão, inspeção, pneus, travões, correia…) com data e quilometragem","O KarBu calcula automaticamente a data ou quilometragem da próxima manutenção","Um <strong>lembrete automático</strong> aparece ao abrir a aplicação quando se aproxima uma manutenção","Mantenha um histórico completo de manutenção do seu veículo — útil para a revenda"],
+  aide_s7:["Na página <strong>Histórico</strong>, registe as suas manutenções (mudança de óleo, revisão, inspeção, pneus, travões, correia…) com data e quilometragem","O KarBu calcula automaticamente a data ou quilometragem da próxima manutenção de acordo com os intervalos habituais","Um <strong>lembrete automático</strong> aparece ao abrir a aplicação quando se aproxima uma manutenção","Mantenha um histórico completo de manutenção do seu veículo — útil para a revenda"],
+  aide_s9h:"⚡ Pontos de carregamento",
+  aide_s9:["KarBu localiza os pontos de carregamento próximos através dos dados OpenStreetMap, disponíveis em todo o mundo","Cada ponto indica os tipos de conectores disponíveis e a sua potência nominal","<strong>CCS / CHAdeMO</strong>: carregamento rápido DC — geralmente a partir de 50 kW até 350 kW e além","<strong>Tipo 2 (T2)</strong>: carregamento normal AC — de 7 a 22 kW","<strong>Tomada doméstica (EF)</strong>: carregamento lento — cerca de 2 a 3 kW"],
   aide_s2h:"📊 Gráficos",
   aide_s2:["Toque num ponto para ver detalhes","Belisque para ampliar","Ponto verde 🟢 = melhor valor, vermelho 🔴 = pior","<strong>Tabela</strong> para detalhes completos"],
   aide_s3h:"🌍 Gestão de países",
   aide_s3:["País principal definido no primeiro uso","Adicione até 6 países em <strong>Adicionar</strong>","Cada país tem uma cor distinta"],
   aide_s4h:"💾 Dados e backup",
-  aide_s4:["Exporte dados CSV ou JSON nas <strong>Configurações</strong> — cópia de segurança JSON automática a cada gravação","Importe backup a qualquer momento","Dados armazenados localmente"],
+  aide_s4:["Exporte dados CSV ou JSON nas <strong>Configurações</strong>","Cópia de segurança JSON automática a cada gravação","Importe backup a qualquer momento","Dados armazenados localmente"],
   aide_s5h:"📧 Contato",
   aide_s5p:"Dúvidas? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -231,17 +279,21 @@ ja:{
   aide_s1h:"🚙 クイックスタート",
   aide_s1:["KarBuを開き<strong>+ 新しい車両</strong>で追加","消費量追跡向上のためタイプ、燃料、タンク容量を設定","給油後は<strong>追加</strong>へ — 走行距離、リットル数、€/L価格またはレシート写真","統計は<strong>ホーム</strong>に自動表示","2回の給油後に追加統計が表示されます"],
   aide_s8h:"⛽ あなたの燃料、最適化",
-  aide_s8:["<strong>ホーム</strong>ページの<strong>スタンド価格</strong>カードには、お気に入りスタンド、または周辺の最安値スタンドが一目で表示されます。お気に入りスタンドが燃料切れの場合、KarBuは自動的に近くの最安値スタンドに切り替わります","このカードをタップすると全体ビューが開きます：<strong>最寄り10スタンド</strong>と<strong>最安値10スタンド</strong>、給油ごとの差額（€）を表示。KarBuは<strong>寄り道の本当の採算性</strong>も計算します。","<strong>インタラクティブマップ</strong>で、任意の都市のスタンドを探索できます","⭐をタップして<strong>お気に入りスタンド</strong>を設定","価格は政府公式データから<strong>10分ごと</strong>に更新されます","フランスで利用可能 — 今夏スペインも対応予定","リター単価はスタンド到着時に<strong>自動入力</strong>されます（変更可）。"],
+  aide_s8:["価格は政府公式データから<strong>10分ごと</strong>にバックグラウンドで更新されます","<strong>ホーム</strong>ページの<strong>スタンド価格</strong>カードには、お気に入りスタンド、または未設定の場合は周辺の最安値スタンドが一目で表示されます。お気に入りスタンドが燃料切れの場合、KarBuは自動的に近くの最安値スタンドに切り替わります","このカードをタップすると全体ビューが開きます：エリア内の<strong>最寄り10スタンド</strong>と<strong>最安値10スタンド</strong>、実際の消費量に基づいた節約額を表示。","KarBuは<strong>寄り道の本当の採算性</strong>を計算します — 何リットルから移動が割に合うか、満タン時の節約額も即座にわかります。","リター単価はスタンド到着時に<strong>自動入力</strong>されます（変更可） — あとはリットル数と走行距離を入力するだけです。","<strong>インタラクティブマップ</strong>で、任意の都市のスタンドを探索できます — 地図を移動するか都市名を入力するだけで、他の地域の価格も確認可能","⭐をタップして<strong>お気に入りスタンド</strong>を設定 — 節約額計算の基準になります","フランスで利用可能 — 今夏スペインも対応予定"],
+  aide_s10h:"⚖️ 2つのスタンドを比較する",
+  aide_s10:["価格リストで、最初に比較するスタンドの<strong>お気に入り</strong>ボタンを<strong>長押し</strong>してください — 青い枠で囲まれます。2番目のスタンドでも同じ操作をすると、比較ツールが自動的に開きます。","<strong>現在地</strong>（往復）から比較するか、<strong>目的地</strong>を入力して比較できます：KarBuは各スタンドを経由したルートを計算し、最も正確な結果を提供します。"],
   aide_s6h:"🗺️ 移動費計算機",
-  aide_s6:["出発地と目的地の住所を入力して距離を自動計算、または手動でキロ数を調整","燃料費は最後の給油時の単価と平均燃費に基づいて計算","要約（km・燃料費・キロ手当）を共有して乗客間で費用を分担","フランスの2025年キロ手当を内蔵 — 経費精算に最適"],
+  aide_s6:["出発地と目的地の住所を入力して距離を自動計算、または手動でキロ数を調整","燃料費は最後の給油時の単価と平均または最後の燃費に基づいて計算","要約（km・燃料費・キロ手当）を共有して乗客間で費用を分担","フランスの2025年キロ手当を内蔵 — 経費精算に最適"],
   aide_s7h:"🔧 メンテナンス",
   aide_s7:["<strong>履歴</strong>ページから、メンテナンス（オイル交換、点検、車検、タイヤ、ブレーキ、タイミングベルトなど）を日付と走行距離と共に記録できます","KarBuは通常の間隔に基づいて次回のメンテナンス日または走行距離を自動計算します","メンテナンス時期が近づくと、アプリ起動時に<strong>自動リマインダー</strong>が表示されます","車両の完全なメンテナンス履歴を保管 — 売却時に便利です"],
+  aide_s9h:"⚡ 充電スタンド",
+  aide_s9:["KarBuはOpenStreetMapのデータを使用して近くの充電スタンドを検索します。世界中で利用可能です","各スタンドには利用可能なコネクタの種類と定格出力が表示されます","<strong>CCS / CHAdeMO</strong>：急速DC充電 — 通常50kWから350kW以上","<strong>タイプ2（T2）</strong>：通常AC充電 — 7〜22kW","<strong>家庭用コンセント（EF）</strong>：低速充電 — 約2〜3kW"],
   aide_s2h:"📊 グラフ",
   aide_s2:["点をタップして詳細表示","ピンチでズーム","緑🟢=最良値、赤🔴=最悪値","<strong>テーブル</strong>で詳細表示"],
   aide_s3h:"🌍 国の管理",
   aide_s3:["メイン国は初回設定","<strong>追加</strong>から最大6か国","各国は異なる色"],
   aide_s4h:"💾 データ＆バックアップ",
-  aide_s4:["<strong>設定</strong>からCSVまたはJSONでエクスポート — 保存するたびに自動JSONバックアップ","いつでもバックアップインポート","データはローカル保存"],
+  aide_s4:["<strong>設定</strong>からCSVまたはJSONでエクスポート","保存するたびに自動JSONバックアップ","いつでもバックアップインポート","データはローカル保存"],
   aide_s5h:"📧 コンタクト",
   aide_s5p:"ご質問は <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -250,17 +302,21 @@ ko:{
   aide_s1h:"🚙 빠른 시작",
   aide_s1:["KarBu를 열고 <strong>+ 새 차량</strong>으로 추가","더 나은 소비 추적을 위해 유형, 연료, 탱크 용량 설정","주유 후 <strong>추가</strong>로 이동 — 차량 km, 리터, €/L 가격 또는 영수증 사진","통계는 <strong>홈</strong>에 자동 표시","2번 주유 후 추가 통계가 표시됩니다"],
   aide_s8h:"⛽ 내 연료, 최적화",
-  aide_s8:["<strong>홈</strong> 페이지의 <strong>주유소 가격</strong> 카드는 즐겨찾는 주유소 또는 주변의 가장 저렴한 주유소를 한눈에 보여줍니다. 즐겨찾는 주유소의 연료가 떨어진 경우, KarBu는 자동으로 근처의 가장 저렴한 주유소로 전환됩니다","이 카드를 탭하여 전체 보기를 엽니다: <strong>가장 가까운 10개 주유소</strong>와 <strong>가장 저렴한 10개 주유소</strong>, 주유당 이익 또는 손실을 €로 표시. KarBu는 <strong>우회의 실제 수익성</strong>도 계산합니다.","<strong>인터랙티브 지도</strong>로 원하는 도시의 주유소를 탐색하세요","별표 ⭐를 탭하여 <strong>즐겨찾는 주유소</strong>를 설정하세요","가격은 정부 공식 데이터에서 <strong>10분마다 업데이트</strong>됩니다","프랑스에서 이용 가능 — 올 여름 스페인 추가 예정","리터당 가격은 주유소 도착 시 <strong>자동으로</strong> 입력됩니다(수정 가능)."],
+  aide_s8:["가격은 정부 공식 데이터에서 백그라운드로 <strong>10분마다 업데이트</strong>됩니다","<strong>홈</strong> 페이지의 <strong>주유소 가격</strong> 카드는 즐겨찾는 주유소 또는 설정이 없는 경우 주변의 가장 저렴한 주유소를 한눈에 보여줍니다. 즐겨찾는 주유소의 연료가 떨어진 경우, KarBu는 자동으로 근처의 가장 저렴한 주유소로 전환됩니다","이 카드를 탭하여 전체 보기를 엽니다: 지역 내 <strong>가장 가까운 10개 주유소</strong>와 <strong>가장 저렴한 10개 주유소</strong>, 실제 연비를 기준으로 계산된 절약액을 표시.","KarBu는 <strong>우회의 실제 수익성</strong>을 계산합니다 — 몇 리터부터 이동할 가치가 있는지, 만탱크 시 절약액이 얼마인지 즉시 알 수 있습니다.","리터당 가격은 주유소 도착 시 <strong>자동으로</strong> 입력됩니다(수정 가능) — 리터 수와 주행거리만 입력하면 됩니다.","<strong>인터랙티브 지도</strong>로 원하는 도시의 주유소를 탐색하세요 — 지도를 이동하거나 도시 이름을 입력하면 다른 지역의 가격도 확인할 수 있습니다","별표 ⭐를 탭하여 <strong>즐겨찾는 주유소</strong>를 설정하세요 — 절약액 계산의 기준으로 사용됩니다","프랑스에서 이용 가능 — 올 여름 스페인 추가 예정"],
+  aide_s10h:"⚖️ 두 주유소 비교하기",
+  aide_s10:["가격 목록에서 비교할 첫 번째 주유소의 <strong>즐겨찾기</strong> 버튼을 <strong>길게 누르세요</strong> — 파란색 테두리가 표시됩니다. 두 번째 주유소에서도 동일하게 하면 비교 도구가 자동으로 열립니다.","<strong>현재 위치</strong>(왕복)에서 비교하거나 <strong>목적지</strong>를 입력하여 비교할 수 있습니다: KarBu는 각 주유소를 경유하는 경로를 계산하여 가장 정확한 결과를 제공합니다."],
   aide_s6h:"🗺️ 경로 계산기",
-  aide_s6:["출발지와 도착지 주소를 입력하여 거리를 자동으로 계산하거나 킬로미터를 수동으로 조정하세요","연료 비용은 마지막 주유 시 리터당 가격과 평균 연비를 기준으로 계산됩니다","요약(km, 연료 비용, km 수당)을 공유하여 승객 간 비용을 분담하세요","프랑스의 2025년 km 수당이 내장되어 있습니다 — 경비 처리에 이상적"],
+  aide_s6:["출발지와 도착지 주소를 입력하여 거리를 자동으로 계산하거나 킬로미터를 수동으로 조정하세요","연료 비용은 마지막 주유 시 리터당 가격과 평균 또는 마지막 주유 연비를 기준으로 계산됩니다","요약(km, 연료 비용, km 수당)을 공유하여 승객 간 비용을 분담하세요","프랑스의 2025년 km 수당이 내장되어 있습니다 — 경비 처리에 이상적"],
   aide_s7h:"🔧 유지보수",
   aide_s7:["<strong>기록</strong> 페이지에서 유지보수(오일 교환, 점검, 검사, 타이어, 브레이크, 타이밍 벨트 등)를 날짜와 주행거리와 함께 기록하세요","KarBu는 일반적인 주기에 따라 다음 유지보수 날짜 또는 주행거리를 자동으로 계산합니다","유지보수 시기가 다가오면 앱 실행 시 <strong>자동 알림</strong>이 표시됩니다","차량의 완전한 유지보수 기록을 보관하세요 — 재판매에 유용합니다"],
+  aide_s9h:"⚡ 충전소",
+  aide_s9:["KarBu는 OpenStreetMap 데이터를 사용하여 근처 충전소를 찾습니다. 전 세계에서 이용 가능합니다","각 충전소는 사용 가능한 커넥터 유형과 정격 출력을 표시합니다","<strong>CCS / CHAdeMO</strong>: 급속 DC 충전 — 일반적으로 50kW에서 350kW 이상","<strong>타입 2 (T2)</strong>: 일반 AC 충전 — 7~22kW","<strong>가정용 콘센트 (EF)</strong>: 완속 충전 — 약 2~3kW"],
   aide_s2h:"📊 차트",
   aide_s2:["점을 탭하여 세부 정보 표시","핀치로 확대","녹색🟢=최적값, 빨간🔴=최악값","<strong>표</strong>로 전체 세부 정보"],
   aide_s3h:"🌍 국가 관리",
   aide_s3:["주 국가는 첫 사용 시 설정","<strong>추가</strong>에서 최대 6개국","각 국가는 고유 색상"],
   aide_s4h:"💾 데이터 & 백업",
-  aide_s4:["<strong>설정</strong>에서 CSV 또는 JSON 내보내기 — 저장할 때마다 자동 JSON 백업","언제든지 백업 가져오기","데이터는 로컬 저장"],
+  aide_s4:["<strong>설정</strong>에서 CSV 또는 JSON 내보내기","저장할 때마다 자동 JSON 백업","언제든지 백업 가져오기","데이터는 로컬 저장"],
   aide_s5h:"📧 연락처",
   aide_s5p:"문의: <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 },
@@ -269,17 +325,21 @@ tr:{
   aide_s1h:"🚙 Hızlı başlangıç",
   aide_s1:["KarBu'yu açın ve <strong>+ Yeni Araç</strong> ile ekleyin","Daha iyi tüketim takibi için tür, yakıt ve depo kapasitesini ayarlayın","Her yakıt doldurmadan sonra <strong>Ekle</strong>'ye gidin — araç km, litre, €/L fiyatı veya fiş fotoğrafı","İstatistikler <strong>Ana Sayfa</strong>'da otomatik görünür","2 yakıt doldurmadan sonra ek istatistikler görünecek"],
   aide_s8h:"⛽ Yakıtınız, optimize edildi",
-  aide_s8:["<strong>Ana Sayfa</strong>'da <strong>İstasyon fiyatı</strong> kartı, favori istasyonunuzu veya çevrenizdeki en ucuz olanı bir bakışta gösterir. Favori istasyonunuzda yakıt yoksa, KarBu otomatik olarak yakındaki en ucuz olana geçer","Tam görünümü açmak için bu karta dokunun: <strong>en yakın 10 istasyon</strong> ve <strong>en ucuz 10 istasyon</strong>, dolum başına € cinsinden kazanç veya kayıpla birlikte. KarBu aynı zamanda <strong>sapmanın gerçek karlılığını</strong> da hesaplar.","<strong>İnteraktif harita</strong> sayesinde, istediğiniz şehirdeki istasyonları keşfedin","⭐ yıldızına dokunarak <strong>favori istasyonunuzu</strong> belirleyin","Fiyatlar resmi devlet verilerinden arka planda <strong>her 10 dakikada bir</strong> güncellenir","Fransa'da mevcut — bu yaz İspanya'da da","Litre başı fiyat, istasyona vardığınızda <strong>otomatik olarak</strong> doldurulur (düzenlenebilir)."],
+  aide_s8:["Fiyatlar resmi devlet verilerinden arka planda <strong>her 10 dakikada bir</strong> güncellenir","<strong>Ana Sayfa</strong>'da <strong>İstasyon fiyatı</strong> kartı, favori istasyonunuzu veya belirlenmemişse çevrenizdeki en ucuz olanı bir bakışta gösterir. Favori istasyonunuzda yakıt yoksa, KarBu otomatik olarak yakındaki en ucuz olana geçer","Tam görünümü açmak için bu karta dokunun: bölgenizdeki <strong>en yakın 10 istasyon</strong> ve <strong>en ucuz 10 istasyon</strong>, gerçek tüketiminize göre hesaplanan tasarrufla birlikte.","KarBu <strong>sapmanın gerçek karlılığını</strong> hesaplar — kaç litreden itibaren seyahatin değer kazandığını ve dolu bir depoda ne kadar tasarruf ettiğinizi anında bilirsiniz.","Litre başı fiyat, istasyona vardığınızda <strong>otomatik olarak</strong> doldurulur (düzenlenebilir) — yalnızca litre sayısını ve kilometre değerini girmeniz yeterlidir.","<strong>İnteraktif harita</strong> sayesinde, istediğiniz şehirdeki istasyonları keşfedin — başka yerlerdeki fiyatları kontrol etmek için haritayı kaydırmak veya bir şehir adı yazmak yeterli","⭐ yıldızına dokunarak <strong>favori istasyonunuzu</strong> belirleyin — tasarruf hesaplaması için referans olarak kullanılır","Fransa'da mevcut — bu yaz İspanya'da da"],
+  aide_s10h:"⚖️ İki istasyonu karşılaştırma",
+  aide_s10:["Fiyat listesinde, karşılaştırmak istediğiniz ilk istasyonun <strong>Favori</strong> düğmesine <strong>uzun basın</strong> — mavi çerçeveyle çevrilir. İkinci bir istasyonda da aynısını yapın: karşılaştırıcı otomatik olarak açılır.","<strong>Mevcut konumunuzdan</strong> (gidiş-dönüş) veya bir <strong>hedef</strong> belirterek karşılaştırabilirsiniz: KarBu her istasyon üzerinden rotayı hesaplayarak mümkün olan en doğru sonucu verir."],
   aide_s6h:"🗺️ Güzergah hesaplayıcı",
-  aide_s6:["Mesafeyi otomatik hesaplamak için kalkış ve varış adreslerini girin veya kilometreleri manuel olarak ayarlayın","Yakıt maliyeti, son dolumunuzdaki litre başı fiyata ve ortalama tüketiminize göre hesaplanır","Yolcular arasında masrafları paylaşmak için özeti (km, yakıt maliyeti ve kilometre ödeneği) paylaşın","Fransa için 2025 kilometre ödeneği entegre edilmiştir — masraf raporları için idealdir"],
+  aide_s6:["Mesafeyi otomatik hesaplamak için kalkış ve varış adreslerini girin veya kilometreleri manuel olarak ayarlayın","Yakıt maliyeti, son dolumunuzdaki litre başı fiyata ve ortalama veya son dolum tüketiminize göre hesaplanır","Yolcular arasında masrafları paylaşmak için özeti (km, yakıt maliyeti ve kilometre ödeneği) paylaşın","Fransa için 2025 kilometre ödeneği entegre edilmiştir — masraf raporları için idealdir"],
   aide_s7h:"🔧 Bakım",
   aide_s7:["<strong>Geçmiş</strong> sayfasından bakımlarınızı (yağ değişimi, servis, muayene, lastikler, frenler, triger kayışı…) tarih ve kilometre ile kaydedin","KarBu, standart aralıklara göre bir sonraki bakımın tarihini veya kilometresini otomatik olarak hesaplar","Bir bakım yaklaştığında, uygulamayı açtığınızda <strong>otomatik bir hatırlatıcı</strong> görünür","Aracınızın tam bakım geçmişini tutun — satışta faydalıdır"],
+  aide_s9h:"⚡ Şarj istasyonları",
+  aide_s9:["KarBu, dünya genelinde kullanılabilen OpenStreetMap verileri sayesinde yakındaki şarj istasyonlarını bulur","Her istasyon mevcut konnektör türlerini ve nominal güçlerini gösterir","<strong>CCS / CHAdeMO</strong>: hızlı DC şarj — genellikle 50 kW'dan 350 kW'a ve üzerine kadar","<strong>Tip 2 (T2)</strong>: normal AC şarj — 7 ila 22 kW","<strong>Ev prizi (EF)</strong>: yavaş şarj — yaklaşık 2 ila 3 kW"],
   aide_s2h:"📊 Grafikler",
   aide_s2:["Detaylar için grafikte bir noktaya dokunun","Yakınlaştırmak için sıkıştırın","Yeşil🟢=en iyi, kırmızı🔴=en kötü","Tam detaylar için <strong>Tablo</strong>"],
   aide_s3h:"🌍 Ülke yönetimi",
   aide_s3:["Ana ülke ilk kullanımda ayarlanır","<strong>Ekle</strong>'den 6 ülkeye kadar","Her ülkenin farklı rengi var"],
   aide_s4h:"💾 Veri & Yedekleme",
-  aide_s4:["<strong>Ayarlar</strong>'dan CSV veya JSON olarak dışa aktarın — her kayıtta otomatik JSON yedekleme","İstediğiniz zaman yedek içe aktarın","Veriler yerel depolanır"],
+  aide_s4:["<strong>Ayarlar</strong>'dan CSV veya JSON olarak dışa aktarın","Her kayıtta otomatik JSON yedekleme","İstediğiniz zaman yedek içe aktarın","Veriler yerel depolanır"],
   aide_s5h:"📧 İletişim",
   aide_s5p:"Sorular: <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>"
 }
@@ -296,10 +356,14 @@ function setLang(lang) {
   document.getElementById("aide_s1_list").innerHTML = buildList(t.aide_s1);
   document.getElementById("aide_s8h").innerHTML = t.aide_s8h;
   document.getElementById("aide_s8_list").innerHTML = buildList(t.aide_s8);
+  document.getElementById("aide_s10h").innerHTML = t.aide_s10h;
+  document.getElementById("aide_s10_list").innerHTML = buildList(t.aide_s10);
   document.getElementById("aide_s6h").innerHTML = t.aide_s6h;
   document.getElementById("aide_s6_list").innerHTML = buildList(t.aide_s6);
   document.getElementById("aide_s7h").innerHTML = t.aide_s7h;
   document.getElementById("aide_s7_list").innerHTML = buildList(t.aide_s7);
+  document.getElementById("aide_s9h").innerHTML = t.aide_s9h;
+  document.getElementById("aide_s9_list").innerHTML = buildList(t.aide_s9);
   document.getElementById("aide_s2h").innerHTML = t.aide_s2h;
   document.getElementById("aide_s2_list").innerHTML = buildList(t.aide_s2);
   document.getElementById("aide_s3h").innerHTML = t.aide_s3h;
