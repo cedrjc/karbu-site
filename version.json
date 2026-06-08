@@ -1,6 +1,6 @@
 {
-  "version": "2.7",
-  "notes_fr": "Améliorations finales et corrections de bugs avant mise en production",
+  "version": "3.1",
+  "notes_fr": "Prix des stations en Espagne — détection automatique selon votre position GPS. Gains/pertes dépliables. Corrections de bugs.",
   "notes_en": "",
   "url": "market://search?q=KarBu"
 }
