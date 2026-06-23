@@ -1,6 +1,6 @@
 {
-  "version": "3.1",
-  "notes_fr": "Carte Prix station : la station la moins chère est désormais indiquée par un point vert 🟢, la plus chère par un point rouge 🔴. Les autres stations restent en bleu.",
+  "version": "3.5",
+  "notes_fr": "Mode voyage: calculez à l'avance où vous arreter sure un long trajet -- tous véhicules.",
   "notes_en": "",
   "url": "market://search?q=KarBu"
 }
