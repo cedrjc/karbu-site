@@ -97,9 +97,11 @@ footer a{color:#60a5fa;text-decoration:none;}
 
 /* ===== MEDIA QUERY MOBILE ===== */
 .mobile-only{display:none;}
+.desktop-only{display:block;}
 @media(max-width:768px){
   .two-col-desc{grid-template-columns:1fr !important;}
   .mobile-only{display:inline;}
+  .desktop-only{display:none;}
   .features{grid-template-columns:repeat(2,1fr);}
   .two-col{grid-template-columns:1fr !important;}
   .roadmap{flex-direction:column !important;}
@@ -192,6 +194,8 @@ footer a{color:#60a5fa;text-decoration:none;}
         
           <p class="hero-tagline" data-t="hero_tagline">Le carnet de bord de votre véhicule</p>
 <p class="hero-sub" data-t="hero_sub"><strong>KarBu</strong> utilise la <strong>consommation réelle</strong><br> de votre véhicule pour savoir quelle station vous fait vraiment économiser.</p>
+          <p class="desktop-only" data-t="hero_sans_abo" style="font-size:13px;font-weight:700;color:#fff;margin:16px 0 4px 0">Sans abonnement · Sans frais cachés · Sans publicité</p>
+          <p class="desktop-only" data-t="hero_privacy_line" style="font-size:12px;color:#cbd5e1;margin:0">🔒 Données privées &amp; sécurisées</p>
       </div>
     </div>
   </div>
