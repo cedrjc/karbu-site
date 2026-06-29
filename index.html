@@ -98,10 +98,14 @@ footer a{color:#60a5fa;text-decoration:none;}
 /* ===== MEDIA QUERY MOBILE ===== */
 .mobile-only{display:none;}
 .desktop-only{display:block;}
+.hero-trustline{font-size:13px;font-weight:700;color:#fff;margin:16px 0 4px 0;}
+.hero-trustline.priv{font-size:12px;font-weight:400;color:#cbd5e1;margin:0;}
 @media(max-width:768px){
   .two-col-desc{grid-template-columns:1fr !important;}
   .mobile-only{display:inline;}
   .desktop-only{display:none;}
+  .hero-trustline{font-size:11px;margin:12px 0 3px 0;}
+  .hero-trustline.priv{font-size:11px;}
   .features{grid-template-columns:repeat(2,1fr);}
   .two-col{grid-template-columns:1fr !important;}
   .roadmap{flex-direction:column !important;}
@@ -194,8 +198,8 @@ footer a{color:#60a5fa;text-decoration:none;}
         
           <p class="hero-tagline" data-t="hero_tagline">Le carnet de bord de votre véhicule</p>
 <p class="hero-sub" data-t="hero_sub"><strong>KarBu</strong> utilise la <strong>consommation réelle</strong><br> de votre véhicule pour savoir quelle station vous fait vraiment économiser.</p>
-          <p class="desktop-only" data-t="hero_sans_abo" style="font-size:13px;font-weight:700;color:#fff;margin:16px 0 4px 0">Sans abonnement · Sans frais cachés · Sans publicité</p>
-          <p class="desktop-only" data-t="hero_privacy_line" style="font-size:12px;color:#cbd5e1;margin:0">🔒 Données privées &amp; sécurisées</p>
+          <p class="hero-trustline" data-t="hero_sans_abo">Sans abonnement · Sans frais cachés · Sans publicité</p>
+          <p class="hero-trustline priv" data-t="hero_privacy_line">🔒 Données privées &amp; sécurisées</p>
       </div>
     </div>
   </div>
@@ -394,16 +398,26 @@ footer a{color:#60a5fa;text-decoration:none;}
   <div class="section">
     <h2 data-t="gal_title">📱 Captures d'écran</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-      <img src="img01.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img02.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img03.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img04.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-	  <img src="img05.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img06.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img07.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img08.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-      <img src="img10.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
-        </div>
+      <img src=".img01.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img02.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img03.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img04.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img05.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img06.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img07.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img08.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img09.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img10.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img11.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img12.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img13.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+	  <img src=".img14.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+      <img src=".img15.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+	  <img src=".img16.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+	  <img src=".img17.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+	  <img src=".img18.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+	  <img src=".img19.jpeg" class="karbu-shot" style="width:100%;border-radius:14px;border:1px solid #e2e8f0;cursor:zoom-in" alt="KarBu"/>
+    </div>
   </div>
 </div>
 
@@ -1044,7 +1058,7 @@ es:{
   nav_miseajour:"🚀 Actualizaciones",
   nav_galerie:"📱 Capturas",
   nav_aide:"❓ Ayuda",
-  hero_sub:"<strong>KarBu</strong> usa tu <strong>consumo real</strong><br> para saber qué estación te hace ahorrar de verdad.",
+  hero_sub:"<strong>KarBu</strong> utiliza el <strong>consumo real</strong> de tu vehículo<br> para saber qué estación te hace ahorrar de verdad.",
   prix_sub_1:"PAGO ÚNICO",
   prix_sub_2:"SIN SUSCRIPCIÓN",
   badge1:"✅ Sin suscripción",
@@ -1166,7 +1180,7 @@ cl_vxx_p:"Sus sugerencias — Atentos a sus comentarios y mejoras.",
   desc_evol_p:"KarBu sigue evolucionando — nuevas funciones ya están planificadas para versiones futuras.",
   popup_text:"está en<strong> Google Play</strong><br><strong>¡Actualmente en prueba con usuarios activos!</strong> 🎉",
   popup_btn:"¡Genial, no puedo esperar!",
-  desc_titre:"KarBu — Tu cuaderno de a bordo inteligente",
+  desc_titre:"KarBu — Tu cuaderno de bitácora inteligente",
 desc_f1h:"📈 Seguimiento del consumo",desc_f1p:"Registra tus repostajes y sigue tu consumo real repostaje a repostaje. Historial completo con gráficos y estadísticas — detecta tendencias y desviaciones antes de que te cuesten dinero.",
 desc_f2h:"⛽ Tu combustible, optimizado",desc_f2p:"Al abrir, KarBu muestra el precio de tu estación ideal — la más rentable según tu posición. Actualizado cada 10 minutos desde datos oficiales del gobierno. De un vistazo sabes cuánto ahorras cambiando de estación, basado en tu consumo real. Ya disponible en Francia y España, más países próximamente.",
 desc_f3h:"🗺️ Modo Viaje",desc_f3p:"Planifica un trayecto a cualquier destino del mundo. A partir del consumo real de tu vehículo y del nivel de tu depósito, KarBu anticipa antes de la reserva e indica dónde buscar una estación o hacer una pausa. En los países compatibles (Francia y España por el momento), las estaciones se muestran con su precio en cada etapa del trayecto, hasta el destino. El coste del trayecto se estima según tu consumo medio real (peajes no incluidos).",
@@ -1185,7 +1199,7 @@ desc_comp_h:"⚖️ Compara dos estaciones al instante",desc_comp_p:"Selecciona 
   aide_s9l3:"<strong>CCS / CHAdeMO</strong>: carga rápida DC — generalmente desde 50 kW hasta 350 kW y más",
   aide_s9l4:"<strong>Tipo 2 (T2)</strong>: carga normal AC — de 7 a 22 kW",
   aide_s9l5:"<strong>Enchufe doméstico (EF)</strong>: carga lenta — aproximadamente 2 a 3 kW",
- hero_tagline: "El cuaderno de a bordo de tu vehículo",
+ hero_tagline: "El cuaderno de bitácora de tu vehículo",
   hero_prix_sub: "Sin suscripción, sin sorpresas, sin publicidad!",
   hero_prix_privacy: "🔒 Datos privados y seguros",
   hero_prix_top: "💰 Compra única — 8,99€",
@@ -2169,6 +2183,15 @@ setTimeout(function(){
   var hashPages = {'#histoire':'histoire','#miseajour':'miseajour','#galerie':'galerie','#aide':'aide','#accueil':'accueil'};
   if(hashPages[hash]){
     showPage(hashPages[hash]);
+  }
+  // Langue forcee via ?lang=xx (utile pour QR codes / liens imprimes cibles par langue)
+  var validLangs = ['fr','en','de','es','it','nl','pt','ja','ko','tr'];
+  var params = new URLSearchParams(window.location.search);
+  var forcedLang = params.get('lang');
+  if(forcedLang && validLangs.indexOf(forcedLang) !== -1){
+    setLangSite(forcedLang);
+    var sel = document.getElementById('lang-select');
+    if(sel) sel.value = forcedLang;
   }
 })();
 </script>
