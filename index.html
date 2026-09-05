@@ -315,12 +315,11 @@ footer a{color:#60a5fa;text-decoration:none;}
   <div class="section" id="download">
     <div class="dl-box" style="padding:36px 32px">
       <p data-t="dl_accroche" style="font-size:18px;font-weight:800;color:#fff;margin-bottom:16px">Votre voiture mérite un vrai suivi. Rien d'autre.</p>
-      <p data-t="dl_prix" style="font-size:28px;font-weight:900;color:#60a5fa;margin-bottom:8px">💰 8,99€</p>
       <p data-t="dl_sans" style="font-size:13px;color:#94a3b8;margin-bottom:24px">Sans publicité · Sans abonnement<br>Sans frais cachés</p>
 	  <p data-t="hero_privacy_line" style="font-size:13px;color:#94a3b8;margin-bottom:24px">🔒 Données privées & sécurisées</p>
       <div style="display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap">
-        <a href="https://play.google.com/store/apps/details?id=com.appdrive.karbu" target="_blank">
-          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" 
+        <a id="play-store-link" href="https://play.google.com/store/apps/details?id=com.appdrive.karbu" target="_blank">
+          <img id="play-store-badge" src="google-play-badge-fr.svg" 
                alt="Disponible sur Google Play" style="height:60px"/>
         </a>
       </div>
@@ -2221,6 +2220,22 @@ function setLangSite(lang){
   });
   var sel=document.getElementById('lang-select');
   if(sel)sel.value=lang;
+
+  // Badge Google Play localise pour toutes les langues (image uniquement)
+  // Le lien pointe vers la fiche traduite uniquement pour les langues ou elle existe (ES, IT)
+  var PLAY_STORE_LOCALIZED = {
+    es: {hl:'es', gl:'ES'},
+    it: {hl:'it', gl:'IT'}
+  };
+  var baseUrl = 'https://play.google.com/store/apps/details?id=com.appdrive.karbu';
+  var linkEl = document.getElementById('play-store-link');
+  var badgeEl = document.getElementById('play-store-badge');
+  if(linkEl && badgeEl){
+    var loc = PLAY_STORE_LOCALIZED[lang];
+    linkEl.href = loc ? (baseUrl + '&hl=' + loc.hl + '&gl=' + loc.gl) : baseUrl;
+    var ext = (lang === 'ja') ? '.png' : '.svg';
+    badgeEl.src = 'google-play-badge-' + lang + ext;
+  }
 }
 </script>
 
