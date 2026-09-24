@@ -68,10 +68,10 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 .feat-wide{grid-column:span 2;}
 .section .feat-promise{font-size:12.5px;font-weight:600;color:#475569;line-height:1.3;margin:-12px 0 16px 0;}
-.feat{background:#fff;border-radius:14px;padding:16px;border:1px solid #e2e8f0;}
-.feat .ico{font-size:24px;margin-bottom:6px;}
-.feat h3{font-weight:700;font-size:13px;margin-bottom:4px;}
-.feat p{font-size:12px;color:#64748b;line-height:1.4;}
+.feat{background:#fff;border-radius:14px;padding:16px;border:1px solid #e2e8f0;display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center;align-content:start;}
+.feat .ico{font-size:30px;line-height:1;height:30px;margin-bottom:0;}
+.feat h3{font-weight:700;font-size:13px;line-height:1.15;margin-bottom:0;}
+.feat p{grid-column:1 / -1;font-size:12px;color:#64748b;line-height:1.4;margin-top:8px;}
 .card{background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0;}
 .privacy{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:28px;}
 .privacy h3{color:#166534;font-weight:700;margin-bottom:10px;font-size:16px;}
@@ -122,6 +122,9 @@ footer a{color:#60a5fa;text-decoration:none;}
   .hero-trustline{font-size:11px;margin:12px 0 3px 0;}
   .hero-trustline.priv{font-size:11px;}
   .features{grid-template-columns:repeat(2,1fr);}
+  .feat{padding:14px;column-gap:8px;}
+  .feat .ico{font-size:26px;}
+  .feat h3{font-size:12.5px;line-height:1.15;}
   .two-col{grid-template-columns:1fr !important;}
   .roadmap{flex-direction:column !important;}
   #page-galerie .section div{grid-template-columns:1fr !important;}
@@ -332,7 +335,7 @@ footer a{color:#60a5fa;text-decoration:none;}
 
   <div class="feat">
     <div class="ico">⚡</div>
-    <h3 data-t="f14h">Bornes de recharge électrique</h3>
+    <h3 data-t="f14h">Bornes électriques</h3>
     <p data-t="f14p">Bornes de recharge électrique repérées partout dans le monde, intégrées directement à votre carte</p>
   </div>
 
@@ -778,7 +781,7 @@ fr:{
   f11p:"Ne ratez plus jamais une révision ou un contrôle technique — alertes automatiques",
   f13h:"Comparateur de stations",
   f13p:"KarBu calcule, pour votre véhicule et votre trajet, le seuil exact en litres où une station devient vraiment rentable",
-  f14h:"Bornes de recharge électrique",
+  f14h:"Bornes électriques",
   f14p:"Bornes de recharge électrique repérées partout dans le monde, intégrées directement à votre carte",
   f12h:"Mode sombre",
   f12p:"Interface adaptée jour et nuit — confort visuel garanti",
@@ -943,7 +946,7 @@ en:{
   f11p:"Never miss a service or MOT again — automatic alerts",
   f13h:"Station comparator",
   f13p:"KarBu calculates, for your vehicle and your trip, the exact litre threshold where a station actually becomes worth it",
-  f14h:"EV charging stations",
+  f14h:"EV chargers",
   f14p:"EV charging stations located worldwide, integrated directly into your map",
   f12h:"Dark mode",
   f12p:"Day and night adapted interface — guaranteed visual comfort",
@@ -1108,7 +1111,7 @@ de:{
   f11p:"Verpassen Sie nie wieder eine Inspektion oder den TÜV — automatische Benachrichtigungen",
   f13h:"Tankstellen-Vergleicher",
   f13p:"KarBu berechnet für Ihr Fahrzeug und Ihre Fahrt die genaue Liter-Schwelle, ab der sich eine Tankstelle wirklich lohnt",
-  f14h:"Elektro-Ladestationen",
+  f14h:"E-Ladestationen",
   f14p:"Elektro-Ladestationen weltweit erfasst, direkt in Ihre Karte integriert",
   f12h:"Dunkelmodus",
   f12p:"Tag und Nacht angepasste Oberfläche — visueller Komfort garantiert",
@@ -1273,7 +1276,7 @@ es:{
   f11p:"No te pierdas nunca más una revisión o la ITV — alertas automáticas",
   f13h:"Comparador de estaciones",
   f13p:"KarBu calcula, para tu vehículo y tu trayecto, el umbral exacto en litros a partir del cual una estación resulta realmente rentable",
-  f14h:"Puntos de recarga eléctrica",
+  f14h:"Puntos de recarga",
   f14p:"Puntos de recarga eléctrica localizados en todo el mundo, integrados directamente en tu mapa",
   f12h:"Modo oscuro",
   f12p:"Interfaz adaptada día y noche — confort visual garantizado",
@@ -1438,7 +1441,7 @@ it:{
   f11p:"Non perdere mai più un tagliando o la revisione — avvisi automatici",
   f13h:"Comparatore di stazioni",
   f13p:"KarBu calcola, per il tuo veicolo e il tuo percorso, la soglia esatta in litri a partire dalla quale una stazione diventa davvero conveniente",
-  f14h:"Colonnine di ricarica elettrica",
+  f14h:"Colonnine elettriche",
   f14p:"Colonnine di ricarica elettrica individuate in tutto il mondo, integrate direttamente nella tua mappa",
   f12h:"Modalità scura",
   f12p:"Interfaccia adattata giorno e notte — comfort visivo garantito",
@@ -1608,7 +1611,7 @@ nl:{
   f11p:"Mis nooit meer een onderhoudsbeurt of APK — automatische meldingen",
   f13h:"Tankstation-vergelijker",
   f13p:"KarBu berekent, voor uw voertuig en uw rit, de exacte literdrempel waarop een tankstation echt rendabel wordt",
-  f14h:"Elektrische laadpalen",
+  f14h:"Laadpalen",
   f14p:"Elektrische laadpalen overal in de wereld gelokaliseerd, rechtstreeks geïntegreerd in uw kaart",
   f12h:"Donkere modus",
   f12p:"Dag en nacht aangepaste interface — visueel comfort gegarandeerd",
@@ -1778,7 +1781,7 @@ pt:{
   f11p:"Nunca mais perca uma revisão ou inspeção — alertas automáticos",
   f13h:"Comparador de postos",
   f13p:"O KarBu calcula, para o seu veículo e a sua viagem, o limite exato em litros a partir do qual um posto se torna realmente rentável",
-  f14h:"Pontos de carregamento elétrico",
+  f14h:"Postos de carregamento",
   f14p:"Pontos de carregamento elétrico localizados em todo o mundo, integrados diretamente no seu mapa",
   f12h:"Modo escuro",
   f12p:"Interface adaptada dia e noite — conforto visual garantido",
@@ -1948,7 +1951,7 @@ ja:{
   f11p:"車検や点検を二度と見逃さない — 自動アラート",
   f13h:"スタンド比較機能",
   f13p:"KarBuはあなたの車両とルートに合わせて、スタンドが本当にお得になる正確なリットル数のしきい値を計算します",
-  f14h:"電気自動車充電スタンド",
+  f14h:"EV充電スタンド",
   f14p:"世界中どこでも充電スタンドの位置を表示し、地図に直接統合",
   f12h:"ダークモード",
   f12p:"昼夜対応インターフェース — 目に優しく快適",
@@ -2278,7 +2281,7 @@ tr:{
   f11p:"Bir bakımı veya muayeneyi asla kaçırmayın — otomatik uyarılar",
   f13h:"İstasyon karşılaştırıcı",
   f13p:"KarBu, aracınız ve güzergahınız için bir istasyonun gerçekten kârlı hale geldiği tam litre eşiğini hesaplar",
-  f14h:"Elektrikli araç şarj istasyonları",
+  f14h:"Şarj istasyonları",
   f14p:"Dünyanın her yerinde tespit edilen elektrikli şarj istasyonları, doğrudan haritanıza entegre",
   f12h:"Karanlık mod",
   f12p:"Gündüz ve gece uyarlanmış arayüz — görsel konfor garantili",
