@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="KarBu — Prix Carburant Malin"/>
+<meta property="og:title" content="KarBu — Carburant moins cher"/>
 <meta property="og:description" content="Maîtrisez vos dépenses carburant. Suivez, analysez, économisez."/>
 <meta property="og:image" content="https://karbu.net/icon-512.png"/>
 <meta property="og:url" content="https://karbu.net"/>
@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" href="icon-512.png"/>
 <link rel="apple-touch-icon" href="icon-512.png"/>
 <meta name="google-site-verification" content="..."/>
-<title>KarBu — Prix Carburant Malin</title>
+<title>KarBu — Carburant moins cher</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;}
@@ -251,7 +251,7 @@ footer a{color:#60a5fa;text-decoration:none;}
   <span id="karbu-logo-wrap-site">Kar<span>Bu</span></span>
 </div>
   <div class="header-right">
-   <select id="lang-select" onchange="setLangSite(this.value)" style="padding:6px 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;font-size:13px;cursor:pointer">
+   <select id="lang-select" onchange="setLangSite(this.value);try{localStorage.setItem('karbu_lang',this.value);}catch(e){}" style="padding:6px 12px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;font-size:13px;cursor:pointer">
   <option value="fr">🇫🇷 Français</option>
   <option value="de">🇩🇪 Deutsch</option>
   <option value="en">🇬🇧 English</option>
@@ -878,6 +878,7 @@ aide_s8l10:"Vous pouvez indiquer le nombre de litres que vous prévoyez de mettr
   aide_s5p:"Une question ? Contactez-nous à <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Tous droits réservés &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Mentions légales</a>",
   footer_gplay:"Google Play et le logo Google Play sont des marques de Google LLC.",
+  page_title:"KarBu — Carburant moins cher",
   hero_sans_abo:"Sans abonnement · Sans frais cachés · Sans publicité",
   dl_accroche:"Votre voiture mérite un vrai suivi. Vous, de vraies économies.",
   dl_sans:"Sans publicité · Sans abonnement<br>Sans frais cachés",
@@ -1043,6 +1044,7 @@ aide_s8l10:"You can enter the number of litres you plan to add to see the saving
   aide_s5p:"A question? Contact us at <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — All rights reserved &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Legal Notice</a>",
   footer_gplay:"Google Play and the Google Play logo are trademarks of Google LLC.",
+  page_title:"KarBu — Fuel Prices",
   hero_sans_abo:"No subscription · No hidden fees · No ads",
   dl_accroche:"Your car deserves real tracking. You deserve real savings.",
   dl_sans:"No ads · No subscription · No hidden fees",
@@ -1208,6 +1210,7 @@ aide_s8l10:"Sie können die Anzahl der Liter angeben, die Sie tanken möchten, u
   aide_s5p:"Fragen? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Alle Rechte vorbehalten &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Impressum</a>",
   footer_gplay:"Google Play und das Google Play-Logo sind Marken von Google LLC.",
+  page_title:"KarBu — Spritpreise",
   hero_sans_abo:"Kein Abo · Keine versteckten Gebühren · Keine Werbung",
   dl_accroche:"Ihr Auto verdient echtes Tracking. Sie verdienen echte Ersparnisse.",
   dl_sans:"Keine Werbung · Kein Abo · Keine versteckten Gebühren",
@@ -1373,6 +1376,7 @@ aide_s8l10:"Puedes indicar el número de litros que prevés repostar para conoce
   aide_s5p:"¿Preguntas? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Todos los derechos reservados &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Aviso legal</a>",
   footer_gplay:"Google Play y el logotipo de Google Play son marcas registradas de Google LLC.",
+  page_title:"KarBu — Precio Gasolina",
   hero_sans_abo:"Sin suscripción · Sin cargos ocultos · Sin publicidad",
   dl_accroche:"Tu coche merece un seguimiento real. Tú, un ahorro real.",
   dl_sans:"Sin publicidad · Sin suscripción · Sin cargos ocultos",
@@ -1543,6 +1547,7 @@ aide_s8l10:"Puoi indicare il numero di litri che prevedi di fare per conoscere i
   aide_s5p:"Domande? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Tutti i diritti riservati &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Note legali</a>",
   footer_gplay:"Google Play e il logo Google Play sono marchi di Google LLC.",
+  page_title:"KarBu — Prezzo Benzina",
   hero_sans_abo:"Nessun abbonamento · Nessun costo nascosto · Nessuna pubblicità",
   dl_accroche:"La tua auto merita un vero monitoraggio. Tu, un risparmio vero.",
   dl_sans:"Nessuna pubblicità · Nessun abbonamento · Nessun costo nascosto",
@@ -1713,6 +1718,7 @@ aide_s8l10:"U kunt het aantal liter opgeven dat u van plan bent te tanken, om de
   aide_s5p:"Vragen? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Alle rechten voorbehouden &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Juridische informatie</a>",
   footer_gplay:"Google Play en het Google Play-logo zijn handelsmerken van Google LLC.",
+  page_title:"KarBu — Brandstof",
   hero_sans_abo:"Geen abonnement · Geen verborgen kosten · Geen reclame",
   dl_accroche:"Uw auto verdient echte tracking. U, echte besparingen.",
   dl_sans:"Geen reclame · Geen abonnement · Geen verborgen kosten",
@@ -1883,6 +1889,7 @@ aide_s8l10:"Pode indicar o número de litros que planeia abastecer para conhecer
   aide_s5p:"Dúvidas? <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Todos os direitos reservados &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Menções legais</a>",
   footer_gplay:"Google Play e o logótipo do Google Play são marcas comerciais da Google LLC.",
+  page_title:"KarBu — Preço dos Combustíveis",
   hero_sans_abo:"Sem assinatura · Sem taxas ocultas · Sem publicidade",
   dl_accroche:"O seu carro merece um acompanhamento real. Você, uma poupança real.",
   dl_sans:"Sem publicidade · Sem assinatura · Sem taxas ocultas",
@@ -2048,6 +2055,7 @@ aide_s8l10:"給油予定のリットル数を入力すると、満タンでは�
   aide_s5p:"ご質問は <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — 全著作権所有 &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>法的表示</a>",
   footer_gplay:"Google Play および Google Play ロゴは Google LLC の商標です。",
+  page_title:"KarBu — 運行記録",
   hero_sans_abo:"サブスクなし · 隠れた費用なし · 広告なし",
   dl_accroche:"あなたの車には本当の追跡を。あなたには、本当の節約を。",
   dl_sans:"広告なし · サブスクなし · 隠れた費用なし",
@@ -2213,6 +2221,7 @@ aide_s8l10:"주유 예정인 리터 수를 입력하면 만탱크가 아닌 해�
   aide_s5p:"문의: <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — 모든 권리 보유 &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>법적 고지</a>",
   footer_gplay:"Google Play 및 Google Play 로고는 Google LLC의 상표입니다.",
+  page_title:"KarBu — 운행 일지",
   hero_sans_abo:"구독 없음 · 숨겨진 요금 없음 · 광고 없음",
   dl_accroche:"내 차에는 진짜 추적을, 나에게는 진짜 절약을.",
   dl_sans:"광고 없음 · 구독 없음 · 숨겨진 요금 없음",
@@ -2378,6 +2387,7 @@ aide_s8l10:"Doldurmayı planladığınız litre miktarını girerek, dolu bir de
   aide_s5p:"Sorular: <a href='mailto:appdrive.dev@proton.me' style='color:#2563eb;font-weight:700'>appdrive.dev@proton.me</a>",
   footer_rights:"© 2026 AppDrive — Tüm hakları saklıdır &nbsp;|&nbsp; <a href='mailto:appdrive.dev@proton.me'>appdrive.dev@proton.me</a> &nbsp;|&nbsp; <a href='mentions-legales.html'>Yasal Bildirim</a>",
   footer_gplay:"Google Play ve Google Play logosu, Google LLC'nin ticari markalarıdır.",
+  page_title:"KarBu — Seyir Defteri",
   hero_sans_abo:"Abonelik yok · Gizli ücret yok · Reklam yok",
   dl_accroche:"Aracınız gerçek bir takibi hak ediyor. Siz de gerçek tasarrufu.",
   dl_sans:"Reklam yok · Abonelik yok · Gizli ücret yok",
@@ -2419,6 +2429,8 @@ function setLangSite(lang){
   });
   var sel=document.getElementById('lang-select');
   if(sel)sel.value=lang;
+  if(t.page_title) document.title = t.page_title;
+  document.documentElement.lang = (LANGS[lang] ? lang : 'fr');
 
   // Badge Google Play localise pour toutes les langues (image uniquement)
   // Le lien pointe vers la fiche traduite uniquement pour les langues ou elle existe (ES, IT)
@@ -2481,13 +2493,30 @@ function setLangSite(lang){
     showPage(hashPages[hash]);
   }
   // Langue forcee via ?lang=xx (utile pour QR codes / liens imprimes cibles par langue)
+  // Choix de la langue au chargement, par ordre de priorite :
+  // 1) ?lang=xx dans l'adresse (QR codes, liens imprimes)  2) choix deja fait par le visiteur (memorise)
+  // 3) langue du navigateur  4) francais
   var validLangs = ['fr','en','de','es','it','nl','pt','ja','ko','tr'];
   var params = new URLSearchParams(window.location.search);
-  var forcedLang = params.get('lang');
-  if(forcedLang && validLangs.indexOf(forcedLang) !== -1){
-    setLangSite(forcedLang);
+  var chosenLang = params.get('lang');
+  if(!(chosenLang && validLangs.indexOf(chosenLang) !== -1)){
+    chosenLang = null;
+    try{
+      var savedLang = localStorage.getItem('karbu_lang');
+      if(savedLang && validLangs.indexOf(savedLang) !== -1) chosenLang = savedLang;
+    }catch(e){}
+  }
+  if(!chosenLang){
+    var navLangs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'fr'];
+    for(var i = 0; i < navLangs.length; i++){
+      var code = String(navLangs[i] || '').toLowerCase().split('-')[0];
+      if(validLangs.indexOf(code) !== -1){ chosenLang = code; break; }
+    }
+  }
+  if(chosenLang){
+    setLangSite(chosenLang);
     var sel = document.getElementById('lang-select');
-    if(sel) sel.value = forcedLang;
+    if(sel) sel.value = chosenLang;
   }
 })();
 </script>
