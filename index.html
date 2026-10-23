@@ -105,6 +105,14 @@ footer a{color:#60a5fa;text-decoration:none;}
 .desktop-only{display:block;}
 .hero-trustline{font-size:13px;font-weight:700;color:#fff;margin:16px 0 4px 0;}
 .hero-trustline.priv{font-size:12px;font-weight:400;color:#cbd5e1;margin:0;}
+/* ===== Bouton WhatsApp (Toujours en évolution) ===== */
+.evol-wa-txt p + p{margin-top:8px;}
+.wa-follow{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;padding:12px 22px;background:#25D366;color:#fff !important;font-size:14px;font-weight:700;border-radius:16px;text-decoration:none;box-shadow:0 4px 12px rgba(37,211,102,.35);transition:background .2s,transform .2s;}
+.wa-follow:hover{background:#1ebe5a;transform:translateY(-1px);}
+.wa-follow svg{width:22px;height:22px;fill:#fff;flex:none;}
+@media(max-width:768px){
+  .wa-follow{display:flex;width:100%;box-sizing:border-box;}
+}
 @media(max-width:768px){
   .hero{display:none;}
   .hero-carousel-mobile{display:block;position:relative;width:100%;aspect-ratio:1492/768;overflow:hidden;background:#0f172a;}
@@ -231,6 +239,15 @@ footer a{color:#60a5fa;text-decoration:none;}
   .dl2-store{align-self:center;margin:16px auto 6px auto;}
   .dl2-store img#play-store-badge,.dl2-store img#play-store-badge-go{height:60px !important;}
   .dl2-soonbtn{height:60px;width:202px;font-size:16px;border-radius:12px;}
+}
+/* post-it "Bientot !" colle de travers sur le badge KarBu Go (affiche via KARBU_GO_POSTIT) */
+.dl2-go .dl2-store{position:relative;}
+.dl2-postit{display:none;position:absolute;top:-15px;right:-16px;z-index:2;transform:rotate(-8deg);transform-origin:center;pointer-events:none;
+  padding:7px 11px 9px;background:linear-gradient(160deg,#fef08a 0%,#fde047 100%);color:#713f12;
+  font-family:"Segoe Print","Bradley Hand","Marker Felt","Comic Sans MS","Chalkboard SE",cursive;font-size:14px;font-weight:700;line-height:1;white-space:nowrap;
+  border-radius:2px 2px 12px 2px;box-shadow:0 5px 10px rgba(0,0,0,.35),0 1px 2px rgba(0,0,0,.25);}
+@media(max-width:759px){
+  .dl2-postit{top:-14px;right:-14px;font-size:17px;padding:8px 13px 10px;}
 }
 /* drapeaux du Mode Voyage (dessines en SVG : les emojis-drapeaux ne s'affichent pas sous Windows) */
 .fl,.hcp-caption .hcp-flags .fl{display:inline-flex;align-items:center;gap:.45em;}
@@ -397,9 +414,13 @@ footer a{color:#60a5fa;text-decoration:none;}
       <h3 data-t="desc_f7h" style="margin-bottom:8px">💬 Un développeur qui vous écoute</h3>
       <p data-t="desc_f7p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">KarBu est née de mes propres besoins de conducteur. Vos retours comptent vraiment — les meilleures suggestions seront intégrées dans les futures versions.</p>
     </div>
-    <div>
-      <h3 data-t="desc_evol_h" style="margin-bottom:8px">🔄 Toujours en évolution</h3>
-      <p data-t="desc_evol_p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">KarBu continue d'évoluer — de nouvelles fonctionnalités sont déjà planifiées pour les versions futures.</p>
+    <div class="evol-wa">
+      <div class="evol-wa-txt">
+        <h3 data-t="desc_evol_h" style="margin-bottom:8px">🔄 Toujours en évolution</h3>
+        <p data-t="desc_evol_p" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">KarBu continue d'évoluer — de nouvelles fonctionnalités sont déjà planifiées pour les versions futures.</p>
+        <p data-t="desc_evol_wa" style="text-align:justify;font-size:14px;color:#475569;line-height:1.7">Soyez les premiers informés : rejoignez la chaîne <strong>KarBu Officiel</strong> sur WhatsApp.</p>
+      </div>
+      <a class="wa-follow" href="https://whatsapp.com/channel/0029Vb8lmcCLtOjAeNuxM31T" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span data-t="wa_follow">Rejoindre la chaîne WhatsApp</span></a>
     </div>
   </div>
 </div>
@@ -437,6 +458,7 @@ footer a{color:#60a5fa;text-decoration:none;}
                 <img id="play-store-badge-go" src="google-play-badge-fr.svg" alt="Google Play" style="height:40px;display:none"/>
                 <span class="dl2-soonbtn" id="dl2-go-soon" data-t="dl2_go_soon">Bientôt disponible</span>
               </a>
+              <span class="dl2-postit" id="dl2-go-postit" data-t="dl2_go_postit" aria-hidden="true">Bientôt !</span>
             </div>
           </div>
         </div>
@@ -791,7 +813,7 @@ fr:{
   f12p:"Interface adaptée jour et nuit — confort visuel garanti",
   dl_sub:"Disponible sur Android<br>IOS bientôt disponible",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100&nbsp;% sans publicité",dl2_tag_karbu:"Achat unique",dl2_tag_go:"Nouveau",dl2_karbu_sub:"Sans abonnement",dl2_go_free:"Application gratuite",dl2_go_trial:"30 jours gratuits",dl2_go_nocommit:"Sans obligation d'achat",dl2_go_soon:"Bientôt disponible",dl2_cmp_title:"Quelle appli pour vous ?",dl2_r_price:"Prix",dl2_r_noads:"Sans publicité",dl2_r_cons:"Suivi de consommation",dl2_r_near:"Stations à proximité",dl2_r_travel:"Mode Voyage",dl2_r_cmp:"Comparateur de stations selon votre conso réelle",dl2_r_obd:"Diagnostic OBD2",dl2_r_maint:"Entretiens",dl2_r_fuelprice:"Prix officiel des carburants en",dl2_r_lang:"10 langues",dl2_free:"Gratuite",dl2_cmp_go:"30 jours d'essai gratuit, puis abonnement",dl2_cmp_incl:"inclus",dl2_countries:"France · Espagne · Italie",dl2_sym:"€",
+  dl2_line1:"100&nbsp;% sans publicité",dl2_tag_karbu:"Achat unique",dl2_tag_go:"Nouveau",dl2_karbu_sub:"Sans abonnement",dl2_go_free:"Application gratuite",dl2_go_trial:"30 jours gratuits",dl2_go_nocommit:"Sans obligation d'achat",dl2_go_soon:"Bientôt disponible",dl2_go_postit:"Bientôt !",dl2_cmp_title:"Quelle appli pour vous ?",dl2_r_price:"Prix",dl2_r_noads:"Sans publicité",dl2_r_cons:"Suivi de consommation",dl2_r_near:"Stations à proximité",dl2_r_travel:"Mode Voyage",dl2_r_cmp:"Comparateur de stations selon votre conso réelle",dl2_r_obd:"Diagnostic OBD2",dl2_r_maint:"Entretiens",dl2_r_fuelprice:"Prix officiel des carburants en",dl2_r_lang:"10 langues",dl2_free:"Gratuite",dl2_cmp_go:"30 jours d'essai gratuit, puis abonnement",dl2_cmp_incl:"inclus",dl2_countries:"France · Espagne · Italie",dl2_sym:"€",
   hum_t1:"Prenez la route avec KarBu",hum_s1:"en toute sécurité et sans distraction",hum_t2:"La bonne station n'est pas toujours la plus proche, ni la moins chère.",hum_t3:"Le bon arrêt. Au moment idéal.<br>Au meilleur prix.",hum_t3p:"Le bon arrêt. Au moment idéal. Au meilleur prix.",hum_trust:"Sans publicité · Sans abonnement · Sans frais cachés",
   hum_t4:"Ce détour vaut-il le coup ?",hum_s4:"Voyez l'économie réelle, au litre près, pour votre véhicule.",
   f9pw:"Prix officiels, station idéale. Des économies réelles, propres à votre véhicule — sans rien saisir. Le comparateur calcule, selon votre trajet, le seuil exact en litres où une station devient vraiment rentable.",
@@ -818,7 +840,7 @@ cl_v25_date:"28 avril 2026",
 cl_v25_p:"Votre station préférée et les moins chères autour de votre position<br>Déjà disponible en France et en Espagne, d'autres pays suivront",
 cl_v27_date:"13 mai 2026",
   cl_v27_p:"Calculateur de trajet — Estimez le coût en carburant selon votre consommation réelle.<br>Partagez votre résumé de trajet.<br><strong>Test en cours sur Google Play !</strong>",
-cl_v30_date:"1 juin 2026",
+cl_v30_date:"juin 2026",
 cl_v30_p:"Lancement de l'application publique !",
 cl_v30_content:"▪ Comparateur de stations : sélectionnez deux stations par appui long sur ⭐ Préférée et comparez économie réelle, détour et rentabilité<br>▪ Support complet véhicules électriques (bornes de recharge via OpenChargeMap, mondial)<br>▪ Corrections et améliorations diverses",
 cl_v35_content:"▪ Mode Voyage calcule où vous arrêter pour faire le plein selon l'autonomie réelle de votre véhicule, avec les prix affichés directement sur la carte — comparateur de stations intégré<br>▪ Prise en charge complète des véhicules électriques (bornes de recharge OpenChargeMap, mondial)",
@@ -831,7 +853,7 @@ cl_v38_date:"29 juillet 2026",
 cl_v38_p:"Le Mode Voyage est désormais accessible pour tous, partout dans le monde — en thermique, en électrique, même sans GPS. Planifiez votre itinéraire et calculez vos arrêts où que vous soyez.",
 cl_v40_date:"31 août 2026",
 cl_v40_content:"▪ Ajout du Diagnostic OBD2 — batterie, moteur, réservoir et pression turbo en temps réel, alerte automatique en cas de code défaut<br>▪ Enrichissement du comparateur de stations",
-  cl_go_date:"19 octobre 2026",cl_go_p:"Sortie de KarBu Go. Idéal pour essayer, ou pour partir en vacances sans rien dépenser !",
+  cl_go_date:"26 octobre 2026",cl_go_p:"Sortie de KarBu Go. Idéal pour essayer, ou pour partir en vacances sans rien dépenser !",
 cl_vxx_date:"2026",
 cl_vxx_p:"Vos suggestions — À l'écoute de vos remarques et améliorations.",
   gal_title:"📱 Captures d'écran",
@@ -892,6 +914,8 @@ aide_s8l10:"Vous pouvez indiquer le nombre de litres que vous prévoyez de mettr
   hero_privacy_line:"🔒 Données privées &amp; sécurisées",
   desc_evol_h:"🔄 Toujours en évolution",
   desc_evol_p:"KarBu continue d'évoluer — de nouvelles fonctionnalités sont déjà planifiées pour les versions futures.",
+  desc_evol_wa:"Soyez les premiers informés : rejoignez la chaîne <strong>KarBu Officiel</strong> sur WhatsApp.",
+  wa_follow:"Rejoindre la chaîne WhatsApp",
   desc_titre:"KarBu — Votre carnet de bord automobile intelligent",
 desc_f1h:"📈 Suivi de consommation",desc_f1p:"Enregistrez vos pleins et suivez votre consommation réelle plein après plein. Historique complet avec graphiques et statistiques détaillées — Identifiez vos tendances et détectez une dérive avant qu'elle ne coûte cher.",
 desc_f2h:"⛽ Votre carburant, optimisé",desc_f2p:"Dès l'ouverture, KarBu affiche le prix de votre station idéale — la plus rentable selon votre position. Mise à jour toutes les 10 minutes depuis les données officielles du gouvernement. En un coup d'œil, vous savez combien vous économisez en changeant de station, calculé sur la base de votre consommation réelle. Déjà disponible en France, en Espagne et en Italie.",
@@ -960,7 +984,7 @@ en:{
   f12p:"Day and night adapted interface — guaranteed visual comfort",
   dl_sub:"Available on Android<br>iOS coming soon",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100% ad-free",dl2_tag_karbu:"One-time purchase",dl2_tag_go:"New",dl2_karbu_sub:"No subscription",dl2_go_free:"Free app",dl2_go_trial:"30 days free",dl2_go_nocommit:"No purchase required",dl2_go_soon:"Coming soon",dl2_cmp_title:"Which app is right for you?",dl2_r_price:"Price",dl2_r_noads:"No ads",dl2_r_cons:"Consumption tracking",dl2_r_near:"Nearby stations",dl2_r_travel:"Travel Mode",dl2_r_cmp:"Station comparator based on your real consumption",dl2_r_obd:"OBD2 Diagnostics",dl2_r_maint:"Maintenance",dl2_r_fuelprice:"Official fuel prices in",dl2_r_lang:"10 languages",dl2_free:"Free",dl2_cmp_go:"30-day free trial, then subscription",dl2_cmp_incl:"included",dl2_countries:"France · Spain · Italy",dl2_sym:"$",
+  dl2_line1:"100% ad-free",dl2_tag_karbu:"One-time purchase",dl2_tag_go:"New",dl2_karbu_sub:"No subscription",dl2_go_free:"Free app",dl2_go_trial:"30 days free",dl2_go_nocommit:"No purchase required",dl2_go_soon:"Coming soon",dl2_go_postit:"Soon!",dl2_cmp_title:"Which app is right for you?",dl2_r_price:"Price",dl2_r_noads:"No ads",dl2_r_cons:"Consumption tracking",dl2_r_near:"Nearby stations",dl2_r_travel:"Travel Mode",dl2_r_cmp:"Station comparator based on your real consumption",dl2_r_obd:"OBD2 Diagnostics",dl2_r_maint:"Maintenance",dl2_r_fuelprice:"Official fuel prices in",dl2_r_lang:"10 languages",dl2_free:"Free",dl2_cmp_go:"30-day free trial, then subscription",dl2_cmp_incl:"included",dl2_countries:"France · Spain · Italy",dl2_sym:"$",
   hum_t1:"Hit the road with KarBu",hum_s1:"safe and distraction-free",hum_t2:"The right station isn't always the closest, or the cheapest.",hum_t3:"The right stop. At the ideal moment.<br>At the best price.",hum_t3p:"The right stop. At the ideal moment. At the best price.",hum_trust:"No ads · No subscription · No hidden fees",
   hum_t4:"Is this detour worth it?",hum_s4:"See your real savings, to the litre, for your vehicle.",
   f9pw:"Official prices, ideal station. Real savings, specific to your vehicle — without entering anything. The comparator calculates, based on your trip, the exact litre threshold where a station actually becomes worth it.",
@@ -1000,7 +1024,7 @@ cl_v38_date:"29 July 2026",
 cl_v38_p:"Trip Mode is now available for everyone, everywhere in the world — for combustion and electric vehicles, even without GPS. Plan your route and calculate your stops wherever you are.",
 cl_v40_date:"31 August 2026",
 cl_v40_content:"▪ Added OBD2 Diagnostics — real-time battery, engine, fuel tank and turbo pressure, with automatic fault code alerts<br>▪ Enhanced station comparator",
-  cl_go_date:"17 October 2026",cl_go_p:"KarBu Go is here. Perfect for trying it out, or for a holiday without spending a thing!",
+  cl_go_date:"26 October 2026",cl_go_p:"KarBu Go is here. Perfect for trying it out, or for a holiday without spending a thing!",
 cl_vxx_date:"2026",
 cl_vxx_p:"Your suggestions — Listening to your feedback and improvements.",
   gal_title:"📱 Screenshots",
@@ -1061,6 +1085,8 @@ aide_s8l10:"You can enter the number of litres you plan to add to see the saving
   hero_privacy_line:"🔒 Private &amp; secure data",
   desc_evol_h:"🔄 Always evolving",
   desc_evol_p:"KarBu keeps evolving — new features are already planned for future versions.",
+  desc_evol_wa:"Be the first to know: join the <strong>KarBu Officiel</strong> channel on WhatsApp.",
+  wa_follow:"Join the WhatsApp channel",
   desc_titre:"KarBu — Your intelligent vehicle logbook",
 desc_f1h:"📈 Consumption tracking",desc_f1p:"Log your fill-ups and track your real consumption fill by fill. Full history with charts and detailed statistics — spot trends and catch any drift before it costs you.",
 desc_f2h:"⛽ Your fuel, optimised",desc_f2p:"On opening, KarBu shows the price of your ideal station — the most profitable one based on your location. Updated every 10 minutes from official government data. At a glance, you know how much you save by switching stations, based on your real consumption. Already available in France, Spain and Italy.",
@@ -1129,7 +1155,7 @@ de:{
   f12p:"Tag und Nacht angepasste Oberfläche — visueller Komfort garantiert",
   dl_sub:"Verfügbar auf Android<br>iOS demnächst",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100 % werbefrei",dl2_tag_karbu:"Einmalkauf",dl2_tag_go:"Neu",dl2_karbu_sub:"Kein Abo",dl2_go_free:"Kostenlose App",dl2_go_trial:"30 Tage gratis",dl2_go_nocommit:"Keine Kaufverpflichtung",dl2_go_soon:"Demnächst verfügbar",dl2_cmp_title:"Welche App passt zu Ihnen?",dl2_r_price:"Preis",dl2_r_noads:"Keine Werbung",dl2_r_cons:"Verbrauchsverfolgung",dl2_r_near:"Tankstellen in der Nähe",dl2_r_travel:"Reise-Modus",dl2_r_cmp:"Tankstellen-Vergleicher nach Ihrem echten Verbrauch",dl2_r_obd:"OBD2-Diagnose",dl2_r_maint:"Wartung",dl2_r_fuelprice:"Offizielle Kraftstoffpreise in",dl2_r_lang:"10 Sprachen",dl2_free:"Kostenlos",dl2_cmp_go:"30 Tage kostenlos testen, danach Abo",dl2_cmp_incl:"inklusive",dl2_countries:"Frankreich · Spanien · Italien",dl2_sym:"€",
+  dl2_line1:"100 % werbefrei",dl2_tag_karbu:"Einmalkauf",dl2_tag_go:"Neu",dl2_karbu_sub:"Kein Abo",dl2_go_free:"Kostenlose App",dl2_go_trial:"30 Tage gratis",dl2_go_nocommit:"Keine Kaufverpflichtung",dl2_go_soon:"Demnächst verfügbar",dl2_go_postit:"Bald!",dl2_cmp_title:"Welche App passt zu Ihnen?",dl2_r_price:"Preis",dl2_r_noads:"Keine Werbung",dl2_r_cons:"Verbrauchsverfolgung",dl2_r_near:"Tankstellen in der Nähe",dl2_r_travel:"Reise-Modus",dl2_r_cmp:"Tankstellen-Vergleicher nach Ihrem echten Verbrauch",dl2_r_obd:"OBD2-Diagnose",dl2_r_maint:"Wartung",dl2_r_fuelprice:"Offizielle Kraftstoffpreise in",dl2_r_lang:"10 Sprachen",dl2_free:"Kostenlos",dl2_cmp_go:"30 Tage kostenlos testen, danach Abo",dl2_cmp_incl:"inklusive",dl2_countries:"Frankreich · Spanien · Italien",dl2_sym:"€",
   hum_t1:"Fahren Sie los mit KarBu",hum_s1:"sicher und ohne Ablenkung",hum_t2:"Die richtige Tankstelle ist nicht immer die nächste – und nicht immer die günstigste.",hum_t3:"Der richtige Stopp. Im idealen Moment.<br>Zum besten Preis.",hum_t3p:"Der richtige Stopp. Im idealen Moment. Zum besten Preis.",hum_trust:"Keine Werbung · Kein Abo · Keine versteckten Gebühren",
   hum_t4:"Lohnt sich dieser Umweg?",hum_s4:"Sehen Sie Ihre echte Ersparnis, auf den Liter genau, für Ihr Fahrzeug.",
   f9pw:"Offizielle Preise, ideale Tankstelle. Echte Ersparnis, individuell für Ihr Fahrzeug — ohne Eingabe. Der Vergleicher berechnet für Ihre Fahrt die genaue Liter-Schwelle, ab der sich eine Tankstelle wirklich lohnt.",
@@ -1169,7 +1195,7 @@ cl_v38_date:"29. Juli 2026",
 cl_v38_p:"Der Reisemodus ist jetzt für alle und überall auf der Welt verfügbar — für Verbrenner und Elektrofahrzeuge, sogar ohne GPS. Planen Sie Ihre Route und berechnen Sie Ihre Stopps, wo immer Sie sich befinden.",
 cl_v40_date:"31. August 2026",
 cl_v40_content:"▪ OBD2-Diagnose hinzugefügt — Batterie, Motor, Tank und Turboladerdruck in Echtzeit, mit automatischer Warnung bei Fehlercodes<br>▪ Verbesserter Tankstellenvergleich",
-  cl_go_date:"17. Oktober 2026",cl_go_p:"KarBu Go ist da. Ideal zum Ausprobieren oder für den Urlaub, ganz ohne Ausgaben!",
+  cl_go_date:"26. Oktober 2026",cl_go_p:"KarBu Go ist da. Ideal zum Ausprobieren oder für den Urlaub, ganz ohne Ausgaben!",
 cl_vxx_date:"2026",
 cl_vxx_p:"Ihre Vorschläge — Wir hören auf Ihr Feedback.",
   gal_title:"📱 Screenshots",
@@ -1230,6 +1256,8 @@ aide_s8l10:"Sie können die Anzahl der Liter angeben, die Sie tanken möchten, u
   hero_privacy_line:"🔒 Private &amp; sichere Daten",
   desc_evol_h:"🔄 Immer in Entwicklung",
   desc_evol_p:"KarBu entwickelt sich weiter — neue Funktionen sind bereits für zukünftige Versionen geplant.",
+  desc_evol_wa:"Erfahren Sie es als Erste: Treten Sie dem WhatsApp-Kanal <strong>KarBu Officiel</strong> bei.",
+  wa_follow:"WhatsApp-Kanal beitreten",
   desc_titre:"KarBu — Ihr intelligentes Fahrtenbuch",
 desc_f1h:"📈 Verbrauchsverfolgung",desc_f1p:"Tankvorgänge eintragen und Ihren realen Verbrauch Tankfüllung für Tankfüllung verfolgen. Vollständiger Verlauf mit Diagrammen und Statistiken — Trends erkennen und Abweichungen früh entdecken.",
 desc_f2h:"⛽ Ihr Kraftstoff, optimiert",desc_f2p:"Beim Öffnen zeigt KarBu den Preis Ihrer idealen Tankstelle — der rentabelsten in Ihrer Nähe. Alle 10 Minuten aus offiziellen Regierungsdaten aktualisiert. Auf einen Blick sehen Sie, wie viel Sie sparen, berechnet auf Basis Ihres realen Verbrauchs. Bereits in Frankreich, Spanien und Italien verfügbar.",
@@ -1298,7 +1326,7 @@ es:{
   f12p:"Interfaz adaptada día y noche — confort visual garantizado",
   dl_sub:"Disponible en Android<br>iOS próximamente",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100 % sin publicidad",dl2_tag_karbu:"Compra única",dl2_tag_go:"Nuevo",dl2_karbu_sub:"Sin suscripción",dl2_go_free:"Aplicación gratuita",dl2_go_trial:"30 días gratis",dl2_go_nocommit:"Sin obligación de compra",dl2_go_soon:"Próximamente",dl2_cmp_title:"¿Qué app es para ti?",dl2_r_price:"Precio",dl2_r_noads:"Sin publicidad",dl2_r_cons:"Seguimiento del consumo",dl2_r_near:"Estaciones cercanas",dl2_r_travel:"Modo Viaje",dl2_r_cmp:"Comparador de estaciones según tu consumo real",dl2_r_obd:"Diagnóstico OBD2",dl2_r_maint:"Mantenimiento",dl2_r_fuelprice:"Precios oficiales de combustible en",dl2_r_lang:"10 idiomas",dl2_free:"Gratuita",dl2_cmp_go:"30 días de prueba gratis, luego suscripción",dl2_cmp_incl:"incluido",dl2_countries:"Francia · España · Italia",dl2_sym:"€",
+  dl2_line1:"100 % sin publicidad",dl2_tag_karbu:"Compra única",dl2_tag_go:"Nuevo",dl2_karbu_sub:"Sin suscripción",dl2_go_free:"Aplicación gratuita",dl2_go_trial:"30 días gratis",dl2_go_nocommit:"Sin obligación de compra",dl2_go_soon:"Próximamente",dl2_go_postit:"¡Pronto!",dl2_cmp_title:"¿Qué app es para ti?",dl2_r_price:"Precio",dl2_r_noads:"Sin publicidad",dl2_r_cons:"Seguimiento del consumo",dl2_r_near:"Estaciones cercanas",dl2_r_travel:"Modo Viaje",dl2_r_cmp:"Comparador de estaciones según tu consumo real",dl2_r_obd:"Diagnóstico OBD2",dl2_r_maint:"Mantenimiento",dl2_r_fuelprice:"Precios oficiales de combustible en",dl2_r_lang:"10 idiomas",dl2_free:"Gratuita",dl2_cmp_go:"30 días de prueba gratis, luego suscripción",dl2_cmp_incl:"incluido",dl2_countries:"Francia · España · Italia",dl2_sym:"€",
   hum_t1:"Toma la carretera con KarBu",hum_s1:"con total seguridad y sin distracciones",hum_t2:"La mejor estación no siempre es la más cercana ni la más barata.",hum_t3:"La parada justa. En el momento ideal.<br>Al mejor precio.",hum_t3p:"La parada justa. En el momento ideal. Al mejor precio.",hum_trust:"Sin publicidad · Sin suscripción · Sin cargos ocultos",
   hum_t4:"¿Merece la pena este desvío?",hum_s4:"Descubre tu ahorro real, al litro, para tu vehículo.",
   f9pw:"Precios oficiales, estación ideal. Ahorros reales, propios de tu vehículo — sin introducir nada. El comparador calcula, según tu trayecto, el umbral exacto en litros a partir del cual una estación resulta realmente rentable.",
@@ -1338,7 +1366,7 @@ cl_v38_date:"29 de julio de 2026",
 cl_v38_p:"El Modo Viaje ya está disponible para todos, en cualquier parte del mundo — en vehículos térmicos y eléctricos, incluso sin GPS. Planifica tu ruta y calcula tus paradas estés donde estés.",
 cl_v40_date:"31 de agosto de 2026",
 cl_v40_content:"▪ Añadido el Diagnóstico OBD2 — batería, motor, depósito y presión del turbo en tiempo real, con alerta automática ante un código de fallo<br>▪ Mejora del comparador de estaciones",
-  cl_go_date:"17 de octubre de 2026",cl_go_p:"¡Llega KarBu Go! Ideal para probarla, o para tus vacaciones sin gastar nada.",
+  cl_go_date:"26 de octubre de 2026",cl_go_p:"¡Llega KarBu Go! Ideal para probarla, o para tus vacaciones sin gastar nada.",
 cl_vxx_date:"2026",
 cl_vxx_p:"Sus sugerencias — Atentos a sus comentarios y mejoras.",
   gal_title:"📱 Capturas de pantalla",
@@ -1399,6 +1427,8 @@ aide_s8l10:"Puedes indicar el número de litros que prevés repostar para conoce
   hero_privacy_line:"🔒 Datos privados y seguros",
   desc_evol_h:"🔄 Siempre en evolución",
   desc_evol_p:"KarBu sigue evolucionando — nuevas funciones ya están planificadas para versiones futuras.",
+  desc_evol_wa:"Sé el primero en enterarte: únete al canal <strong>KarBu Officiel</strong> en WhatsApp.",
+  wa_follow:"Unirme al canal de WhatsApp",
   desc_titre:"KarBu — Tu cuaderno de bitácora inteligente",
 desc_f1h:"📈 Seguimiento del consumo",desc_f1p:"Registra tus repostajes y sigue tu consumo real repostaje a repostaje. Historial completo con gráficos y estadísticas — detecta tendencias y desviaciones antes de que te cuesten dinero.",
 desc_f2h:"⛽ Tu combustible, optimizado",desc_f2p:"Al abrir, KarBu muestra el precio de tu estación ideal — la más rentable según tu posición. Actualizado cada 10 minutos desde datos oficiales del gobierno. De un vistazo sabes cuánto ahorras cambiando de estación, basado en tu consumo real. Ya disponible en Francia, España e Italia.",
@@ -1467,7 +1497,7 @@ it:{
   f12p:"Interfaccia adattata giorno e notte — comfort visivo garantito",
   dl_sub:"Disponibile su Android<br>iOS presto",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100% senza pubblicità",dl2_tag_karbu:"Acquisto unico",dl2_tag_go:"Novità",dl2_karbu_sub:"Nessun abbonamento",dl2_go_free:"App gratuita",dl2_go_trial:"30 giorni gratis",dl2_go_nocommit:"Nessun obbligo di acquisto",dl2_go_soon:"Prossimamente",dl2_cmp_title:"Quale app fa per te?",dl2_r_price:"Prezzo",dl2_r_noads:"Senza pubblicità",dl2_r_cons:"Monitoraggio consumi",dl2_r_near:"Stazioni vicine",dl2_r_travel:"Modalità Viaggio",dl2_r_cmp:"Comparatore di stazioni in base ai tuoi consumi reali",dl2_r_obd:"Diagnostica OBD2",dl2_r_maint:"Manutenzione",dl2_r_fuelprice:"Prezzi ufficiali dei carburanti in",dl2_r_lang:"10 lingue",dl2_free:"Gratuita",dl2_cmp_go:"30 giorni di prova gratuita, poi abbonamento",dl2_cmp_incl:"incluso",dl2_countries:"Francia · Spagna · Italia",dl2_sym:"€",
+  dl2_line1:"100% senza pubblicità",dl2_tag_karbu:"Acquisto unico",dl2_tag_go:"Novità",dl2_karbu_sub:"Nessun abbonamento",dl2_go_free:"App gratuita",dl2_go_trial:"30 giorni gratis",dl2_go_nocommit:"Nessun obbligo di acquisto",dl2_go_soon:"Prossimamente",dl2_go_postit:"Presto!",dl2_cmp_title:"Quale app fa per te?",dl2_r_price:"Prezzo",dl2_r_noads:"Senza pubblicità",dl2_r_cons:"Monitoraggio consumi",dl2_r_near:"Stazioni vicine",dl2_r_travel:"Modalità Viaggio",dl2_r_cmp:"Comparatore di stazioni in base ai tuoi consumi reali",dl2_r_obd:"Diagnostica OBD2",dl2_r_maint:"Manutenzione",dl2_r_fuelprice:"Prezzi ufficiali dei carburanti in",dl2_r_lang:"10 lingue",dl2_free:"Gratuita",dl2_cmp_go:"30 giorni di prova gratuita, poi abbonamento",dl2_cmp_incl:"incluso",dl2_countries:"Francia · Spagna · Italia",dl2_sym:"€",
   hum_t1:"Mettiti in strada con KarBu",hum_s1:"in tutta sicurezza e senza distrazioni",hum_t2:"La stazione giusta non è sempre la più vicina, né la più economica.",hum_t3:"La sosta giusta. Al momento ideale.<br>Al miglior prezzo.",hum_t3p:"La sosta giusta. Al momento ideale. Al miglior prezzo.",hum_trust:"Senza pubblicità · Senza abbonamento · Senza costi nascosti",
   hum_t4:"Vale la pena questa deviazione?",hum_s4:"Scopri il risparmio reale, al litro, per il tuo veicolo.",
   f9pw:"Prezzi ufficiali, stazione ideale. Risparmi reali, specifici per il tuo veicolo — senza inserire nulla. Il comparatore calcola, in base al tuo percorso, la soglia esatta in litri a partire dalla quale una stazione diventa davvero conveniente.",
@@ -1507,7 +1537,7 @@ cl_v38_date:"29 luglio 2026",
 cl_v38_p:"La Modalità Viaggio è ora disponibile per tutti, ovunque nel mondo — per veicoli termici ed elettrici, anche senza GPS. Pianifica il tuo percorso e calcola le tue soste ovunque tu sia.",
 cl_v40_date:"31 agosto 2026",
 cl_v40_content:"▪ Aggiunta la Diagnostica OBD2 — batteria, motore, serbatoio e pressione del turbo in tempo reale, con avviso automatico in caso di codice di errore<br>▪ Migliorato il comparatore di stazioni",
-  cl_go_date:"17 ottobre 2026",cl_go_p:"È arrivata KarBu Go. Ideale per provarla, o per le vacanze senza spendere nulla!",
+  cl_go_date:"26 ottobre 2026",cl_go_p:"È arrivata KarBu Go. Ideale per provarla, o per le vacanze senza spendere nulla!",
 cl_vxx_date:"2026",
 cl_vxx_p:"I tuoi suggerimenti — In ascolto dei tuoi commenti e miglioramenti.",
   gal_title:"📱 Screenshot",
@@ -1573,6 +1603,8 @@ aide_s8l10:"Puoi indicare il numero di litri che prevedi di fare per conoscere i
   hero_privacy_line:"🔒 Dati privati e sicuri",
   desc_evol_h:"🔄 Sempre in evoluzione",
   desc_evol_p:"KarBu continua ad evolversi — nuove funzionalità sono già pianificate per le versioni future.",
+  desc_evol_wa:"Sii il primo a saperlo: unisciti al canale <strong>KarBu Officiel</strong> su WhatsApp.",
+  wa_follow:"Unisciti al canale WhatsApp",
   desc_titre:"KarBu — Il tuo libretto di bordo intelligente",
 desc_f1h:"📈 Monitoraggio consumi",desc_f1p:"Registra i rifornimenti e monitora il tuo consumo reale rifornimento dopo rifornimento. Storico completo con grafici e statistiche — individua le tendenze e rileva le deviazioni prima che costino.",
 desc_f2h:"⛽ Il tuo carburante, ottimizzato",desc_f2p:"All'apertura, KarBu mostra il prezzo della tua stazione ideale — la più conveniente in base alla tua posizione. Aggiornato ogni 10 minuti dai dati ufficiali del governo. In un colpo d'occhio sai quanto risparmi cambiando stazione, basato sul tuo consumo reale. Già disponibile in Francia, Spagna e Italia.",
@@ -1641,7 +1673,7 @@ nl:{
   f12p:"Dag en nacht aangepaste interface — visueel comfort gegarandeerd",
   dl_sub:"Beschikbaar op Android<br>iOS binnenkort",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100% reclamevrij",dl2_tag_karbu:"Eenmalige aankoop",dl2_tag_go:"Nieuw",dl2_karbu_sub:"Geen abonnement",dl2_go_free:"Gratis app",dl2_go_trial:"30 dagen gratis",dl2_go_nocommit:"Geen aankoopverplichting",dl2_go_soon:"Binnenkort beschikbaar",dl2_cmp_title:"Welke app past bij u?",dl2_r_price:"Prijs",dl2_r_noads:"Geen reclame",dl2_r_cons:"Verbruiksregistratie",dl2_r_near:"Tankstations in de buurt",dl2_r_travel:"Reismodus",dl2_r_cmp:"Tankstation-vergelijker op basis van uw werkelijke verbruik",dl2_r_obd:"OBD2-diagnose",dl2_r_maint:"Onderhoud",dl2_r_fuelprice:"Officiële brandstofprijzen in",dl2_r_lang:"10 talen",dl2_free:"Gratis",dl2_cmp_go:"30 dagen gratis proberen, daarna abonnement",dl2_cmp_incl:"inbegrepen",dl2_countries:"Frankrijk · Spanje · Italië",dl2_sym:"€",
+  dl2_line1:"100% reclamevrij",dl2_tag_karbu:"Eenmalige aankoop",dl2_tag_go:"Nieuw",dl2_karbu_sub:"Geen abonnement",dl2_go_free:"Gratis app",dl2_go_trial:"30 dagen gratis",dl2_go_nocommit:"Geen aankoopverplichting",dl2_go_soon:"Binnenkort beschikbaar",dl2_go_postit:"Binnenkort!",dl2_cmp_title:"Welke app past bij u?",dl2_r_price:"Prijs",dl2_r_noads:"Geen reclame",dl2_r_cons:"Verbruiksregistratie",dl2_r_near:"Tankstations in de buurt",dl2_r_travel:"Reismodus",dl2_r_cmp:"Tankstation-vergelijker op basis van uw werkelijke verbruik",dl2_r_obd:"OBD2-diagnose",dl2_r_maint:"Onderhoud",dl2_r_fuelprice:"Officiële brandstofprijzen in",dl2_r_lang:"10 talen",dl2_free:"Gratis",dl2_cmp_go:"30 dagen gratis proberen, daarna abonnement",dl2_cmp_incl:"inbegrepen",dl2_countries:"Frankrijk · Spanje · Italië",dl2_sym:"€",
   hum_t1:"Ga de weg op met KarBu",hum_s1:"veilig en zonder afleiding",hum_t2:"Het juiste tankstation is niet altijd het dichtstbijzijnde of het goedkoopste.",hum_t3:"De juiste stop. Op het ideale moment.<br>Tegen de beste prijs.",hum_t3p:"De juiste stop. Op het ideale moment. Tegen de beste prijs.",hum_trust:"Geen reclame · Geen abonnement · Geen verborgen kosten",
   hum_t4:"Is deze omweg de moeite waard?",hum_s4:"Zie uw echte besparing, tot op de liter nauwkeurig, voor uw voertuig.",
   f9pw:"Officiële prijzen, ideaal tankstation. Echte besparingen, specifiek voor uw voertuig — zonder iets in te voeren. De vergelijker berekent, op basis van uw rit, de exacte literdrempel waarop een tankstation echt rendabel wordt.",
@@ -1681,7 +1713,7 @@ cl_v38_date:"29 juli 2026",
 cl_v38_p:"Reismodus is nu voor iedereen overal ter wereld beschikbaar — voor benzine/diesel- en elektrische voertuigen, zelfs zonder gps. Plan uw route en bereken uw stops, waar u ook bent.",
 cl_v40_date:"31 augustus 2026",
 cl_v40_content:"▪ OBD2-diagnose toegevoegd — accu, motor, brandstoftank en turbodruk in realtime, met automatische melding bij een storingscode<br>▪ Verbeterde stationsvergelijker",
-  cl_go_date:"17 oktober 2026",cl_go_p:"KarBu Go is er. Ideaal om te proberen, of voor vakantie zonder iets uit te geven!",
+  cl_go_date:"26 oktober 2026",cl_go_p:"KarBu Go is er. Ideaal om te proberen, of voor vakantie zonder iets uit te geven!",
 cl_vxx_date:"2026",
 cl_vxx_p:"Uw suggesties — Wij luisteren naar uw feedback.",
   gal_title:"📱 Schermafbeeldingen",
@@ -1747,6 +1779,8 @@ aide_s8l10:"U kunt het aantal liter opgeven dat u van plan bent te tanken, om de
   hero_privacy_line:"🔒 Privé &amp; beveiligde gegevens",
   desc_evol_h:"🔄 Altijd in ontwikkeling",
   desc_evol_p:"KarBu blijft evolueren — nieuwe functies zijn al gepland voor toekomstige versies.",
+  desc_evol_wa:"Wees als eerste op de hoogte: word lid van het WhatsApp-kanaal <strong>KarBu Officiel</strong>.",
+  wa_follow:"Word lid van het kanaal",
   desc_titre:"KarBu — Uw intelligente voertuiglogboek",
 desc_f1h:"📈 Verbruiksregistratie",desc_f1p:"Registreer tankbeurten en volg uw werkelijk verbruik tankbeurt voor tankbeurt. Volledige geschiedenis met grafieken en statistieken — trends herkennen en afwijkingen vroeg opsporen.",
 desc_f2h:"⛽ Uw brandstof, geoptimaliseerd",desc_f2p:"Bij het openen toont KarBu de prijs van uw ideale tankstation — het meest rendabele op basis van uw locatie. Elke 10 minuten bijgewerkt vanuit officiële overheidsgegevens. In één oogopslag ziet u hoeveel u bespaart door van station te wisselen, berekend op uw werkelijk verbruik. Al beschikbaar in Frankrijk, Spanje en Italië.",
@@ -1815,7 +1849,7 @@ pt:{
   f12p:"Interface adaptada dia e noite — conforto visual garantido",
   dl_sub:"Disponível no Android<br>iOS em breve",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"100% sem publicidade",dl2_tag_karbu:"Compra única",dl2_tag_go:"Novo",dl2_karbu_sub:"Sem assinatura",dl2_go_free:"Aplicação gratuita",dl2_go_trial:"30 dias grátis",dl2_go_nocommit:"Sem obrigação de compra",dl2_go_soon:"Brevemente disponível",dl2_cmp_title:"Qual a aplicação para si?",dl2_r_price:"Preço",dl2_r_noads:"Sem publicidade",dl2_r_cons:"Monitorização do consumo",dl2_r_near:"Postos próximos",dl2_r_travel:"Modo Viagem",dl2_r_cmp:"Comparador de postos com base no seu consumo real",dl2_r_obd:"Diagnóstico OBD2",dl2_r_maint:"Manutenção",dl2_r_fuelprice:"Preços oficiais dos combustíveis em",dl2_r_lang:"10 idiomas",dl2_free:"Gratuita",dl2_cmp_go:"30 dias de teste grátis, depois assinatura",dl2_cmp_incl:"incluído",dl2_countries:"França · Espanha · Itália",dl2_sym:"€",
+  dl2_line1:"100% sem publicidade",dl2_tag_karbu:"Compra única",dl2_tag_go:"Novo",dl2_karbu_sub:"Sem assinatura",dl2_go_free:"Aplicação gratuita",dl2_go_trial:"30 dias grátis",dl2_go_nocommit:"Sem obrigação de compra",dl2_go_soon:"Brevemente disponível",dl2_go_postit:"Em breve!",dl2_cmp_title:"Qual a aplicação para si?",dl2_r_price:"Preço",dl2_r_noads:"Sem publicidade",dl2_r_cons:"Monitorização do consumo",dl2_r_near:"Postos próximos",dl2_r_travel:"Modo Viagem",dl2_r_cmp:"Comparador de postos com base no seu consumo real",dl2_r_obd:"Diagnóstico OBD2",dl2_r_maint:"Manutenção",dl2_r_fuelprice:"Preços oficiais dos combustíveis em",dl2_r_lang:"10 idiomas",dl2_free:"Gratuita",dl2_cmp_go:"30 dias de teste grátis, depois assinatura",dl2_cmp_incl:"incluído",dl2_countries:"França · Espanha · Itália",dl2_sym:"€",
   hum_t1:"Pegue a estrada com o KarBu",hum_s1:"em total segurança e sem distrações",hum_t2:"O melhor posto nem sempre é o mais próximo, nem o mais barato.",hum_t3:"A paragem certa. No momento ideal.<br>Ao melhor preço.",hum_t3p:"A paragem certa. No momento ideal. Ao melhor preço.",hum_trust:"Sem publicidade · Sem assinatura · Sem taxas ocultas",
   hum_t4:"Vale a pena este desvio?",hum_s4:"Veja a poupança real, ao litro, para o seu veículo.",
   f9pw:"Preços oficiais, posto ideal. Poupanças reais, próprias do seu veículo — sem introduzir nada. O comparador calcula, com base na sua viagem, o limite exato em litros a partir do qual um posto se torna realmente rentável.",
@@ -1855,7 +1889,7 @@ cl_v38_date:"29 de julho de 2026",
 cl_v38_p:"O Modo Viagem está agora disponível para todos, em qualquer parte do mundo — em veículos térmicos e elétricos, mesmo sem GPS. Planeie o seu percurso e calcule as suas paragens onde quer que esteja.",
 cl_v40_date:"31 de agosto de 2026",
 cl_v40_content:"▪ Adicionado o Diagnóstico OBD2 — bateria, motor, depósito e pressão do turbo em tempo real, com alerta automático em caso de código de falha<br>▪ Comparador de estações melhorado",
-  cl_go_date:"17 de outubro de 2026",cl_go_p:"Chegou o KarBu Go. Ideal para experimentar, ou para as férias sem gastar nada!",
+  cl_go_date:"26 de outubro de 2026",cl_go_p:"Chegou o KarBu Go. Ideal para experimentar, ou para as férias sem gastar nada!",
 cl_vxx_date:"2026",
 cl_vxx_p:"Suas sugestões — Atentos aos seus comentários e melhorias.",
   gal_title:"📱 Capturas de tela",
@@ -1921,6 +1955,8 @@ aide_s8l10:"Pode indicar o número de litros que planeia abastecer para conhecer
   hero_privacy_line:"🔒 Dados privados e seguros",
   desc_evol_h:"🔄 Sempre em evolução",
   desc_evol_p:"KarBu continua a evoluir — novas funcionalidades já estão planeadas para versões futuras.",
+  desc_evol_wa:"Seja o primeiro a saber: junte-se ao canal <strong>KarBu Officiel</strong> no WhatsApp.",
+  wa_follow:"Juntar-me ao canal do WhatsApp",
  desc_titre:"KarBu — O seu livro de bordo inteligente",
 desc_f1h:"📈 Monitorização do consumo",desc_f1p:"Registe abastecimentos e acompanhe o seu consumo real abastecimento a abastecimento. Histórico completo com gráficos e estatísticas — identifique tendências e detete desvios antes de custarem dinheiro.",
 desc_f2h:"⛽ O seu combustível, otimizado",desc_f2p:"Ao abrir, o KarBu mostra o preço da sua estação ideal — a mais rentável com base na sua posição. Atualizado a cada 10 minutos a partir de dados oficiais do governo. De relance, sabe quanto poupa ao mudar de estação, com base no seu consumo real. Já disponível em França, Espanha e Itália.",
@@ -1989,7 +2025,7 @@ ja:{
   f12p:"昼夜対応インターフェース — 目に優しく快適",
   dl_sub:"Android対応<br>iOS近日公開",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"広告なし100%",dl2_tag_karbu:"買い切り",dl2_tag_go:"新登場",dl2_karbu_sub:"サブスクなし",dl2_go_free:"無料アプリ",dl2_go_trial:"30日間無料",dl2_go_nocommit:"購入の義務なし",dl2_go_soon:"近日公開",dl2_cmp_title:"どちらのアプリが合っていますか？",dl2_r_price:"価格",dl2_r_noads:"広告なし",dl2_r_cons:"燃費記録",dl2_r_near:"近くのスタンド",dl2_r_travel:"旅行モード",dl2_r_cmp:"実際の燃費に基づくスタンド比較",dl2_r_obd:"OBD2診断",dl2_r_maint:"メンテナンス",dl2_r_fuelprice:"公式の燃料価格（対応国）",dl2_r_lang:"10か国語に対応",dl2_free:"無料",dl2_cmp_go:"30日間の無料体験、その後サブスク",dl2_cmp_incl:"含まれる",dl2_countries:"フランス・スペイン・イタリア",dl2_sym:"¥",
+  dl2_line1:"広告なし100%",dl2_tag_karbu:"買い切り",dl2_tag_go:"新登場",dl2_karbu_sub:"サブスクなし",dl2_go_free:"無料アプリ",dl2_go_trial:"30日間無料",dl2_go_nocommit:"購入の義務なし",dl2_go_soon:"近日公開",dl2_go_postit:"もうすぐ!",dl2_cmp_title:"どちらのアプリが合っていますか？",dl2_r_price:"価格",dl2_r_noads:"広告なし",dl2_r_cons:"燃費記録",dl2_r_near:"近くのスタンド",dl2_r_travel:"旅行モード",dl2_r_cmp:"実際の燃費に基づくスタンド比較",dl2_r_obd:"OBD2診断",dl2_r_maint:"メンテナンス",dl2_r_fuelprice:"公式の燃料価格（対応国）",dl2_r_lang:"10か国語に対応",dl2_free:"無料",dl2_cmp_go:"30日間の無料体験、その後サブスク",dl2_cmp_incl:"含まれる",dl2_countries:"フランス・スペイン・イタリア",dl2_sym:"¥",
   hum_t1:"KarBuと一緒に出発しよう",hum_s1:"安全に、気を散らさず",hum_t2:"最適なスタンドは、最寄りでも最安でもないことがあります。",hum_t3:"最適な給油ストップ。最適なタイミング。<br>最良の価格で。",hum_t3p:"最適な給油ストップ。最適なタイミング。 最良の価格で。",hum_trust:"広告なし · サブスクなし · 隠れた費用なし",
   hum_t4:"この寄り道は、その価値がある？",hum_s4:"あなたの車両に合わせた本当の節約額を、1リットル単位で。",
   f9pw:"公式価格、最適スタンド。あなたの車両に合わせた本当の節約額を自動計算 — 何も入力不要。比較機能が、ルートに合わせて、スタンドが本当にお得になる正確なリットル数のしきい値を計算します。",
@@ -2029,7 +2065,7 @@ cl_v38_date:"2026年7月29日",
 cl_v38_p:"モード・ボヤージュ（旅行モード）がGPSなしでも、ガソリン車・電気自動車を問わず、世界中どこでも誰でも利用できるようになりました。どこにいても経路を計画し、立ち寄り地点を計算できます。",
 cl_v40_date:"2026年8月31日",
 cl_v40_content:"▪ OBD2診断を追加 — バッテリー、エンジン、燃料タンク、ターボ圧をリアルタイム表示し、故障コード検出時は自動で警告<br>▪ ステーション比較機能を強化",
-  cl_go_date:"2026年10月17日",cl_go_p:"KarBu Goが登場。試してみるのにも、お金をかけない旅行にもぴったりです！",
+  cl_go_date:"2026年10月26日",cl_go_p:"KarBu Goが登場。試してみるのにも、お金をかけない旅行にもぴったりです！",
 cl_vxx_date:"2026年",
 cl_vxx_p:"あなたの提案 — フィードバックに耳を傾けています。",
   gal_title:"📱 スクリーンショット",
@@ -2090,6 +2126,8 @@ aide_s8l10:"給油予定のリットル数を入力すると、満タンでは�
   hero_privacy_line:"🔒 個人情報保護と安心のセキュリティ",
   desc_evol_h:"🔄 常に進化中",
   desc_evol_p:"KarBuは進化を続けています — 将来のバージョンに向けて新機能がすでに計画されています。",
+  desc_evol_wa:"いち早くお知らせします。WhatsAppチャンネル「<strong>KarBu Officiel</strong>」にご参加ください。",
+  wa_follow:"チャンネルに参加",
   desc_titre:"KarBu — あなたのスマート車両ログブック",
 desc_f1h:"📈 燃費記録",desc_f1p:"給油ごとにリアルな燃費を記録。グラフと詳細統計付きの完全な履歴 — 傾向を把握し、問題になる前に異常を検知。",
 desc_f2h:"⛽ あなたの燃料、最適化",desc_f2p:"起動するとすぐに、あなたの位置に基づいた最適スタンドの価格を表示。政府公式データから10分ごとに更新。実際の燃費をもとに、スタンドを変えた場合の節約額を一目で確認できます。フランス、スペイン、イタリアですでに利用可能。",
@@ -2158,7 +2196,7 @@ ko:{
   f12p:"주야간 적응 인터페이스 — 시각적 편안함 보장",
   dl_sub:"Android 출시<br>iOS 출시 예정",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"광고 100% 없음",dl2_tag_karbu:"일회성 구매",dl2_tag_go:"신규",dl2_karbu_sub:"구독 없음",dl2_go_free:"무료 앱",dl2_go_trial:"30일 무료",dl2_go_nocommit:"구매 의무 없음",dl2_go_soon:"곧 출시",dl2_cmp_title:"어떤 앱이 맞을까요?",dl2_r_price:"가격",dl2_r_noads:"광고 없음",dl2_r_cons:"연비 추적",dl2_r_near:"가까운 주유소",dl2_r_travel:"여행 모드",dl2_r_cmp:"실제 연비 기반 주유소 비교기",dl2_r_obd:"OBD2 진단",dl2_r_maint:"유지보수",dl2_r_fuelprice:"공식 연료 가격 제공 국가",dl2_r_lang:"10개 언어",dl2_free:"무료",dl2_cmp_go:"30일 무료 체험 후 구독",dl2_cmp_incl:"포함",dl2_countries:"프랑스 · 스페인 · 이탈리아",dl2_sym:"₩",
+  dl2_line1:"광고 100% 없음",dl2_tag_karbu:"일회성 구매",dl2_tag_go:"신규",dl2_karbu_sub:"구독 없음",dl2_go_free:"무료 앱",dl2_go_trial:"30일 무료",dl2_go_nocommit:"구매 의무 없음",dl2_go_soon:"곧 출시",dl2_go_postit:"곧!",dl2_cmp_title:"어떤 앱이 맞을까요?",dl2_r_price:"가격",dl2_r_noads:"광고 없음",dl2_r_cons:"연비 추적",dl2_r_near:"가까운 주유소",dl2_r_travel:"여행 모드",dl2_r_cmp:"실제 연비 기반 주유소 비교기",dl2_r_obd:"OBD2 진단",dl2_r_maint:"유지보수",dl2_r_fuelprice:"공식 연료 가격 제공 국가",dl2_r_lang:"10개 언어",dl2_free:"무료",dl2_cmp_go:"30일 무료 체험 후 구독",dl2_cmp_incl:"포함",dl2_countries:"프랑스 · 스페인 · 이탈리아",dl2_sym:"₩",
   hum_t1:"KarBu와 함께 출발하세요",hum_s1:"안전하게, 방해 없이",hum_t2:"좋은 주유소가 항상 가장 가깝거나 가장 저렴한 곳은 아닙니다.",hum_t3:"알맞은 정차, 최적의 타이밍,<br>최고의 가격.",hum_t3p:"알맞은 정차, 최적의 타이밍, 최고의 가격.",hum_trust:"광고 없음 · 구독 없음 · 숨겨진 요금 없음",
   hum_t4:"이 우회, 가치가 있을까요?",hum_s4:"내 차량 기준의 실제 절약액을 리터 단위로 확인하세요.",
   f9pw:"공식 가격, 최적 주유소. 내 차량에 맞춘 진짜 절약액 — 아무것도 입력하지 않아도. 비교기가 경로에 맞춰, 주유소가 진짜 이득이 되는 정확한 리터 기준을 계산합니다.",
@@ -2198,7 +2236,7 @@ cl_v38_date:"2026년 7월 29일",
 cl_v38_p:"이제 여행 모드를 전 세계 어디서나, 내연기관 차량과 전기차 모두, GPS 없이도 누구나 사용할 수 있습니다. 어디에 있든 경로를 계획하고 정차 지점을 계산하세요.",
 cl_v40_date:"2026년 8월 31일",
 cl_v40_content:"▪ OBD2 진단 추가 — 배터리, 엔진, 연료 탱크, 터보 압력을 실시간으로 확인하고 고장 코드 감지 시 자동 경고<br>▪ 주유소 비교 기능 개선",
-  cl_go_date:"2026년 10월 17일",cl_go_p:"KarBu Go 출시. 체험해보기에도, 돈 한 푼 안 쓰는 휴가에도 딱이에요!",
+  cl_go_date:"2026년 10월 26일",cl_go_p:"KarBu Go 출시. 체험해보기에도, 돈 한 푼 안 쓰는 휴가에도 딱이에요!",
 cl_vxx_date:"2026년",
 cl_vxx_p:"여러분의 제안 — 피드백에 귀 기울이겠습니다.",
   gal_title:"📱 스크린샷",
@@ -2259,6 +2297,8 @@ aide_s8l10:"주유 예정인 리터 수를 입력하면 만탱크가 아닌 해�
   hero_privacy_line:"🔒 개인 및 보안 데이터",
   desc_evol_h:"🔄 항상 진화 중",
   desc_evol_p:"KarBu는 계속 발전하고 있습니다 — 새로운 기능이 이미 향후 버전을 위해 계획되어 있습니다.",
+  desc_evol_wa:"가장 먼저 소식을 받아보세요. WhatsApp 채널 <strong>KarBu Officiel</strong>에 참여하세요.",
+  wa_follow:"채널 참여하기",
  desc_titre:"KarBu — 스마트 차량 로그북",
 desc_f1h:"📈 연비 추적",desc_f1p:"주유마다 실제 연비를 기록하세요. 그래프와 상세 통계가 포함된 전체 기록 — 추세를 파악하고 비용이 발생하기 전에 이상을 감지하세요.",
 desc_f2h:"⛽ 내 연료, 최적화",desc_f2p:"앱을 열면 위치 기반 최적 주유소 가격을 즉시 표시. 정부 공식 데이터에서 10분마다 업데이트. 실제 연비를 기준으로 주유소를 바꿀 때 얼마나 절약하는지 한눈에 확인할 수 있습니다. 프랑스, 스페인, 이탈리아에서 이미 이용 가능합니다.",
@@ -2327,7 +2367,7 @@ tr:{
   f12p:"Gündüz ve gece uyarlanmış arayüz — görsel konfor garantili",
   dl_sub:"Android'de mevcut<br>iOS yakında",
   dl_btn:"▶ Google Play Store",
-  dl2_line1:"%100 reklamsız",dl2_tag_karbu:"Tek seferlik satın alma",dl2_tag_go:"Yeni",dl2_karbu_sub:"Abonelik yok",dl2_go_free:"Ücretsiz uygulama",dl2_go_trial:"30 gün ücretsiz",dl2_go_nocommit:"Satın alma zorunluluğu yok",dl2_go_soon:"Yakında",dl2_cmp_title:"Hangi uygulama size uygun?",dl2_r_price:"Fiyat",dl2_r_noads:"Reklam yok",dl2_r_cons:"Tüketim takibi",dl2_r_near:"Yakındaki istasyonlar",dl2_r_travel:"Seyahat Modu",dl2_r_cmp:"Gerçek tüketiminize göre istasyon karşılaştırıcı",dl2_r_obd:"OBD2 Tanılama",dl2_r_maint:"Bakım",dl2_r_fuelprice:"Resmi akaryakıt fiyatları:",dl2_r_lang:"10 dil",dl2_free:"Ücretsiz",dl2_cmp_go:"30 gün ücretsiz deneme, sonra abonelik",dl2_cmp_incl:"dahil",dl2_countries:"Fransa · İspanya · İtalya",dl2_sym:"₺",
+  dl2_line1:"%100 reklamsız",dl2_tag_karbu:"Tek seferlik satın alma",dl2_tag_go:"Yeni",dl2_karbu_sub:"Abonelik yok",dl2_go_free:"Ücretsiz uygulama",dl2_go_trial:"30 gün ücretsiz",dl2_go_nocommit:"Satın alma zorunluluğu yok",dl2_go_soon:"Yakında",dl2_go_postit:"Yakında!",dl2_cmp_title:"Hangi uygulama size uygun?",dl2_r_price:"Fiyat",dl2_r_noads:"Reklam yok",dl2_r_cons:"Tüketim takibi",dl2_r_near:"Yakındaki istasyonlar",dl2_r_travel:"Seyahat Modu",dl2_r_cmp:"Gerçek tüketiminize göre istasyon karşılaştırıcı",dl2_r_obd:"OBD2 Tanılama",dl2_r_maint:"Bakım",dl2_r_fuelprice:"Resmi akaryakıt fiyatları:",dl2_r_lang:"10 dil",dl2_free:"Ücretsiz",dl2_cmp_go:"30 gün ücretsiz deneme, sonra abonelik",dl2_cmp_incl:"dahil",dl2_countries:"Fransa · İspanya · İtalya",dl2_sym:"₺",
   hum_t1:"KarBu ile yola çıkın",hum_s1:"güvenle ve dikkat dağıtmadan",hum_t2:"Doğru istasyon her zaman en yakın ya da en ucuz olan değildir.",hum_t3:"Doğru durak. İdeal anda.<br>En iyi fiyata.",hum_t3p:"Doğru durak. İdeal anda. En iyi fiyata.",hum_trust:"Reklam yok · Abonelik yok · Gizli ücret yok",
   hum_t4:"Bu sapmaya değer mi?",hum_s4:"Aracınız için gerçek tasarrufu litre bazında görün.",
   f9pw:"Resmi fiyatlar, ideal istasyon. Aracınıza özel gerçek tasarruflar — hiçbir şey girmeden. Karşılaştırıcı, güzergahınıza göre bir istasyonun gerçekten kârlı hale geldiği tam litre eşiğini hesaplar.",
@@ -2367,7 +2407,7 @@ cl_v38_date:"29 Temmuz 2026",
 cl_v38_p:"Seyahat Modu artık GPS olmadan bile, benzinli/dizel ve elektrikli araçlar için dünyanın her yerinde herkes tarafından kullanılabilir. Nerede olursanız olun rotanızı planlayın ve duraklarınızı hesaplayın.",
 cl_v40_date:"31 Ağustos 2026",
 cl_v40_content:"▪ OBD2 Tanılama eklendi — akü, motor, yakıt deposu ve turbo basıncını gerçek zamanlı görüntüleyin, arıza kodu tespitinde otomatik uyarı<br>▪ İstasyon karşılaştırma özelliği geliştirildi",
-  cl_go_date:"17 Ekim 2026",cl_go_p:"KarBu Go yayında. Denemek için ya da hiç harcama yapmadan tatil için ideal!",
+  cl_go_date:"26 Ekim 2026",cl_go_p:"KarBu Go yayında. Denemek için ya da hiç harcama yapmadan tatil için ideal!",
 cl_vxx_date:"2026",
 cl_vxx_p:"Önerileriniz — Geri bildirimlerinizi dinliyoruz.",
   gal_title:"📱 Ekran Görüntüleri",
@@ -2428,6 +2468,8 @@ aide_s8l10:"Doldurmayı planladığınız litre miktarını girerek, dolu bir de
   hero_privacy_line:"🔒 Özel ve güvenli veriler",
   desc_evol_h:"🔄 Her zaman gelişiyor",
   desc_evol_p:"KarBu gelişmeye devam ediyor — gelecek sürümler için yeni özellikler zaten planlanmış durumda.",
+  desc_evol_wa:"İlk siz haberdar olun: WhatsApp'taki <strong>KarBu Officiel</strong> kanalına katılın.",
+  wa_follow:"Kanala katıl",
   desc_titre:"KarBu — Akıllı araç günlüğünüz",
 desc_f1h:"📈 Tüketim takibi",desc_f1p:"Yakıt doldurmalarını kaydedin ve gerçek tüketiminizi dolurum dolurum takip edin. Grafikler ve istatistiklerle tam geçmiş — eğilimleri fark edin ve sapmayı pahalıya mal olmadan tespit edin.",
 desc_f2h:"⛽ Yakıtınız, optimize edildi",desc_f2p:"Uygulama açıldığında, konumunuza göre en uygun istasyonun fiyatı görüntülenir. Resmi devlet verilerinden her 10 dakikada güncellenir. Gerçek yakıt tüketiminize göre istasyon değiştirdiğinizde ne kadar tasarruf ettiğinizi tek bakışta görürsünüz. Fransa, İspanya ve İtalya'da zaten mevcut.",
@@ -2500,6 +2542,10 @@ function setLangSite(lang){
       var goSoon = document.getElementById('dl2-go-soon');
       if(goSoon) goSoon.style.display = 'none';
     }
+    // Post-it "Bientot !" : >>> LE 26/10 (sortie) : passer KARBU_GO_POSTIT a false <<<
+    var KARBU_GO_POSTIT = true;
+    var goPostit = document.getElementById('dl2-go-postit');
+    if(goPostit) goPostit.style.display = (KARBU_GO_LIVE && KARBU_GO_POSTIT) ? 'block' : 'none';
   }
 }
 </script>
