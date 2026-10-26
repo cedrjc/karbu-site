@@ -2546,7 +2546,7 @@ function setLangSite(lang){
       if(goSoon) goSoon.style.display = 'none';
     }
     // Post-it "Bientot !" : >>> LE 26/10 (sortie) : passer KARBU_GO_POSTIT a false <<<
-    var KARBU_GO_POSTIT = true;
+    var KARBU_GO_POSTIT = false;
     var goPostit = document.getElementById('dl2-go-postit');
     if(goPostit) goPostit.style.display = (KARBU_GO_LIVE && KARBU_GO_POSTIT) ? 'block' : 'none';
   }
