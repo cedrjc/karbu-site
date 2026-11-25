@@ -91,6 +91,9 @@ header{background:#fff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display
 .changelog{background:#fff;border-radius:14px;padding:20px;border:1px solid #e2e8f0;margin-bottom:12px;}
 .changelog h3{font-size:14px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;}
 .changelog p{font-size:13px;color:#64748b;}
+.cl-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.cl-tab{border:2px solid var(--c);background:transparent;color:#1e293b;font-weight:700;font-size:13px;padding:5px 14px;border-radius:8px;cursor:pointer;font-family:inherit;}
+.cl-tab.on{background:var(--c);color:#fff;}
 footer{background:#1e293b;color:#94a3b8;text-align:center;padding:20px;font-size:12px;}
 footer a{color:#60a5fa;text-decoration:none;}
 .foot-legal{margin-top:6px;font-size:11px;opacity:.75;}
@@ -529,70 +532,80 @@ html:lang(de) .dl2-table td,html:lang(nl) .dl2-table td,html:lang(pt) .dl2-table
 <div class="page" id="page-miseajour">
   <div class="section">
     <h2 data-t="cl_title">📋 Changelog</h2>
-    <div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.0</span> <span data-t="cl_v10_date">Antérieurement</span></h3>
-      <p data-t="cl_v10_p">Première version privée — Suivi carburant et consommation, 2 véhicules, 3 pays</p>
+    <div class="cl-tabs">
+      <button type="button" class="cl-tab on" style="--c:#10b981" data-g="4" onclick="showClGroup('4')">v4</button>
+      <button type="button" class="cl-tab" style="--c:#8b5cf6" data-g="3" onclick="showClGroup('3')">v3</button>
+      <button type="button" class="cl-tab" style="--c:#2563eb" data-g="2" onclick="showClGroup('2')">v2</button>
+      <button type="button" class="cl-tab" style="--c:#10b981" data-g="1" onclick="showClGroup('1')">v1</button>
     </div>
-    <div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.5</span> <span data-t="cl_v15_date">5 mars 2026</span></h3>
-      <p data-t="cl_v15_p">Préparation version publique — Suivi carburant complet, 6 véhicules, 7 pays, graphiques interactifs, export CSV, mode sombre.</p>
+    <div class="cl-group" data-g="4">
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.x</span> <span data-t="cl_vxx_date">2026</span></h3>
+      <p data-t="cl_vxx_p">Vos suggestions — À l'écoute de vos remarques et améliorations.</p>
     </div>
-    <div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.7</span> <span data-t="cl_v17_date">9 mars 2026</span></h3>
-      <p data-t="cl_v17_p">▪ Rappel vidange — Alerte automatique selon kilométrage ou durée depuis la dernière vidange.<br>▪ Rappel contrôle technique — Alerte automatique suivant l'âge du véhicule</p>
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.2</span> <span data-t="cl_42_date">26 novembre 2026</span></h3>
+      <p data-t="cl_42_p">▪ Page d'accueil repensée<br>▪ Ajout d'un plein ou d'une recharge simplifié<br>▪ Historique : détails du dernier plein simplifiés<br>▪ Graphiques : tableaux par date décroissante<br>▪ Configuration réorganisée, ajout et suppression des véhicules<br>▪ Améliorations visuelles et corrections</p>
     </div>
-    <div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.0</span> <span data-t="cl_v20_date">01 avril 2026</span></h3>
-      <p data-t="cl_v20_p">Traduction en 10 langues (Anglais, Allemand, Espagnol, Français, Italien, Japonais, Coréen, Néerlandais, Portugais, Turc</p>
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.1</span> <span data-t="cl_pt_date">12 novembre 2026</span></h3>
+      <p data-t="cl_pt_p">▪ Ajout des prix officiels des carburants du Portugal, dans KarBu et KarBu Go</p>
     </div>
-    <div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.5</span> <span data-t="cl_v25_date">28 avril 2026</span></h3>
-      <p data-t="cl_v25_p">Votre station préférée et les moins chères autour de votre position<br>Déjà disponible en France et en Espagne, d'autres pays suivront</p>
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.0</span> <span data-t="cl_v40_date">31 août 2026</span></h3>
+      <p data-t="cl_v40_content">▪ Ajout du Diagnostic OBD2 — batterie, moteur, réservoir et pression turbo en temps réel, alerte automatique en cas de code défaut<br>▪ Enrichissement du comparateur de stations</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.7</span> <span data-t="cl_v27_date">13 mai 2026</span></h3>
-      <p data-t="cl_v27_p">Estimez le coût de vos trajets en carburant selon votre consommation réelle. Partagez votre résumé de trajet<br>— Véhicules thermiques uniquement<br><strong>Test en cours sur Google Play !</strong></p>
     </div>
-    <div class="changelog">
-      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">1 juin 2026</span></h3>
-      <p data-t="cl_v30_content">▪ Comparateur de stations : sélectionnez deux stations par appui long sur ⭐ Préférée et comparez économie réelle, détour et rentabilité<br>▪ Support complet véhicules électriques (bornes de recharge via OpenChargeMap, mondial)<br>▪ Corrections et améliorations diverses</p>
+    <div class="cl-group" data-g="3" style="display:none">
+      <div class="changelog">
+      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.8</span> <span data-t="cl_v38_date">29 juillet 2026</span></h3>
+      <p data-t="cl_v38_p">Le Mode Voyage est désormais accessible pour tous, partout dans le monde — en thermique, en électrique, même sans GPS. Planifiez votre itinéraire et calculez vos arrêts où que vous soyez.</p>
     </div>
-	<div class="changelog">
+      <div class="changelog">
+      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.7</span> <span data-t="cl_v37_date">24 juillet 2026</span></h3>
+      <p data-t="cl_v37_p">▪ Ajout des stations-service italiennes<br>▪ Refonte des icônes de navigation</p>
+    </div>
+      <div class="changelog">
+      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.5</span> <span data-t="cl_v36_date">1 juillet 2026</span></h3>
+      <p data-t="cl_v30_p"><strong>Lancement de l'application publique!</strong></p>
+    </div>
+      <div class="changelog">
       <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.5</span> <span data-t="cl_v35_date">23 juin 2026</span></h3>
       <p data-t="cl_v35_content">▪ Mode Voyage calcule où vous arrêter pour faire le plein selon l'autonomie réelle de votre véhicule, avec les prix affichés directement sur la carte — comparateur de stations intégré<br>▪ Prise en charge complète des véhicules électriques (bornes de recharge OpenChargeMap, mondial)</p>
       <p data-t="cl_v35_hidden" style="display:none">▪ Toujours gratuit, sans inscription, sur karbu.net</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.5</span> <span data-t="cl_v36_date">1 juillet 2026</span></h3>
-      <p data-t="cl_v30_p"><strong>Lancement de l'application publique!</strong></p>
+      <div class="changelog">
+      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.0</span> <span data-t="cl_v30_date">1 juin 2026</span></h3>
+      <p data-t="cl_v30_content">▪ Comparateur de stations : sélectionnez deux stations par appui long sur ⭐ Préférée et comparez économie réelle, détour et rentabilité<br>▪ Support complet véhicules électriques (bornes de recharge via OpenChargeMap, mondial)<br>▪ Corrections et améliorations diverses</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.7</span> <span data-t="cl_v37_date">24 juillet 2026</span></h3>
-      <p data-t="cl_v37_p">▪ Ajout des stations-service italiennes<br>▪ Refonte des icônes de navigation</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#8b5cf6;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v3.8</span> <span data-t="cl_v38_date">29 juillet 2026</span></h3>
-      <p data-t="cl_v38_p">Le Mode Voyage est désormais accessible pour tous, partout dans le monde — en thermique, en électrique, même sans GPS. Planifiez votre itinéraire et calculez vos arrêts où que vous soyez.</p>
+    <div class="cl-group" data-g="2" style="display:none">
+      <div class="changelog">
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.7</span> <span data-t="cl_v27_date">13 mai 2026</span></h3>
+      <p data-t="cl_v27_p">Estimez le coût de vos trajets en carburant selon votre consommation réelle. Partagez votre résumé de trajet<br>— Véhicules thermiques uniquement<br><strong>Test en cours sur Google Play !</strong></p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.0</span> <span data-t="cl_v40_date">31 août 2026</span></h3>
-      <p data-t="cl_v40_content">▪ Ajout du Diagnostic OBD2 — batterie, moteur, réservoir et pression turbo en temps réel, alerte automatique en cas de code défaut<br>▪ Enrichissement du comparateur de stations</p>
+      <div class="changelog">
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.5</span> <span data-t="cl_v25_date">28 avril 2026</span></h3>
+      <p data-t="cl_v25_p">Votre station préférée et les moins chères autour de votre position<br>Déjà disponible en France et en Espagne, d'autres pays suivront</p>
     </div>
-	<div class="changelog">
-      <h3><span data-t="cl_go_date">Octobre 2026</span></h3>
-      <p data-t="cl_go_p">Sortie de KarBu Go. Idéal pour essayer, ou pour partir en vacances sans rien dépenser !</p>
+      <div class="changelog">
+      <h3><span style="background:#2563eb;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v2.0</span> <span data-t="cl_v20_date">01 avril 2026</span></h3>
+      <p data-t="cl_v20_p">Traduction en 10 langues (Anglais, Allemand, Espagnol, Français, Italien, Japonais, Coréen, Néerlandais, Portugais, Turc</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.1</span> <span data-t="cl_pt_date">12 novembre 2026</span></h3>
-      <p data-t="cl_pt_p">▪ Ajout des prix officiels des carburants du Portugal, dans KarBu et KarBu Go</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.2</span> <span data-t="cl_42_date">26 novembre 2026</span></h3>
-      <p data-t="cl_42_p">▪ Page d'accueil repensée<br>▪ Ajout d'un plein ou d'une recharge simplifié<br>▪ Historique : détails du dernier plein simplifiés<br>▪ Graphiques : tableaux par date décroissante<br>▪ Configuration réorganisée, ajout et suppression des véhicules<br>▪ Améliorations visuelles et corrections</p>
+    <div class="cl-group" data-g="1" style="display:none">
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.7</span> <span data-t="cl_v17_date">9 mars 2026</span></h3>
+      <p data-t="cl_v17_p">▪ Rappel vidange — Alerte automatique selon kilométrage ou durée depuis la dernière vidange.<br>▪ Rappel contrôle technique — Alerte automatique suivant l'âge du véhicule</p>
     </div>
-	<div class="changelog">
-      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v4.x</span> <span data-t="cl_vxx_date">2026</span></h3>
-      <p data-t="cl_vxx_p">Vos suggestions — À l'écoute de vos remarques et améliorations.</p>
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.5</span> <span data-t="cl_v15_date">5 mars 2026</span></h3>
+      <p data-t="cl_v15_p">Préparation version publique — Suivi carburant complet, 6 véhicules, 7 pays, graphiques interactifs, export CSV, mode sombre.</p>
+    </div>
+      <div class="changelog">
+      <h3><span style="background:#10b981;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px">v1.0</span> <span data-t="cl_v10_date">Antérieurement</span></h3>
+      <p data-t="cl_v10_p">Première version privée — Suivi carburant et consommation, 2 véhicules, 3 pays</p>
+    </div>
     </div>
   </div>
 </div>
@@ -788,6 +801,10 @@ function toggleMenu(){
   var h=document.getElementById('hamburger');
   m.classList.toggle('open');
   h.classList.toggle('open');
+}
+function showClGroup(g){
+  document.querySelectorAll('.cl-group').forEach(function(d){d.style.display=(d.getAttribute('data-g')===g)?'':'none';});
+  document.querySelectorAll('.cl-tab').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-g')===g);});
 }
 function showPage(name){
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
